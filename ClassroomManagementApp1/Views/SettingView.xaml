@@ -1,0 +1,99 @@
+﻿<Window x:Class="ClassroomManagementApp1.Views.SettingView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/iconpacks"
+        xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="Setting" Height="350" Width = "525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.8*"/>
+            <ColumnDefinition Width="4.2*"/>
+        </Grid.ColumnDefinitions>
+        <!--Column0-->
+        <Grid Grid.Column="0" ClipToBounds="True">
+            <Border CornerRadius="20 0 0 20" ClipToBounds="True" Background="White">
+                <Border CornerRadius="20 0 0 20" ClipToBounds="True" Margin="0,0,0,0">
+                    <Border.Background>
+                        <SolidColorBrush Color="White"></SolidColorBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+
+            <!--Add logo-->
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Height="55" Width="56">
+                <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform"/>
+            </StackPanel>
+            <!--Menu buttons-->
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">
+                <Button x:Name="BtnDashboard" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2" Click="BtnDashboard_Click">
+                    <Border  CornerRadius="10" Padding="5">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Icon:PackIconMaterial Kind="HomeVariant" Width="7" VerticalAlignment="Center" Foreground="gray"/>
+                            <TextBlock Text=" Dashboard" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="gray"
+       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </Button>
+
+                <Button x:Name="BtnClassroom" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2" Click="BtnClassroom_Click">
+                    <Border CornerRadius="10" Padding="5">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Icon:PackIconMaterial Kind="School" Width="8" VerticalAlignment="Center" Foreground="Gray"/>
+                            <TextBlock Text=" Classrooms" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="gray"
+       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </Button>
+
+                <Button x:Name="BtnAssignment" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2" Click="BtnAssignment_Click">
+                    <Border CornerRadius="10" Padding="5">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Icon:PackIconMaterial Kind="ClockCheck" Width="8" VerticalAlignment="Center" Foreground="Gray"/>
+                            <TextBlock Text=" Assignment" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="Gray"
+                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </Button>
+
+                <Button x:Name="BtnSetting" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2">
+                    <Border Background="#b897c6" CornerRadius="10" Padding="5">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Icon:PackIconMaterial Kind="Cog" Width="8" VerticalAlignment="Center" Foreground="White"/>
+                            <TextBlock Text=" Setting" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="White"
+                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </Border>
+                </Button>
+            </StackPanel>
+            <!--Sign out-->
+            <Border HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,8">
+                <Button x:Name="btnSignOut" Background="Transparent" BorderBrush="Transparent" >
+                    <StackPanel>
+                        <Icon:PackIconMaterial HorizontalAlignment="Center" Kind="ExitToApp" Width="15" Foreground="Gray" Margin="0,0,0,2" BorderBrush="Transparent"/>
+                        <TextBlock Text="SIGN OUT" FontFamily="Montserrat" FontSize="8" Foreground="Gray" Margin="0"/>
+                    </StackPanel>
+                </Button>
+            </Border>
+        </Grid>
+
+        <!--Column1-->
+        <Grid Grid.Column="1" ClipToBounds="True">
+            <Border Background="White" CornerRadius="0,20,20,0"/>
+            <Border CornerRadius="20,20,20,20" Background="#ebdef2" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,0">
+                <Border.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleY="-0.184"/>
+                        <RotateTransform/>
+                        <TranslateTransform Y="-0.497"/>
+                    </TransformGroup>
+                </Border.RenderTransform>
+            </Border>
+        </Grid>
+
+    </Grid>
+</Window>
