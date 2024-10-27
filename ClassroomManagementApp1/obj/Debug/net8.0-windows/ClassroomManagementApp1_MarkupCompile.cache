@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\App.xaml
-15126600878
+18-1249167671
 
-46-919062170
+55-756928793
 257-2058363747
-Component\MainWindowBoxAssignments.xaml;Component\MainWindowBoxAssignments1.xaml;Component\MainWindowBoxAssignments2.xaml;Component\MainWindowBoxClasses.xaml;Component\MainWindowBoxClasses1.xaml;Component\MainWindowBoxClasses2.xaml;MainWindow.xaml;Views\AssignmentsView.xaml;Views\ClassesView.xaml;Views\ClassInfoView.xaml;Views\ClassroomsView.xaml;Views\MainUI.xaml;Views\MainWindowView.xaml;Views\SettingView.xaml;Views\SignInView.xaml;
+Component\ClassroomListViewAssignments.xaml;Component\ClassroomListViewClasses.xaml;Component\MainWindowBoxAssignments.xaml;Component\MainWindowBoxAssignments1.xaml;Component\MainWindowBoxAssignments2.xaml;Component\MainWindowBoxClasses.xaml;Component\MainWindowBoxClasses1.xaml;Component\MainWindowBoxClasses2.xaml;Component\MainWindowBoxStudentInfo.xaml;MainWindow.xaml;Views\AssignmentsView.xaml;Views\ClassesView.xaml;Views\ClassInfoView.xaml;Views\ClassroomsView.xaml;Views\MainUI.xaml;Views\MainWindowView.xaml;Views\SettingView.xaml;Views\SignInView.xaml;
 
 False
 

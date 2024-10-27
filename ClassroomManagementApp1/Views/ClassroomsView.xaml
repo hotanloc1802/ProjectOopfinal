@@ -115,7 +115,7 @@
             </StackPanel>
 
             <!--Youre Classroom-->
-            <StackPanel HorizontalAlignment="Left" Margin="20,65,30,0">
+            <StackPanel Margin="20,65,0,0" HorizontalAlignment="Left" Width="310">
                 <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="12"/>
 
                 <ScrollViewer VerticalScrollBarVisibility="Hidden" Height="255">

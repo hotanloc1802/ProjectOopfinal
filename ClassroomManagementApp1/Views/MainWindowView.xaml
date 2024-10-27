@@ -31,7 +31,7 @@
                 <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform"/>
             </StackPanel>
             <!--Menu buttons-->
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0" Width="81">
                 <Button x:Name="btnDashboard" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2">
                     <Border Background="#b897c6" CornerRadius="10" Padding="5">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -103,15 +103,14 @@
                     <Border x:Name="boSearch" Background="White" CornerRadius="10">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <Icon:PackIconMaterial Kind="Magnify" Width="13" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0"/>
-                            <TextBox x:Name="txtSearch" Background="Transparent" BorderBrush="Transparent" 
-                                    Width="250" Height="30" Margin="0" 
-                                    VerticalAlignment="Center" Padding="5,5"/>
+                            <TextBox x:Name="boxSearch" Background="Transparent" BorderBrush="Transparent" Foreground="#b897d1"
+     Width="227" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" />
 
                         </StackPanel>
                     </Border>
                     <Border Height="30" VerticalAlignment="Top">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <TextBlock Text="Search..." Foreground="#b897d1" FontFamily="Montserrat" Margin="27,0,0,0" />
+                            <TextBlock x:Name="txtSearch" Text="Search..." Foreground="#b897d1" FontFamily="Montserrat" Margin="27,0,0,0" IsHitTestVisible="False"/>
                         </StackPanel>
                     </Border>
                 </Grid>
@@ -193,30 +192,22 @@
 
         <!--Column2-->
         <Grid Grid.Column="2" ClipToBounds="True">
-            <!-- Image and Name of Student -->
             <Border CornerRadius="0 20 20 0" Background="#ebdef2" />
             <Border CornerRadius="20 20 20 20">
                 <Border.Background>
                     <SolidColorBrush Color="White"></SolidColorBrush>
                 </Border.Background>
             </Border>
-            <StackPanel>
-                <Border x:Name="boStudentInfo" HorizontalAlignment="Center">
-                    <Grid>
-                        <Ellipse Width="70" Height="70" Fill="#f6eefb" Stroke="Transparent" VerticalAlignment="Top" Margin="0,50,0,0"/>
-                        <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="70" Height="70" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">
-                            <Image.Clip>
-                                <EllipseGeometry Center="35,35" RadiusX="35" RadiusY="35"/>
-                            </Image.Clip>
-                        </Image>
-                        <TextBlock Text="Ngo Thi Hong Ly" FontFamily="Montserrat" FontSize="8" FontWeight="ExtraBold" Foreground="#b897c6" Margin="0,125,0,0"/>
-                        <TextBlock Text="Student" FontFamily="Montserrat" FontSize="8" FontWeight="Light" Foreground="#b897c6" HorizontalAlignment="Center" Margin="0,135,0,0"/>
-                    </Grid>
-                </Border>
-
-                <!-- Calendar -->
-
-            </StackPanel>
+        </Grid>
+        <Grid Grid.Column="2" ClipToBounds="True">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <component:MainWindowBoxStudentInfo />
+            </Grid>
+            
         </Grid>
     </Grid>
 </Window>

@@ -25,7 +25,7 @@
 
             <!--Add logo-->
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Height="55" Width="56">
-                <Image Source="Images/logo.png" Width="55" Height="55" Stretch="Uniform"/>
+                <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform"/>
             </StackPanel>
             <!--Menu buttons-->
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">

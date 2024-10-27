@@ -38,7 +38,7 @@ namespace ClassroomManagementApp1.ViewModels.BoxClasses
             _classService = classService;
             _assignmentService = assignmentService;
             ClassViewModel = new ClassViewModel(_classService);
-            AssignmentViewModel = new AssignmentViewModel(_assignmentService, _classService);
+            AssignmentViewModel = new AssignmentViewModel(_assignmentService);
             InitializeData();
         }
         private static (ClassesService, AssignmentService) CreateDbContext()

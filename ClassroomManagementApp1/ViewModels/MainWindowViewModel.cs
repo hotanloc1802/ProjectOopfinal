@@ -59,7 +59,7 @@ namespace ClassroomManagementApp1.ViewModels
             _classService = classService;
             _assignmentService = assignmentService;
             ClassViewModel = new ClassViewModel(_classService);
-            AssignmentViewModel = new AssignmentViewModel(_assignmentService, _classService);
+            AssignmentViewModel = new AssignmentViewModel(_assignmentService);
 
         }
         private static (ClassesService, AssignmentService) CreateDbContext()

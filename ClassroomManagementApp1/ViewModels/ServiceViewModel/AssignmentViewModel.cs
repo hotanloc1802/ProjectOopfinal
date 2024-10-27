@@ -14,7 +14,6 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
     public class AssignmentViewModel
     {
         private readonly AssignmentService _assignmentService;
-        private readonly ClassesService _classService;
 
         // ObservableCollection to notify UI of changes
         public ObservableCollection<Assignment> Assignments { get; set; } = new ObservableCollection<Assignment>();
@@ -27,10 +26,9 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 _nearestAssignment = value;
             }
         }
-        public AssignmentViewModel(AssignmentService assignmentService, ClassesService classService)
+        public AssignmentViewModel(AssignmentService assignmentService)
         {
-            _assignmentService = assignmentService;
-            _classService = classService; // Initialize the class service
+            _assignmentService = assignmentService;// Initialize the class service
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -62,7 +60,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             var nearest = await _assignmentService.GetNearestAssignmentByClassID(classID);
             NearestAssignment = nearest;
         }
-        private async Task LoadAssignmentsByStudentId(string studentid)
+        public async Task LoadAssignmentsByStudentId(string studentid)
         {
             if (!string.IsNullOrEmpty(studentid))
             {
