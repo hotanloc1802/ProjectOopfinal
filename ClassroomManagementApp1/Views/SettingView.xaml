@@ -25,7 +25,7 @@
 
             <!--Add logo-->
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Height="55" Width="56">
-                <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform"/>
+                <Image Source="Images/logo.png" Width="55" Height="55" Stretch="Uniform"/>
             </StackPanel>
             <!--Menu buttons-->
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">
@@ -71,7 +71,7 @@
             </StackPanel>
             <!--Sign out-->
             <Border HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,8">
-                <Button x:Name="btnSignOut" Background="Transparent" BorderBrush="Transparent" >
+                <Button x:Name="btnSignOut" Background="Transparent" BorderBrush="Transparent" Click="SignOut_Click">
                     <StackPanel>
                         <Icon:PackIconMaterial HorizontalAlignment="Center" Kind="ExitToApp" Width="15" Foreground="Gray" Margin="0,0,0,2" BorderBrush="Transparent"/>
                         <TextBlock Text="SIGN OUT" FontFamily="Montserrat" FontSize="8" Foreground="Gray" Margin="0"/>
@@ -93,6 +93,67 @@
                     </TransformGroup>
                 </Border.RenderTransform>
             </Border>
+
+            <StackPanel Margin="30,0">
+                <Grid Margin="0,15,0,0">
+                    <TextBlock VerticalAlignment="Center" Text="Setting" FontSize="35" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6"/>
+                    <Grid HorizontalAlignment="Right" VerticalAlignment="Center" >
+                        <Ellipse Width="70" Height="70" Fill="white" Stroke="Transparent" VerticalAlignment="Top" />
+                        <Image Source="D:\final_lab\AppOop\AppOop\images\profile.png" Width="70" Height="70" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top">
+                            <Image.Clip>
+                                <EllipseGeometry Center="35,35" RadiusX="35" RadiusY="35"/>
+                            </Image.Clip>
+                        </Image>
+                    </Grid>
+                </Grid>
+                <Border x:Name="boSetting" Margin="10" Background="White" CornerRadius="10">
+                    <StackPanel Margin="20,10">
+                        <TextBlock Text="Basic Info" FontSize="20" FontFamily="Montserrat" Foreground="Gray"/>
+                        <Grid Margin="10,5">
+                            <TextBlock Text="Profile Picture" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6"/>
+                            <Grid Margin="60,0,0,0" >
+                                <Ellipse Width="40" Height="40" Fill="#f6eefb" Stroke="Transparent" VerticalAlignment="Top" />
+                                <Image x:Name="imgProfilePicture" Source="D:\final_lab\AppOop\AppOop\images\profile.png" Width="40" Height="40" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                    <Image.Clip>
+                                        <EllipseGeometry Center="20,20" RadiusX="20" RadiusY="20"/>
+                                    </Image.Clip>
+                                </Image>
+                            </Grid>
+                            <Button x:Name="btnEditPic" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Right" Click="ChangeProfilePicture_Click">
+                                <Icon:PackIconMaterial Kind="Pencil" Width="11" Foreground="Gray" BorderBrush="Transparent"/>
+                            </Button>
+                        </Grid>
+                        <Grid Margin="10,5">
+                            <TextBlock Text="Student Name" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6"/>
+                            <TextBlock Margin="160,0,0,0" Text="Ngo Thi Hong Ly" FontSize="13" FontFamily="Montserrat Bold" Foreground="#b897c6"/>
+                        </Grid>
+                        <Grid Margin="10,5">
+                            <TextBlock Text="Date of Birth" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6"/>
+                            <TextBlock Margin="160,0,0,0" Text="10/12/2004" FontSize="13" FontFamily="Montserrat Bold" Foreground="#b897c6"/>
+                        </Grid>
+
+                        <TextBlock Text="Account Info" FontSize="20" FontFamily="Montserrat" Foreground="Gray"/>
+                        <Grid Margin="10,5">
+                            <TextBlock Text="Date of Birth" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6"/>
+                            <TextBlock Margin="160,0,0,0" Text="10/12/2004" FontSize="13" FontFamily="Montserrat Bold" Foreground="#b897c6"/>
+                        </Grid>
+                        <Grid Margin="10,5">
+                            <TextBlock Text="Password" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6" VerticalAlignment="Center"/>
+                            <TextBlock x:Name="txtPasswordDots" Text="........" FontSize="13" FontFamily="Montserrat Bold" Foreground="#b897c6" 
+                                       VerticalAlignment="Center" Margin="160,0,40,0" Visibility="Visible"/>
+                            <!-- PasswordBox to enter password when click button change -->
+                            <TextBox x:Name="boxPassword" FontSize="13" FontFamily="Montserrat" Foreground="Gray" 
+                                         VerticalAlignment="Center" Margin="160,0,40,0" Visibility="Collapsed"/>
+                            <!-- Button Change/Save -->
+                            <Button x:Name="btnChangeSave" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Right"
+                                    Click="btnChangeSave_Click">
+                                <Icon:PackIconMaterial x:Name="iconChangeSave" Kind="Pencil" Width="11" Foreground="Gray"/>
+                            </Button>
+                        </Grid>
+                    </StackPanel>
+
+                </Border>
+            </StackPanel>
         </Grid>
 
     </Grid>

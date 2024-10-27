@@ -177,3 +177,8 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindowBoxClasses.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindowBoxClasses1.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindowBoxClasses2.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\SignInView.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ClassInfoView.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ClassInfoView.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\SignInView.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.sourcelink.json

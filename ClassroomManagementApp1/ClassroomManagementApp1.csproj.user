@@ -31,6 +31,9 @@
     <Compile Update="Views\ClassesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ClassInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ClassroomsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -41,6 +44,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\SettingView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SignInView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -72,6 +78,9 @@
     <Page Update="Views\ClassesView.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\ClassInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\ClassroomsView.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -82,6 +91,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SettingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SignInView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -27,7 +27,7 @@
             </Border>
 
             <!--Add logo-->
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Height="55" Width="56">
+            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,-3,0" Height="55" Width="56">
                 <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform"/>
             </StackPanel>
             <!--Menu buttons-->
@@ -103,7 +103,7 @@
                     <Border x:Name="boSearch" Background="White" CornerRadius="10">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <Icon:PackIconMaterial Kind="Magnify" Width="13" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0"/>
-                            <TextBox x:Name="SearchTextBox" Background="Transparent" BorderBrush="Transparent" 
+                            <TextBox x:Name="txtSearch" Background="Transparent" BorderBrush="Transparent" 
                                     Width="250" Height="30" Margin="0" 
                                     VerticalAlignment="Center" Padding="5,5"/>
 

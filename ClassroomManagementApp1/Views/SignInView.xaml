@@ -1,0 +1,73 @@
+﻿<Window x:Class="ClassroomManagementApp1.Views.SignInView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/iconpacks"
+        xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="SignIn" Height="350" Width = "525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Column0-->
+        <Grid Grid.Column="0" ClipToBounds="True">
+            <Border CornerRadius="20 0 0 20" ClipToBounds="True" Background="White">
+                <Border CornerRadius="20 0 0 20" ClipToBounds="True" Margin="0,0,0,0">
+                    <Border.Background>
+                        <SolidColorBrush Color="White"></SolidColorBrush>
+                    </Border.Background>
+                </Border>
+            </Border>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image Source="D:\final_lab\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform" Margin="0,0,0,-5"/>
+                <Image  Source="D:\final_lab\AppOop\AppOop\images\backgroundSignIn.png" Width="258" Height="258" Stretch="Uniform"/>
+            </StackPanel>
+        </Grid>
+
+        <!--Column1-->
+        <Grid Grid.Column="1" ClipToBounds="True">
+            <Border Background="White" CornerRadius="0,20,20,0"/>
+            <Border CornerRadius="20,20,20,20" Background="#ebdef2" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,0"/>
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,0">
+                <Border x:Name="BoSignIn" Background="White" CornerRadius="10">
+                    <StackPanel Margin="0,10">
+                        <TextBlock HorizontalAlignment="Center" Text="SIGN IN" FontSize="30" FontFamily="Montserrat Bold" Foreground="Gray"/>
+                        <Border Margin="15,5" BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10">
+                            <Grid>
+                                <Icon:PackIconMaterial Kind="Account" Width="13" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                                <TextBox x:Name="boxUserName" Foreground="#b897d1" FontFamily="Montserrat" Background="Transparent"  BorderBrush="Transparent" 
+                                         Width="180" VerticalAlignment="Center" Padding="5,5" Margin="20,0,0,0"
+                                         GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                                <TextBlock x:Name="txtUserName" FontSize="13" Text="User Name" FontFamily="Montserrat" Foreground="#b897d1" 
+                                           VerticalAlignment="Center" Margin="27,0,0,0" IsHitTestVisible="False"/>
+                            </Grid>
+                        </Border>
+                        <Border Margin="15,5" BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10">
+                            <Grid>
+                                <Icon:PackIconMaterial Kind="LockOutline" Width="13" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                                <PasswordBox x:Name="boxPassword" Foreground="#b897d1" FontFamily="Montserrat" Background="Transparent"  BorderBrush="Transparent" 
+                                         VerticalAlignment="Center" Padding="5,5" Margin="20,0,0,0"
+                                         GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                                <TextBlock x:Name="txtPassword" FontSize="13" Text="Password" FontFamily="Montserrat" Foreground="#b897d1" 
+                                           VerticalAlignment="Center" Margin="27,0,0,0" IsHitTestVisible="False"/>
+                            </Grid>
+                        </Border>
+                        <Button x:Name="btnViewAll" Margin="0,5,0,0" Background="Transparent" BorderBrush="Transparent" Width="80" Height="32" Click="LogIn_Click">
+                            <Border Background="#b897d1" CornerRadius="20" Padding="5" Width="75" Height="28">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Text="LogIn" FontFamily="Montserrat" FontSize="15" Foreground="White" VerticalAlignment="Center" Padding="3"/>
+                                </StackPanel>
+                            </Border>
+                        </Button>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
