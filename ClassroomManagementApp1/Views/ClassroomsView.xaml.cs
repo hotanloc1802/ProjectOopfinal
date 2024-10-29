@@ -56,5 +56,19 @@ namespace ClassroomManagementApp1.Views
             SettingWindow.Show();
             this.Close();
         }
+        private void SignOut_Click(object obj, RoutedEventArgs e)
+        {
+            SignInView SignInWindow = new SignInView();
+            SignInWindow.Show();
+            this.Close();
+        }
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtSearch.Visibility = Visibility.Collapsed;
+        }
+        private void TextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            txtSearch.Visibility = Visibility.Visible;
+        }
     }
 }

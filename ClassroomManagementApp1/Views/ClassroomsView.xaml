@@ -6,278 +6,299 @@
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/iconpacks"
         xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
-        mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" Background="Transparent"
-        Title="Classrooms" Height="350" Width = "525">
-
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.8*"/>
-            <ColumnDefinition Width="4.2*"/>
-        </Grid.ColumnDefinitions>
-        <!--Column0-->
-        <Grid Grid.Column="0" ClipToBounds="True">
-            <Border CornerRadius="20 0 0 20" ClipToBounds="True" Background="White">
-                <Border CornerRadius="20 0 0 20" ClipToBounds="True" Margin="0,0,0,0">
-                    <Border.Background>
-                        <SolidColorBrush Color="White"></SolidColorBrush>
-                    </Border.Background>
+        mc:Ignorable="d"
+            Title="MainWindowView" Height="760" Width="1280" Background="Transparent" ResizeMode="NoResize"
+        AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Border Background="#ebdef2" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
+        Padding="20" >
+        <Border CornerRadius="40" Height="716" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1236">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#ebdef2" Offset="0" />
+                    <GradientStop Color="#ebdef2" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Grid Margin="0,0,0,15" HorizontalAlignment="Center" Width="1176" Height="686" VerticalAlignment="Bottom">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.8*"/>
+                    <ColumnDefinition Width="3.2*"/>
+                    <ColumnDefinition Width="1.0*"/>
+                </Grid.ColumnDefinitions>
+                <Border CornerRadius="20 0 0 20" ClipToBounds="True" Background="White" Grid.Row="0"  Grid.RowSpan="2">
+                    <Border  CornerRadius="20 0 0 20" ClipToBounds="True" Margin="0,0,-5,0">
+                        <Border.Background>
+                            <SolidColorBrush Color="White"></SolidColorBrush>
+                        </Border.Background>
+                    </Border>
                 </Border>
-            </Border>
-
-            <!--Add logo-->
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Height="55" Width="56">
-                <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform"/>
-            </StackPanel>
-            <!--Menu buttons-->
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">
-                <Button x:Name="BtnDashboard" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2" Click="BtnDashboard_Click">
-                    <Border  CornerRadius="10" Padding="5">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Icon:PackIconMaterial Kind="HomeVariant" Width="7" VerticalAlignment="Center" Foreground="gray"/>
-                            <TextBlock Text=" Dashboard" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="gray"
-                               VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Border>
-                </Button>
-
-                <Button x:Name="BtnClassroom" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2" Click="BtnClassroom_Click">
-                    <Border Background="#b897c6" CornerRadius="10" Padding="5">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Icon:PackIconMaterial Kind="School" Width="8" VerticalAlignment="Center" Foreground="white"/>
-                            <TextBlock Text=" Classroom" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="white"
-                               VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Border>
-                </Button>
-
-                <Button x:Name="BtnAssignment" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2" Click="BtnAssignment_Click">
-                    <Border CornerRadius="10" Padding="5">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Icon:PackIconMaterial Kind="ClockCheck" Width="8" VerticalAlignment="Center" Foreground="Gray"/>
-                            <TextBlock Text=" Assignment" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="Gray"
-                   VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Border>
-                </Button>
-
-                <Button x:Name="BtnSetting" Background="Transparent" BorderBrush="Transparent" Height="25" Margin="0,2" Click="Setting_Click">
-                    <Border CornerRadius="10" Padding="5">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                            <Icon:PackIconMaterial Kind="Cog" Width="8" VerticalAlignment="Center" Foreground="Gray"/>
-                            <TextBlock Text=" Setting" FontFamily="Montserrat Bold" FontSize="9.5" Foreground="Gray"
-                               VerticalAlignment="Center"/>
-                        </StackPanel>
-                    </Border>
-                </Button>
-            </StackPanel>
-            <!--Sign out-->
-            <Border HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,8">
-                <Button x:Name="btnSignOut" Background="Transparent" BorderBrush="Transparent" >
-                    <StackPanel>
-                        <Icon:PackIconMaterial HorizontalAlignment="Center" Kind="ExitToApp" Width="15" Foreground="Gray" Margin="0,0,0,2" BorderBrush="Transparent"/>
-                        <TextBlock Text="SIGN OUT" FontFamily="Montserrat" FontSize="8" Foreground="Gray" Margin="0"/>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" >
+                        <Image Source="D:\final_lab\AppOop\AppOop\images\logo.png" Stretch="Uniform" Width="130"/>
                     </StackPanel>
-                </Button>
-            </Border>
-        </Grid>
+                    <StackPanel Grid.Row="1" Margin="0,100.7,0,0">
+                        <Border CornerRadius="10" Padding="5,5,5,5" Margin="15,0,15,0" Width="162"  >
+                            <Button x:Name="btnDashboard"  Style="{StaticResource menuButton}" Click="BtnDashboard_Click" Width="158" Margin="-5,5,0,5"  >
+                                <Button.Triggers>
+                                    <!-- Trigger khi di chuột vào Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Đổi màu nền của Button khi di chuột vào -->
+                                                <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="#ebdef2" Duration="0:0:0.2" />
+                                                <!-- Đổi màu Foreground của TextBlock khi di chuột vào -->
+                                                <ColorAnimation Storyboard.TargetName="dashboardText" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="Black" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
 
-        <!--Column1-->
-        <Grid Grid.Column="1" ClipToBounds="True">
-            <Border Background="White" CornerRadius="0,20,20,0"/>
-            <Border CornerRadius="20" Background="#ebdef2" RenderTransformOrigin="0.5,0.5" Margin="0">
-                <Border.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform AngleY="-0.184"/>
-                        <RotateTransform/>
-                        <TranslateTransform Y="-0.497"/>
-                    </TransformGroup>
-                </Border.RenderTransform>
-            </Border>
+                                    <!-- Trigger khi di chuột ra khỏi Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Trở lại màu nền gốc của Button khi di chuột ra -->
+                                                <ColorAnimation Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" To="Transparent" Duration="0:0:0.2" />
+                                                <!-- Trở lại màu Foreground gốc của TextBlock khi di chuột ra -->
+                                                <ColorAnimation Storyboard.TargetName="dashboardText" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#959595" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Icon:PackIconMaterial Kind="HomeVariant" VerticalAlignment="Center" Foreground="#959595"/>
+                                    <!-- Gán tên cho TextBlock để có thể sử dụng trong Storyboard -->
+                                    <TextBlock x:Name="dashboardText" Text=" Dashboard" FontFamily="Montserrat Bold" FontSize="17" Foreground="#959595" VerticalAlignment="Center" Height="18" Margin="0,2,0,0"/>
+                                </StackPanel>
+                            </Button>
 
-            <!--Search bar-->
-            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Height="30" >
-                <Grid Width="290" Height="30">
-                    <Border Background="White" CornerRadius="10">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <Icon:PackIconMaterial Kind="Magnify" Width="13" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0"/>
-                            <TextBox x:Name="SearchTextBox" Background="Transparent"  BorderBrush="Transparent" 
-                                     Width="250" Height="30" Margin="0" 
-                                     VerticalAlignment="Center" Padding="5,5"/>
-                        </StackPanel>
-                    </Border>
-                    <Border Height="30" VerticalAlignment="Top">
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <TextBlock Text="Search..." Foreground="#b897d1" FontFamily="Montserrat" Margin="27,0,0,0" />
-                        </StackPanel>
-                    </Border>
+                        </Border>
+                        <Border Background="Transparent" Padding="5,5,5,5" Margin="15,0,15,0" Width="162"  >
+                            <Button x:Name="btnClassroom" Style="{StaticResource menuButton}" Click="BtnClassroom_Click"  Width="158" Margin="-5,5,0,5" Background="#b897c6" >
+
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Icon:PackIconMaterial Kind="School" VerticalAlignment="Center" Foreground="White"/>
+                                    <TextBlock  x:Name="classroomText" Text=" Classroom" FontFamily="Montserrat Bold" FontSize="17" Foreground="White"
+                     VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                        <Border Background="Transparent" CornerRadius="10" Padding="5,5,5,5" Margin="15,0,15,0" Width="162"  >
+                            <Button x:Name="btnAssignment" Style="{StaticResource menuButton}"  Width="158" Margin="-5,5,0,5" Click="BtnAssignment_Click" >
+                                <Button.Triggers>
+                                    <!-- Trigger khi di chuột vào Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Đổi màu nền của Button khi di chuột vào -->
+                                                <ColorAnimation 
+                                Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                To="#ebdef2" Duration="0:0:0.2" />
+                                                <!-- Đổi màu Foreground của TextBlock khi di chuột vào -->
+                                                <ColorAnimation 
+                                Storyboard.TargetName="assignmentText" 
+                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                To="Black" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+
+                                    <!-- Trigger khi di chuột ra khỏi Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Trở lại màu nền gốc của Button khi di chuột ra -->
+                                                <ColorAnimation 
+                                Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                To="Transparent" Duration="0:0:0.2" />
+                                                <!-- Trở lại màu Foreground gốc của TextBlock khi di chuột ra -->
+                                                <ColorAnimation 
+                                Storyboard.TargetName="assignmentText" 
+                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                To="#959595" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Icon:PackIconMaterial Kind="ClockCheck" VerticalAlignment="Center" Foreground="#959595"/>
+                                    <TextBlock  x:Name="assignmentText"  Text="Assignment" FontFamily="Montserrat Bold" FontSize="17" Foreground="#959595"
+                     VerticalAlignment="Center" Margin="3,0,0,0"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                        <Border Background="Transparent" Padding="5,5,5,5" Margin="15,0,15,0" Width="162">
+                            <Button x:Name="btnSetting"  Style="{StaticResource menuButton}"  Width="158" Margin="-5,5,0,5" Click="Setting_Click" >
+                                <Button.Triggers>
+                                    <!-- Trigger khi di chuột vào Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Đổi màu nền của Button khi di chuột vào -->
+                                                <ColorAnimation 
+                                Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                To="#ebdef2" Duration="0:0:0.2" />
+                                                <!-- Đổi màu Foreground của TextBlock khi di chuột vào -->
+                                                <ColorAnimation 
+                                Storyboard.TargetName="settingText" 
+                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                To="Black" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+
+                                    <!-- Trigger khi di chuột ra khỏi Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Trở lại màu nền gốc của Button khi di chuột ra -->
+                                                <ColorAnimation 
+                                 Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                To="Transparent" Duration="0:0:0.2" />
+                                                <!-- Trở lại màu Foreground gốc của TextBlock khi di chuột ra -->
+                                                <ColorAnimation 
+                                Storyboard.TargetName="settingText" 
+                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                To="#959595" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Icon:PackIconMaterial Kind="Cog"  VerticalAlignment="Center" Foreground="#959595"/>
+                                    <TextBlock x:Name="settingText"  Text=" Setting" FontFamily="Montserrat Bold" FontSize="17" Foreground="#959595"
+                    VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </StackPanel>
+                    <Grid Grid.Row="2" Margin="0,80,0,0">
+                        <Border>
+
+                            <Button x:Name="btnLogout"  Style="{StaticResource menuButton}" Width="158" Click="SignOut_Click">
+                                <Button.Triggers>
+                                    <!-- Trigger khi di chuột vào Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseEnter">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Đổi màu nền của Button khi di chuột vào -->
+                                                <ColorAnimation 
+                                Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                To="#ebdef2" Duration="0:0:0.2" />
+                                                <!-- Đổi màu Foreground của TextBlock khi di chuột vào -->
+                                                <ColorAnimation 
+                                Storyboard.TargetName="signoutText" 
+                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                To="Black" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+
+                                    <!-- Trigger khi di chuột ra khỏi Button -->
+                                    <EventTrigger RoutedEvent="UIElement.MouseLeave">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <!-- Trở lại màu nền gốc của Button khi di chuột ra -->
+                                                <ColorAnimation 
+                                Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                To="Transparent" Duration="0:0:0.2" />
+                                                <!-- Trở lại màu Foreground gốc của TextBlock khi di chuột ra -->
+                                                <ColorAnimation 
+                                Storyboard.TargetName="signoutText" 
+                                Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" 
+                                To="#959595" Duration="0:0:0.2" />
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </Button.Triggers>
+                                <StackPanel>
+                                    <Icon:PackIconMaterial HorizontalAlignment="Center" Kind="ExitToApp" Foreground="Gray" />
+                                    <TextBlock  x:Name="signoutText" Text="SIGN OUT" FontFamily="Montserrat" FontSize="17" Foreground="Gray" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </Button>
+                        </Border>
+                    </Grid>
                 </Grid>
-            </StackPanel>
-
-            <!--Youre Classroom-->
-            <StackPanel Margin="20,65,0,0" HorizontalAlignment="Left" Width="310">
-                <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="12"/>
-
-                <ScrollViewer VerticalScrollBarVisibility="Hidden" Height="255">
-                    <StackPanel>
-                        <Button x:Name="BtnClassroom1" Background="Transparent" Margin="0,5,0,10" BorderBrush="Transparent" Click="BtnClassroom1_Click">
-                            <Border Height="70" Width="278" CornerRadius="10" Background="#b897c6">
-                                <Grid Grid.Column="1" VerticalAlignment="Center">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="70"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                        <Ellipse Width="48" Height="48" Fill="#f6eefb" Stroke="Transparent" Margin="0,-10,0,0"/>
-                                        <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="48" Height="48" Stretch="UniformToFill" Margin="0,-10,0,0">
-                                            <Image.Clip>
-                                                <EllipseGeometry Center="24,24" RadiusX="24" RadiusY="24"/>
-                                            </Image.Clip>
-                                        </Image>
-                                        <TextBlock Text="Lect. Ross Geller" FontSize="8" Foreground="White" Margin="0,51,0,0"/>
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
-                                            <TextBlock Text="ENGLISH" FontSize="12" FontFamily="Montserrat Bold" Foreground="White" />
-                                            <TextBlock Text="12th September, 2024 - 21st November, 2024" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                            <TextBlock Text="+4 files uploaded" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </Grid>
-                            </Border>
-                        </Button>
-
-                        <Button x:Name="BtnClassroom2" Background="Transparent" Margin="0,-5,0,10" BorderBrush="Transparent" Click="BtnClassroom1_Click">
-                            <Border Height="70" Width="278" CornerRadius="10" Background="#b897c6">
-                                <Grid Grid.Column="1" VerticalAlignment="Center">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="70"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                        <Ellipse Width="48" Height="48" Fill="#f6eefb" Stroke="Transparent" Margin="0,-10,0,0"/>
-                                        <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="48" Height="48" Stretch="UniformToFill" Margin="0,-10,0,0">
-                                            <Image.Clip>
-                                                <EllipseGeometry Center="24,24" RadiusX="24" RadiusY="24"/>
-                                            </Image.Clip>
-                                        </Image>
-                                        <TextBlock Text="Lect. Ross Geller" FontSize="8" Foreground="White" Margin="0,51,0,0"/>
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
-                                            <TextBlock Text="ENGLISH" FontSize="12" FontFamily="Montserrat Bold" Foreground="White" />
-                                            <TextBlock Text="12th September, 2024 - 21st November, 2024" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                            <TextBlock Text="+4 files uploaded" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </Grid>
-                            </Border>
-                        </Button>
-
-                        <Button x:Name="BtnClassroom3" Background="Transparent" Margin="0,-5,0,10" BorderBrush="Transparent" Click="BtnClassroom1_Click">
-                            <Border Height="70" Width="278" CornerRadius="10" Background="#b897c6">
-                                <Grid Grid.Column="1" VerticalAlignment="Center">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="70"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                        <Ellipse Width="48" Height="48" Fill="#f6eefb" Stroke="Transparent" Margin="0,-10,0,0"/>
-                                        <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="48" Height="48" Stretch="UniformToFill" Margin="0,-10,0,0">
-                                            <Image.Clip>
-                                                <EllipseGeometry Center="24,24" RadiusX="24" RadiusY="24"/>
-                                            </Image.Clip>
-                                        </Image>
-                                        <TextBlock Text="Lect. Ross Geller" FontSize="8" Foreground="White" Margin="0,51,0,0"/>
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
-                                            <TextBlock Text="ENGLISH" FontSize="12" FontFamily="Montserrat Bold" Foreground="White" />
-                                            <TextBlock Text="12th September, 2024 - 21st November, 2024" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                            <TextBlock Text="+4 files uploaded" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </Grid>
-                            </Border>
-                        </Button>
-
-                        <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,-5,0,10" BorderBrush="Transparent" Click="BtnClassroom1_Click">
-                            <Border Height="70" Width="278" CornerRadius="10" Background="#b897c6">
-                                <Grid Grid.Column="1" VerticalAlignment="Center">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="70"/>
-                                        <ColumnDefinition Width="Auto"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                        <Ellipse Width="48" Height="48" Fill="#f6eefb" Stroke="Transparent" Margin="0,-10,0,0"/>
-                                        <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="48" Height="48" Stretch="UniformToFill" Margin="0,-10,0,0">
-                                            <Image.Clip>
-                                                <EllipseGeometry Center="24,24" RadiusX="24" RadiusY="24"/>
-                                            </Image.Clip>
-                                        </Image>
-                                        <TextBlock Text="Lect. Ross Geller" FontSize="8" Foreground="White" Margin="0,51,0,0"/>
-                                    </Grid>
-                                    <Grid Grid.Column="1">
-                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
-                                            <TextBlock Text="ENGLISH" FontSize="12" FontFamily="Montserrat Bold" Foreground="White" />
-                                            <TextBlock Text="12th September, 2024 - 21st November, 2024" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                            <TextBlock Text="+4 files uploaded" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </Grid>
-                            </Border>
-                        </Button>
-                    </StackPanel>
-                </ScrollViewer>
-            </StackPanel>
-
-            <!--Deadlines-->
-            <StackPanel Margin="310,65,20,0">
-                <TextBlock Text="Deadlines:" Foreground="Gray" FontFamily="Montserrat" FontSize="12"/>
-                <Border x:Name="boDeadlines" Height="240" Width="106" Background="White" CornerRadius="10" Margin="0,8,0,0">
-                    <ScrollViewer VerticalScrollBarVisibility="Hidden">
-                        <StackPanel Margin="5">
-                            <Border x:Name="boDeadline1" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Margin="3,5,3,5">
-                                <StackPanel>
-                                    <TextBlock Text="English" FontSize="13" FontFamily="Montserrat Bold" Foreground="#b897c6" />
-                                    <TextBlock Text="EX1: Travelling" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                    <TextBlock Text="Thursday, October 3rd" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                </StackPanel>
-                            </Border>
-                            <Border x:Name="boDeadline2" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Margin="3,5,3,5">
-                                <StackPanel>
-                                    <TextBlock Text="English" FontSize="13" FontFamily="Montserrat Bold" Foreground="#b897c6" />
-                                    <TextBlock Text="EX1: Travelling" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                    <TextBlock Text="Thursday, October 3rd" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                </StackPanel>
-                            </Border>
-                            <Border x:Name="boDeadline3" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Margin="3,5,3,5">
-                                <StackPanel>
-                                    <TextBlock Text="English" FontSize="13" FontFamily="Montserrat Bold" Foreground="#b897c6" />
-                                    <TextBlock Text="EX1: Travelling" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                    <TextBlock Text="Thursday, October 3rd" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                </StackPanel>
-                            </Border>
-                            <Border x:Name="boDeadline4" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Margin="3,5,3,5" >
-                                <StackPanel>
-                                    <TextBlock Text="English" FontSize="12" FontFamily="Montserrat Bold" Foreground="#b897c6" />
-                                    <TextBlock Text="EX1: Travelling" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                    <TextBlock Text="Thursday, October 3rd" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                </StackPanel>
-                            </Border>
-                            <Border x:Name="boDeadline5" HorizontalAlignment="Left" Background="Transparent" BorderBrush="Transparent" Margin="3,5,3,5" >
-                                <StackPanel>
-                                    <TextBlock Text="English" FontSize="12" FontFamily="Montserrat Bold" Foreground="#b897c6" />
-                                    <TextBlock Text="EX1: Travelling" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                    <TextBlock Text="Thursday, October 3rd" FontSize="8" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,2,0,0"/>
-                                </StackPanel>
-                            </Border>
+                <Border Grid.Column="1" Background="White"/>
+                <Border Grid.Column="1" CornerRadius="20 0 0 20" Background="#ebdef2"/>
+                <Grid Grid.Column="1" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="215"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Margin="120,30,120,0" >
+                        <Border x:Name="boSearch" Background="White" CornerRadius="10" Height="45">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <Icon:PackIconMaterial Kind="Magnify" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0" Width="25" Height="25"/>
+                                <TextBox x:Name="boxSearch" Background="Transparent" BorderBrush="Transparent" Foreground="#b897d1"
+                                Width="227" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                            </StackPanel>
+                        </Border>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock x:Name="txtSearch" Text="Search..." Foreground="#b897d1" FontFamily="Montserrat" Margin="38,0,0,0" IsHitTestVisible="False"  />
                         </StackPanel>
-                    </ScrollViewer>
-                </Border>
-            </StackPanel>
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="30,30,30,0">
+                        <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
+                    </Grid>
+                    <Grid Grid.Row="2" Margin="0,15,0,0" >
+                        <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,-5,0,5" Height="200" BorderBrush="Transparent" Click="BtnClassroom1_Click" >
+                            <Border Height="170" Width="689" CornerRadius="10" Background="#b897c6">
+                                <Grid Grid.Column="1" VerticalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="auto" MinWidth="100"/>
+                                        <ColumnDefinition Width="Auto" MinWidth="369.5"/>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Margin="30,0,0,0">
+                                        <Grid Width="120" Height="120" Margin="0,10,0,0">
+                                            <Ellipse Width="110" Height="110" Fill="#f6eefb" Stroke="Transparent"/>
+                                            <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="100" Stretch="UniformToFill" Height="100">
+                                                <Image.Clip>
+                                                    <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                                                </Image.Clip>
+                                            </Image>
+                                        </Grid>
+                                        <TextBlock Text="Lect. Ross Geller" FontSize="18" Foreground="White" HorizontalAlignment="Center"/>
+                                    </StackPanel>
+                                    <Grid Grid.Column="1" Margin="15,0,0,0">
+                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                            <TextBlock Text="ENGLISH" FontSize="34" FontFamily="Montserrat Bold" Foreground="White" />
+                                            <TextBlock Text="12th September, 2024 - 21st November, 2024" FontSize="18" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
+                                            <TextBlock Text="+4 files uploaded" FontSize="18" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Button>
+                    </Grid>
+                </Grid>
 
-        </Grid>
-    </Grid>
-
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="75"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="1"  Margin="30,30,30,0">
+                        <TextBlock Text="Deadlines:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Border x:Name="boDeadlines"  Background="White" CornerRadius="30" Margin="0,23,0,0">
+                            <Border x:Name="boDeadline1" Background="Transparent" BorderBrush="Transparent">
+                                <StackPanel Margin="10,30,10,0">
+                                    <TextBlock Text="English" FontSize="34" FontFamily="Montserrat Bold" Foreground="#b897c6" />
+                                    <TextBlock Text="EX1: Travelling" FontSize="22" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,10,0,0"/>
+                                    <TextBlock Text="Thursday, October 3rd" FontSize="22" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,10,0,0"/>
+                                </StackPanel>
+                            </Border>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Border>
+    </Border>
 </Window>

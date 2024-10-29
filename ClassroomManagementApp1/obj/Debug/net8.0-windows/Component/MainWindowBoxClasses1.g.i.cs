@@ -61,7 +61,7 @@ namespace ClassroomManagementApp1.Component {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClassroomManagementApp1;component/component/mainwindowboxclasses1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClassroomManagementApp1;V1.0.0.0;component/component/mainwindowboxclasses1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Component\MainWindowBoxClasses1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
