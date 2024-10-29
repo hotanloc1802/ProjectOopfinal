@@ -3,12 +3,103 @@
   "WorkspaceRootPath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\mainwindowview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\mainwindowview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxassignments1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxassignments1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\classroomlistviewclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\classroomlistviewclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\mainwindowview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\mainwindowview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\assigmentlistviewassignments.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\assigmentlistviewassignments.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\assignmentlistviewassignmentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\assignmentlistviewassignmentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\classroomlistviewassignmentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\classroomlistviewassignmentsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\classroomlistviewclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\classroomlistviewclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\assignmentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\assignmentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\classroomsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\classroomsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\classesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\classesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\classinfoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\classinfoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\classroomlistviewassignments.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -19,12 +110,16 @@
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\classroomlistviewassignments.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\assigmentlistviewassignments.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\assigmentlistviewassignments.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\classroomlistviewclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\classroomlistviewclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\service\\teachersevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\service\\teachersevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\classroomlistviewclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\classroomlistviewclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclasses1viewmodel .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,10 +132,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclasses2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclasses2viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,14 +150,6 @@
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\serviceviewmodel\\accountviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxassignments1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxassignments1viewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\classroomsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\classroomsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\settingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\settingview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -75,32 +158,12 @@
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\signinview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\classesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\classesview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\classinfoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\classinfoview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\classroomlistviewclasses.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\classroomlistviewclasses.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\mainwindowview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\mainwindowview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxclassesitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\viewmodels\\serviceviewmodel\\classviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -113,10 +176,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\service\\classservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\service\\classservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments2.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -159,24 +218,12 @@
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\mainwindowview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\mainwindowview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\settingview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,10 +238,6 @@
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\signinview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxassignments1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxassignments1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -203,24 +246,12 @@
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\mainwindowboxassignmentsitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\models\\assignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\component\\mainwindowboxclasses.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\component\\mainwindowboxclasses.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\classroomsview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -251,14 +282,6 @@
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\viewmodels\\boxclasses\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\mainui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\mainui.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\service\\teachersevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\service\\teachersevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\data\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -273,10 +296,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\models\\classstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\models\\classstudent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|c:\\users\\admin\\source\\repos\\classroommanagementapp1\\classroommanagementapp1\\views\\assignmentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{F6579728-22B3-463D-A4F2-A7ADBD08732A}|ClassroomManagementApp1\\ClassroomManagementApp1.csproj|solutionrelative:classroommanagementapp1\\views\\assignmentsview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -286,57 +305,42 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClassroomListViewAssignments.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAWwA0AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T20:23:55.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ClassroomListViewAssignments.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
+              "Title": "MainWindowView.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\MainWindowView.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\MainWindowView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T20:06:18.317Z",
+              "WhenOpened": "2024-10-25T10:48:46.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClassroomListViewAssignmentsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAkwEQAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T20:07:03.911Z",
+              "DocumentIndex": 5,
+              "Title": "MainWindowBoxAssignments.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T17:06:02.211Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ClassroomListViewClassesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAcwEgAAABWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T18:14:45.408Z",
+              "Title": "MainWindowBoxClasses.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T17:06:59.051Z",
               "EditorCaption": ""
             },
             {
@@ -353,246 +357,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClassroomListViewClasses.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T18:03:42.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MainWindowBoxClasses1ViewModel .cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:16:25.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MainWindowBoxAssignments2ViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T21:38:49.785Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MainWindowBoxClasses2ViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAWwCgAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:23:14.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainWindowBoxClassesViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:23:05.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MainWindowViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAIA7wD0AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:31:16.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MainWindowBoxAssignmentsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T21:37:55.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AssignmentViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAD4vw0AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:25:55.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "AccountViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T17:25:57.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MainWindowBoxAssignments1ViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCgAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T21:38:27.516Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "SignInView.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SignInView.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SignInView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T14:39:16.393Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ClassInfoView.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T15:03:57.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "SettingView.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SettingView.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SettingView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:14:36.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ClassesView.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassesView.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassesView.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassesView.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassesView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T21:18:43.15Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ClassroomsView.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-25T10:52:27.002Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ClassroomListViewClasses.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAWwA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T18:04:11.631Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "MainWindowView.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\MainWindowView.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\MainWindowView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-25T10:48:46.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\MainWindow.xaml",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\MainWindow.xaml",
               "RelativeToolTip": "ClassroomManagementApp1\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:41:14.412Z",
+              "WhenOpened": "2024-10-28T08:16:52.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Class.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Class.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Class.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Class.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Class.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "MainWindowBoxClasses.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAUwCkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T16:55:44.471Z",
+              "WhenOpened": "2024-10-26T17:10:48.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 6,
               "Title": "MainWindowBoxClassesItem.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesItem.cs",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesItem.cs",
@@ -605,286 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "ClassViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAcwDwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:27:36.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "MainWindowBoxStudentInfoViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAmwC4AAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T17:21:34.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "ClassService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\ClassService.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\ClassService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\ClassService.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Service\\ClassService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwA4AAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T16:59:01.225Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "MainWindowBoxAssignments2.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:06:36.239Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "MainWindowBoxAssignments2.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwB0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:09:59.841Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "MainWindowBoxStudentInfo.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-27T16:44:10.27Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "MainWindowBoxStudentInfo.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T16:47:16.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "MainWindowBoxClasses2.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwB0AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:12:10.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "MainWindowBoxStudentInfoItem.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T17:23:46.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AccountService.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\AccountService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AccountService.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Service\\AccountService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T17:27:45.502Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "AssignmentService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AssignmentService.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\AssignmentService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AssignmentService.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Service\\AssignmentService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAADwvyEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T16:58:47.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "StudentService.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\StudentService.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\StudentService.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\StudentService.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Service\\StudentService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T16:59:15.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Account.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Account.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Account.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Account.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T11:10:47.877Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Student.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Student.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Student.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Student.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Student.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T16:56:04.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "MainWindowView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAADgv0MAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T10:50:10.111Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "MainWindowBoxClasses.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:06:59.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:23:38.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "MainWindowBoxAssignments.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBkAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:08:19.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "MainWindowBoxAssignments.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:06:02.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "SettingView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAwwFAAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T18:53:57.175Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ClassInfoView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T15:05:31.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "SignInView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T14:47:51.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 7,
               "Title": "MainWindowBoxAssignments1.xaml",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml",
@@ -896,187 +407,239 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "MainWindowBoxAssignments1.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "MainWindowBoxAssignments1ViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments1ViewModel.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCgAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:09:10.986Z"
+              "WhenOpened": "2024-10-26T21:38:27.516Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "MainWindowBoxAssignmentsItem.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T21:39:29.132Z"
+              "DocumentIndex": 9,
+              "Title": "ClassroomListViewClasses.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-27T18:03:42.652Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 10,
+              "Title": "MainWindowView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\MainWindowView.xaml.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAwEIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T10:50:10.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainWindowBoxAssignments2.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T17:06:36.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Window1.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Window1.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Window1.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Window1.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Window1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T19:13:20.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "MainWindowBoxClasses1.xaml",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml",
               "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:07:11.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-26T17:07:11.003Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 14,
+              "Title": "MainWindowBoxClassesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClassesViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:23:05.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AssigmentListViewAssignments.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T04:19:03.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Window1.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\Window1.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\Window1.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\Window1.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\Window1.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-28T05:03:07.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AssignmentListViewAssignmentsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\AssignmentListViewAssignmentsViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\AssignmentListViewAssignmentsViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\AssignmentListViewAssignmentsViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\AssignmentListViewAssignmentsViewModel.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAiwFkAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T04:23:21.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Microsoft.WinFX.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.400\\Sdks\\Microsoft.NET.Sdk.WindowsDesktop\\targets\\Microsoft.WinFX.targets",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAmwNIAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-10-28T04:42:30.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ClassroomsView.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-25T10:52:27.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClassesView.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassesView.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassesView.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassesView.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassesView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T21:18:43.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClassroomListViewAssignmentsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewAssignmentsViewModel.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwBUAAABrAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T20:07:03.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ClassInfoView.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-27T15:03:57.343Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
               "Title": "Assignment.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Assignment.cs",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Assignment.cs",
               "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Assignment.cs",
               "RelativeToolTip": "ClassroomManagementApp1\\Models\\Assignment.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-26T16:55:21.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "MainWindowBoxClasses1.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAcwCAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:11:35.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "MainWindowBoxClasses2.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
+              "DocumentIndex": 20,
+              "Title": "AssignmentsView.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:07:21.206Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T11:06:09.659Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "MainWindowBoxClasses.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAcwCAAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:10:48.176Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "ClassroomsView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwC0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T10:56:22.17Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Subject.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Subject.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Subject.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Subject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T16:56:12.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Command\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Command\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Command\\RelayCommand.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Command\\RelayCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T18:11:36.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "StudentViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:29:22.977Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "TeacherViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAAwAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:30:21.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "AssignmentsView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAhwB0AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T11:00:26.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 61,
-              "Title": "ViewModelBase.cs",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
-              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T17:16:58.953Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 62,
-              "Title": "MainUI.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainUI.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\MainUI.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\MainUI.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\MainUI.xaml",
+              "DocumentIndex": 25,
+              "Title": "ClassroomListViewAssignments.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-26T17:14:31.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T20:06:18.317Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 26,
+              "Title": "ClassroomListViewAssignments.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewAssignments.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAWwBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T20:23:55.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AssigmentListViewAssignments.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\AssigmentListViewAssignments.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T04:24:57.34Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "TeacherSevice.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\TeacherSevice.cs",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\TeacherSevice.cs",
@@ -1088,7 +651,495 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ClassroomListViewClassesViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ClassroomListViewClassesViewModel.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwEgAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T18:14:45.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MainWindowBoxClasses1ViewModel .cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses1ViewModel .cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:16:25.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MainWindowBoxAssignments2ViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignments2ViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T21:38:49.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MainWindowBoxClasses2ViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxClasses2ViewModel.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAWwCgAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:23:14.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAIA7wD0AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:31:16.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MainWindowBoxAssignmentsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsViewModel.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAD4vygAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T21:37:55.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AssignmentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AssignmentViewModel.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAD4vw0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:25:55.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "AccountViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\AccountViewModel.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T17:25:57.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "SignInView.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SignInView.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SignInView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-27T14:39:16.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "SettingView.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SettingView.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SettingView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T17:14:36.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ClassroomListViewClasses.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\ClassroomListViewClasses.xaml.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAWwA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T18:04:11.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Class.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Class.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Class.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Class.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Class.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T16:55:44.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "ClassViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\ClassViewModel.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAcwDwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:27:36.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "MainWindowBoxStudentInfoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoViewModel.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAmwC4AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T17:21:34.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "ClassService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\ClassService.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\ClassService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\ClassService.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Service\\ClassService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwA4AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T16:59:01.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "MainWindowBoxAssignments2.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments2.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:09:59.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "MainWindowBoxStudentInfo.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-27T16:44:10.27Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "MainWindowBoxStudentInfo.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxStudentInfo.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T16:47:16.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "MainWindowBoxClasses2.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwB0AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:12:10.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "MainWindowBoxStudentInfoItem.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxStudentInfoItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T17:23:46.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AccountService.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\AccountService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AccountService.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Service\\AccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T17:27:45.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "AssignmentService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AssignmentService.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\AssignmentService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\AssignmentService.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Service\\AssignmentService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAADwvyEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T16:58:47.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "StudentService.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\StudentService.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Service\\StudentService.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Service\\StudentService.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Service\\StudentService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAgAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T16:59:15.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Account.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Account.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Account.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Account.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T11:10:47.877Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Student.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Student.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T16:56:04.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:23:38.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "MainWindowBoxAssignments.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments.xaml.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAiwBkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:08:19.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "SettingView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SettingView.xaml.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAwwFAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T18:53:57.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "ClassInfoView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassInfoView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T15:05:31.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "SignInView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\SignInView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T14:47:51.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "MainWindowBoxAssignments1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxAssignments1.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:09:10.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "MainWindowBoxAssignmentsItem.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\MainWindowBoxAssignmentsItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T21:39:29.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "MainWindowBoxClasses1.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses1.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAcwCAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:11:35.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "MainWindowBoxClasses2.xaml",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
+              "RelativeToolTip": "ClassroomManagementApp1\\Component\\MainWindowBoxClasses2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-26T17:07:21.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "ClassroomsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\ClassroomsView.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwC0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T10:56:22.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Subject.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Subject.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Subject.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Models\\Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T16:56:12.576Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 65,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Command\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Command\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Command\\RelayCommand.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Command\\RelayCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T18:11:36.263Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "StudentViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\StudentViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:29:22.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "TeacherViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\ServiceViewModel\\TeacherViewModel.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAwAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:30:21.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "AssignmentsView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAhwB0AAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T11:00:26.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
+              "RelativeToolTip": "ClassroomManagementApp1\\ViewModels\\BoxClasses\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-26T17:16:58.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
               "Title": "Teacher.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Teacher.cs",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Teacher.cs",
@@ -1100,7 +1151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 73,
               "Title": "Classstudent.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Classstudent.cs",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Classstudent.cs",
@@ -1112,7 +1163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 70,
               "Title": "Dbcontext.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Data\\Dbcontext.cs",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Data\\Dbcontext.cs",
@@ -1124,7 +1175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 72,
               "Title": "Submission.cs",
               "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Models\\Submission.cs",
               "RelativeDocumentMoniker": "ClassroomManagementApp1\\Models\\Submission.cs",
@@ -1133,17 +1184,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T09:19:49.561Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 68,
-              "Title": "AssignmentsView.xaml",
-              "DocumentMoniker": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
-              "RelativeDocumentMoniker": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
-              "ToolTip": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
-              "RelativeToolTip": "ClassroomManagementApp1\\Views\\AssignmentsView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-25T11:06:09.659Z"
             }
           ]
         }

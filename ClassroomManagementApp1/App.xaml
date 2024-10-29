@@ -2,8 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks" 
-             xmlns:local="clr-namespace:ClassroomManagementApp1.Component"
-             StartupUri="Component/ClassroomListViewAssignments.xaml">
+             xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
+             StartupUri="Views/MainWindowView.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

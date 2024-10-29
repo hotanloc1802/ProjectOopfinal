@@ -29,8 +29,17 @@ namespace ClassroomManagementApp1.Component
         }
         private void BtnClassroom1_Click(object sender, RoutedEventArgs e)
         {
+            // Hiển thị ClassesView
             ClassesView ClassWindow = new ClassesView();
             ClassWindow.Show();
+
+            // Ẩn cửa sổ chứa UserControl
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                parentWindow.Visibility = Visibility.Hidden;
+            }
         }
+
     }
 }
