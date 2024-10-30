@@ -62,6 +62,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         {
             var cls = await _classService.GetClassById(classId);
             SelectedClass = cls; // Gán lớp học vào property để hiển thị
+
         }
         public async Task LoadClassesByStudentIdAsync(string studentId)
         {

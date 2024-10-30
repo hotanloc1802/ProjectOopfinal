@@ -17,7 +17,7 @@ namespace ClassroomManagementApp1.Component
     /// <summary>
     /// Interaction logic for ClassroomListViewClasses.xaml
     /// </summary>
-    public partial class ClassroomListViewClasses : Window
+    public partial class ClassroomListViewClasses : UserControl
     {
         public ClassroomListViewClasses()
         {

@@ -248,12 +248,13 @@
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <Icon:PackIconMaterial Kind="Magnify" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0" Width="25" Height="25"/>
                                 <TextBox x:Name="boxSearch" Background="Transparent" BorderBrush="Transparent" Foreground="#b897d1"
-                                    Width="227" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" />
+                                    Width="227" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" KeyDown="boxSearch_KeyDown"/>
                             </StackPanel>
                         </Border>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <TextBlock x:Name="txtSearch" Text="Search..." Foreground="#b897d1" FontFamily="Montserrat" Margin="38,0,0,0" IsHitTestVisible="False"  />
                         </StackPanel>
+                       
                     </Grid>
                     <Grid Grid.Row="1" Margin="0,40,0,0">
                         <Border Background="white" CornerRadius="10" Margin="40,0,40,10" Height="160">

@@ -1,36 +1,44 @@
-﻿<Window x:Class="ClassroomManagementApp1.Component.ClassroomListViewClasses"
+﻿<UserControl x:Class="ClassroomManagementApp1.Component.ClassroomListViewClasses"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassroomManagementApp1.Component"
+        xmlns:convert="clr-namespace:ClassroomManagementApp1.ValueConverter"
         mc:Ignorable="d"
         Height="450" Width="800">
+    <UserControl.Resources>
+        <convert:MainWindowBoxClassesDateConverter x:Key="MainWindowBoxClassesDateConverter" />
+    </UserControl.Resources>
     <Grid>
-        <ListView ItemsSource="{Binding Listclasses}">
+        <ListView ItemsSource="{Binding ListClassesWithDateRange}" ScrollViewer.VerticalScrollBarVisibility="Visible"
+          ScrollViewer.CanContentScroll="False"
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Button Background="Transparent" Margin="0,5,0,10" BorderBrush="Transparent" Height="70" Width="278" >
-                        <Border Height="70" Width="278" CornerRadius="10" Background="#b897c6" >
-                            <Grid VerticalAlignment="Center">
+                    <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,0,0,5" Height="200" BorderBrush="Transparent" >
+                        <Border Height="170" Width="689" CornerRadius="10" Background="#b897c6">
+                            <Grid Grid.Column="1" VerticalAlignment="Center">
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="70"/>
-                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="auto" MinWidth="100"/>
+                                    <ColumnDefinition Width="Auto" MinWidth="369.5"/>
                                 </Grid.ColumnDefinitions>
-                                <Grid Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                                    <Ellipse Width="48" Height="48" Fill="#f6eefb" Stroke="Transparent" Margin="0,-10,0,0"/>
-                                    <Image Source="/images/profile.png" Width="48" Height="48" Stretch="UniformToFill" Margin="0,-10,0,0">
-                                        <Image.Clip>
-                                            <EllipseGeometry Center="24,24" RadiusX="24" RadiusY="24"/>
-                                        </Image.Clip>
-                                    </Image>
-                                    <TextBlock Text="Lect. Ross Geller" FontSize="8" Foreground="White" Margin="0,51,0,0"/>
-                                </Grid>
-                                <Grid Grid.Column="1">
-                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0"  Height="70" Width="278" >
-                                        <TextBlock Text="{Binding subjectid}" FontSize="12" FontFamily="Montserrat Bold" Foreground="White" />
-                                        <TextBlock Text="12th September, 2024 - 21st November, 2024" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                        <TextBlock Text="+4 files uploaded" FontSize="8" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
+                                <StackPanel Margin="30,0,0,0">
+                                    <Grid Width="120" Height="120" Margin="0,10,0,0">
+                                        <Ellipse Width="110" Height="110" Fill="#f6eefb" Stroke="Transparent"/>
+                                        <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="100" Stretch="UniformToFill" Height="100">
+                                            <Image.Clip>
+                                                <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
+                                            </Image.Clip>
+                                        </Image>
+                                    </Grid>
+                                    <TextBlock Text="Lect. Ross Geller" FontSize="18" Foreground="White" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                <Grid Grid.Column="1" Margin="15,0,0,0">
+                                    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
+                                        <TextBlock Text="{Binding classname}" FontSize="34" FontFamily="Montserrat Bold" Foreground="White" />
+                                        <TextBlock Text="{Binding DateRange, Converter={StaticResource MainWindowBoxClassesDateConverter}}" FontSize="18" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
+                                        <TextBlock Text="{Binding AssignmentCount, StringFormat='{}{0} assignments updated'}"  FontSize="18" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
                                     </StackPanel>
                                 </Grid>
                             </Grid>
@@ -40,4 +48,4 @@
             </ListView.ItemTemplate>
         </ListView>
     </Grid>
-</Window>
+</UserControl>

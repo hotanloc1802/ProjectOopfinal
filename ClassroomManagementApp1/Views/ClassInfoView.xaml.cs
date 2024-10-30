@@ -29,5 +29,17 @@ namespace ClassroomManagementApp1.Views
         {
             RequestClose?.Invoke(this, EventArgs.Empty);
         }
+        private void OK_Click(object obj, RoutedEventArgs e)
+        {
+            // Hiển thị hộp thoại xác nhận
+            var result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận thoát", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            // Kiểm tra kết quả chọn của người dùng
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close(); // Đóng cửa sổ nếu chọn Yes
+            }
+            // Nếu chọn No, không làm gì cả
+        }
     }
 }

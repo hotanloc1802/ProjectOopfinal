@@ -6,6 +6,7 @@
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/iconpacks"
         xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
+        xmlns:component="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d"
             Title="MainWindowView" Height="760" Width="1280" Background="Transparent" ResizeMode="NoResize"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
@@ -228,7 +229,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="75"/>
                         <RowDefinition Height="auto"/>
-                        <RowDefinition Height="215"/>
+                        <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0" Margin="120,30,120,0" >
                         <Border x:Name="boSearch" Background="White" CornerRadius="10" Height="45">
@@ -245,35 +246,8 @@
                     <Grid Grid.Row="1" Margin="30,30,30,0">
                         <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
                     </Grid>
-                    <Grid Grid.Row="2" Margin="0,15,0,0" >
-                        <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,-5,0,5" Height="200" BorderBrush="Transparent" Click="BtnClassroom1_Click" >
-                            <Border Height="170" Width="689" CornerRadius="10" Background="#b897c6">
-                                <Grid Grid.Column="1" VerticalAlignment="Center">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="auto" MinWidth="100"/>
-                                        <ColumnDefinition Width="Auto" MinWidth="369.5"/>
-                                    </Grid.ColumnDefinitions>
-                                    <StackPanel Margin="30,0,0,0">
-                                        <Grid Width="120" Height="120" Margin="0,10,0,0">
-                                            <Ellipse Width="110" Height="110" Fill="#f6eefb" Stroke="Transparent"/>
-                                            <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\profile.png" Width="100" Stretch="UniformToFill" Height="100">
-                                                <Image.Clip>
-                                                    <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"/>
-                                                </Image.Clip>
-                                            </Image>
-                                        </Grid>
-                                        <TextBlock Text="Lect. Ross Geller" FontSize="18" Foreground="White" HorizontalAlignment="Center"/>
-                                    </StackPanel>
-                                    <Grid Grid.Column="1" Margin="15,0,0,0">
-                                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
-                                            <TextBlock Text="ENGLISH" FontSize="34" FontFamily="Montserrat Bold" Foreground="White" />
-                                            <TextBlock Text="12th September, 2024 - 21st November, 2024" FontSize="18" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                            <TextBlock Text="+4 files uploaded" FontSize="18" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                        </StackPanel>
-                                    </Grid>
-                                </Grid>
-                            </Border>
-                        </Button>
+                    <Grid Grid.Row="2" >
+                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,0,0,10" Height="548" VerticalAlignment="Bottom"/>
                     </Grid>
                 </Grid>
 

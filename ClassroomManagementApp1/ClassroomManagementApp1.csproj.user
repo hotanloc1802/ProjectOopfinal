@@ -10,6 +10,9 @@
     <Compile Update="Component\AssigmentListViewAssignments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Component\ClassInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Component\ClassroomListViewAssignments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Component\AssigmentListViewAssignments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\ClassInfo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Component\ClassroomListViewAssignments.xaml">

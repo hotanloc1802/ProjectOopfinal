@@ -51,6 +51,7 @@ namespace ClassroomManagementApp1.ClassService
             return await _context.Classes
                 .Include(c => c.Teacher) // Bao gồm thông tin giáo viên
                 .Include(c => c.Subject) // Bao gồm thông tin môn học
+                .Include(c=> c.Assignments)
                 .FirstOrDefaultAsync(c => c.classid == classId); // Lọc theo classId
         }
 
@@ -61,6 +62,7 @@ namespace ClassroomManagementApp1.ClassService
                 .Where(c => c.ClassStudents.Any(cs => cs.studentid == studentId)) // Kiểm tra mối quan hệ học sinh-lớp
                 .Include(c => c.Teacher) // Bao gồm thông tin giáo viên
                 .Include(c => c.Subject) // Bao gồm thông tin môn học
+                .Include (c => c.Assignments)   
                 .ToListAsync();
         }
     }

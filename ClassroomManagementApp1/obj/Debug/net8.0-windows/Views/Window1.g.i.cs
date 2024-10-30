@@ -111,7 +111,7 @@ namespace ClassroomManagementApp1.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClassroomManagementApp1;V1.0.0.0;component/views/window1.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClassroomManagementApp1;component/views/window1.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\Window1.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

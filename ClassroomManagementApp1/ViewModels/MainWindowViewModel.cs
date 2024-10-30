@@ -6,7 +6,7 @@ using ClassroomManagementApp1.ViewModels.BoxClasses;
 using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
-using ClassroomManagementApp1.ViewModels.BoxClasses;
+using ClassroomManagementApp1.Commands;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.ViewModels;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +22,7 @@ namespace ClassroomManagementApp1.ViewModels
         private readonly ClassesService _classService;
         private readonly AssignmentService _assignmentService;
         // 2. Tạo các instance phương thức Relaycommand
+        public ICommand SearchCommand { get; }
         // 3. Tạo các instance của component
         public MainWindowBoxClassesViewModel MainWindowBoxClassesViewModel { get; set; }
         // 4. Tạo các biến lưu trữ
@@ -58,6 +59,7 @@ namespace ClassroomManagementApp1.ViewModels
             _assignmentService = assignmentService;
             ClassViewModel = new ClassViewModel(_classService);
             AssignmentViewModel = new AssignmentViewModel(_assignmentService);
+            SearchCommand = new SearchClassCommand(ClassViewModel);
 
         }
         private static (ClassesService, AssignmentService) CreateDbContext()

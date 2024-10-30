@@ -74,9 +74,16 @@ namespace ClassroomManagementApp1.Views
         }
         private void boxSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.Key == Key.Enter)
+            {
+                var searchText = boxSearch.Text; // Lấy văn bản từ TextBox
+                var command = DataContext?.GetType().GetProperty("SearchCommand")?.GetValue(DataContext) as ICommand; // Lấy command từ DataContext
+                if (command != null && command.CanExecute(searchText)) // Kiểm tra điều kiện thực thi
+                {
+                    command.Execute(searchText); // Thực hiện command
+                }
+            }
         }
 
-        
     }
 }
