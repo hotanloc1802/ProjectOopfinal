@@ -1,4 +1,4 @@
-﻿using ClassroomManagementApp1.ViewModels.BoxClasses;
+﻿using ClassroomManagementApp1.ViewModels.MainWindowBoxAssignmentsViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;

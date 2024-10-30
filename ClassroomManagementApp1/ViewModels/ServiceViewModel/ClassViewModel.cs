@@ -17,7 +17,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 
         // ObservableCollection to notify UI of changes
         public ObservableCollection<Class> Classes { get; set; } = new ObservableCollection<Class>();
-
+        public ObservableCollection<Assignment> Assignments { get; set; } = new ObservableCollection<Assignment>();
         public ClassViewModel(ClassesService classService)
         {
             _classService = classService;
@@ -35,6 +35,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         // Tải tất cả các lớp học
         public async Task LoadAllClassesAsync(string studentid)
         {
+            //Assignments.Clear();
             var classList = await _classService.GetAllClassesByStudentId(studentid);
             Classes.Clear();
             foreach (var cls in classList)
@@ -45,13 +46,17 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         // Tải 3 lớp gần nhất theo StudentID
         public async Task LoadTop3NearestClassesByStudentIdAsync(string studentId)
         {
+            //Assignments.Clear();
             var classList = await _classService.GetTop3NearestClassesByStudentId(studentId);
             Classes.Clear();
             foreach (var cls in classList)
             {
                 Classes.Add(cls);
+               
             }
+
         }
+
         // Lấy thông tin của một lớp học theo ClassID
         public async Task LoadClassByIdAsync(string classId)
         {
@@ -60,13 +65,34 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         }
         public async Task LoadClassesByStudentIdAsync(string studentId)
         {
+            //Assignments.Clear();
             var classList = await _classService.GetClassesByStudentId(studentId);
             Classes.Clear();
             foreach (var cls in classList)
             {
                 Classes.Add(cls);
+                foreach (var assignment in cls.Assignments)
+                {
+                    Assignments.Add(assignment);
+                }
+            }
+
+        }
+        // Tải bài tập theo ClassID
+        public async Task LoadAssignmentsByClassIdAsync(string classId)
+        {
+            // Lấy lớp học theo ClassID
+            var cls = await _classService.GetClassById(classId);
+            if (cls != null) // Kiểm tra xem lớp học có tồn tại không
+            {
+                Assignments.Clear(); // Xóa các bài tập cũ
+                foreach (var assignment in cls.Assignments)
+                {
+                    Assignments.Add(assignment); // Thêm bài tập vào danh sách
+                }
             }
         }
+
         // PropertyChanged event handler for UI updates
         public event PropertyChangedEventHandler PropertyChanged;
 

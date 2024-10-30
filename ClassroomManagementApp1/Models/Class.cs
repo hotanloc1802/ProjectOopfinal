@@ -33,6 +33,6 @@ namespace ClassroomManagementApp1.Models
         public Teacher Teacher { get; set; }
 
         // Navigation Property for Assignment (1-n)
-        public ICollection<Assignment> Assignments { get; set; }
+        public ICollection<Assignment> Assignments { get; set; } = new List<Assignment>();
     }
 }

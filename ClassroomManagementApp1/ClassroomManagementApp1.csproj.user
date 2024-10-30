@@ -25,13 +25,13 @@
     <Compile Update="Component\MainWindowBoxAssignments2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\MainWindowBoxClasses.xaml.cs">
+    <Compile Update="Component\ClassroomBoxClasses\MainWindowBoxClasses.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\MainWindowBoxClasses1.xaml.cs">
+    <Compile Update="Component\ClassroomBoxClasses\MainWindowBoxClasses1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\MainWindowBoxClasses2.xaml.cs">
+    <Compile Update="Component\ClassroomBoxClasses\MainWindowBoxClasses2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Component\MainWindowBoxStudentInfo.xaml.cs">
@@ -87,13 +87,13 @@
     <Page Update="Component\MainWindowBoxAssignments2.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\MainWindowBoxClasses.xaml">
+    <Page Update="Component\ClassroomBoxClasses\MainWindowBoxClasses.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\MainWindowBoxClasses1.xaml">
+    <Page Update="Component\ClassroomBoxClasses\MainWindowBoxClasses1.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\MainWindowBoxClasses2.xaml">
+    <Page Update="Component\ClassroomBoxClasses\MainWindowBoxClasses2.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Component\MainWindowBoxStudentInfo.xaml">

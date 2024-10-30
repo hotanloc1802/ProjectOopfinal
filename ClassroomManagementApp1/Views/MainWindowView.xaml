@@ -309,10 +309,10 @@
                             <component:MainWindowBoxClasses/>
                         </Grid>
                         <Grid Grid.Column="1" Margin="10,0,10,0">
-                            <component:MainWindowBoxClasses/>
+                            <component:MainWindowBoxClasses1/>
                         </Grid>
                         <Grid Grid.Column="2" Margin="10,0,10,0">
-                            <component:MainWindowBoxClasses/>
+                            <component:MainWindowBoxClasses2/>
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="4" Margin="10,15,10,0">
@@ -322,13 +322,13 @@
                             <ColumnDefinition Width="0.3*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0" Margin="10,0,10,0">
-                            <component:MainWindowBoxAssignments/>
+                            <component:MainWindowBoxAssignments />
                         </Grid>
                         <Grid Grid.Column="1" Margin="10,0,10,0">
-                            <component:MainWindowBoxAssignments/>
+                            <component:MainWindowBoxAssignments1/>
                         </Grid>
                         <Grid Grid.Column="2" Margin="10,0,10,0">
-                            <component:MainWindowBoxAssignments/>
+                            <component:MainWindowBoxAssignments2/>
                         </Grid>
                     </Grid>
                 </Grid>

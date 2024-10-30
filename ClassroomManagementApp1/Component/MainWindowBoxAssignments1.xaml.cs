@@ -1,4 +1,4 @@
-﻿using ClassroomManagementApp1.ViewModels.BoxClasses;
+﻿using ClassroomManagementApp1.ViewModels.MainWindowBoxAssignmentsViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +23,7 @@ namespace ClassroomManagementApp1.Component
         public MainWindowBoxAssignments1()
         {
             InitializeComponent();
-            DataContext = new MainWindowBoxAssignments1ViewModel();
+            DataContext = new MainWindowBoxAssignmentsViewModel();
         }
     }
 }

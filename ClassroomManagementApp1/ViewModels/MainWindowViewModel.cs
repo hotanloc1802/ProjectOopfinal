@@ -24,8 +24,6 @@ namespace ClassroomManagementApp1.ViewModels
         // 2. Tạo các instance phương thức Relaycommand
         // 3. Tạo các instance của component
         public MainWindowBoxClassesViewModel MainWindowBoxClassesViewModel { get; set; }
-        public MainWindowBoxClasses1ViewModel MainWindowBoxClasses1ViewModel { get; set; }
-        public MainWindowBoxClasses2ViewModel MainWindowBoxClasses2ViewModel { get; set; }
         // 4. Tạo các biến lưu trữ
         private string _studentId;
         public string StudentId

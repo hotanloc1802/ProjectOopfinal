@@ -2,6 +2,7 @@
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels;
+using ClassroomManagementApp1.ViewModels.MainWindowBoxAssignmentsViewModel;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;

@@ -40,6 +40,7 @@ namespace ClassroomManagementApp1.ClassService
                 .Select(cs => cs.Class) // Chọn đối tượng lớp học
                 .Include(c => c.Teacher) // Bao gồm thông tin giáo viên
                 .Include(c => c.Subject) // Bao gồm thông tin môn học
+                .Include(c => c.Assignments)
                 .Take(3) // Lấy 3 lớp học đầu tiên
                 .ToListAsync();
         }

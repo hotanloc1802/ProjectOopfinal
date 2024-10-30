@@ -8,14 +8,17 @@ namespace ClassroomManagementApp1.ViewModels.BoxClasses
 {
     public class MainWindowBoxClassesItem : ViewModelBase
     {
-        public string _teacherid { get; }
-        public string _classid { get; }
+        public string _classname { get; }
+        public string _teachername { get; }
+        public int _assignmentcount{ get; }
         public string _datebegin { get; }
         public string _dateend { get; }
-        public MainWindowBoxClassesItem(string teacherid, string classid, string datebegin, string dateend)
+
+        public MainWindowBoxClassesItem(string classname, string teachername, int assignmentcount, string datebegin ,string dateend)
         {
-            _teacherid = teacherid;
-            _classid = classid;
+            _classname = classname;
+            _teachername = teachername;
+            _assignmentcount = assignmentcount;
             _datebegin = datebegin;
             _dateend = dateend;
         }
