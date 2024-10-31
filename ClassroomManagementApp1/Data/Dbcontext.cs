@@ -18,7 +18,7 @@ namespace ClassroomManagementApp1.Data
         public DbSet<ClassStudent> ClassStudent { get; set; }
         public DbSet<Subject> Subject { get; set; }
         public DbSet<Assignment> Assignment { get; set; }
-        public DbSet<Submission> Submission { get; set; }
+        public DbSet<Submission> Submissions { get; set; }
 
         // Cấu hình model và ánh xạ bảng
         protected override void OnModelCreating(ModelBuilder modelBuilder) // Thay đổi từ DbModelBuilder sang ModelBuilder

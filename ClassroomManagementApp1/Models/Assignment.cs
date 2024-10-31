@@ -22,6 +22,5 @@ namespace ClassroomManagementApp1.Models
         public ICollection<Submission> Submissions { get; set; }
 
         public Class Class { get; set; }
-
     }
 }

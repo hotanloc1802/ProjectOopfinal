@@ -10,12 +10,18 @@ namespace ClassroomManagementApp1.ClassService
 {
     public class ClassesService
     {
+        //1. Read DbContext
+
         private readonly AppDbContext _context;
+
+        //2.Constructor Service
 
         public ClassesService(AppDbContext context)
         {
             _context = context;
         }
+
+        //3. Build Service
 
         // Lấy tất cả các lớp học theo studentId (bao gồm giáo viên và môn học)
         public async Task<List<Class>> GetAllClassesByStudentId(string studentId)
@@ -62,7 +68,7 @@ namespace ClassroomManagementApp1.ClassService
                 .Where(c => c.ClassStudents.Any(cs => cs.studentid == studentId)) // Kiểm tra mối quan hệ học sinh-lớp
                 .Include(c => c.Teacher) // Bao gồm thông tin giáo viên
                 .Include(c => c.Subject) // Bao gồm thông tin môn học
-                .Include (c => c.Assignments)   
+                .Include (c => c.Assignments)
                 .ToListAsync();
         }
     }

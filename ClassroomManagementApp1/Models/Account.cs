@@ -8,7 +8,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 using ClassroomManagementApp1.Models;
 namespace ClassroomManagementApp1.Models
 {
-
     public class Account
     {
         [Key]

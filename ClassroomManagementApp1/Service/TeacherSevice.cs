@@ -10,12 +10,16 @@ namespace ClassroomManagementApp1.ClassService
 {
     public class TeacherService
     {
+        // 1. Read DbContext
+
         private readonly AppDbContext _context;
 
+        // 2. Constructor Service
         public TeacherService(AppDbContext context)
         {
             _context = context;
         }
+        // 3. Build Service
 
         // Thêm giáo viên
         public async Task AddTeacherAsync(Teacher teacher)

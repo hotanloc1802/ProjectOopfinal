@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassroomManagementApp1.Data;
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -22,15 +23,15 @@ namespace ClassroomManagementApp1.Views
     /// </summary>
     public partial class MainWindowView : Window
     {
-        public MainWindowView()
+        public MainWindowView(string studentid)
         {
             InitializeComponent();
-            DataContext = new MainWindowViewModel();
+            DataContext = new MainWindowViewModel(studentid);
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView DashboardWindow = new MainWindowView();
-            DashboardWindow.Show();
+            MainWindowView dashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
+            dashboardWindow.Show();
             this.Close();
         }
         private void BtnClassroom_Click(object sender, RoutedEventArgs e)

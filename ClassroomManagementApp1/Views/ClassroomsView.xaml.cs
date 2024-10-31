@@ -1,4 +1,6 @@
-﻿using ClassroomManagementApp1.Views;
+﻿using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.ViewModels;
+using ClassroomManagementApp1.Views;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -25,10 +27,11 @@ namespace ClassroomManagementApp1.Views
         public ClassroomsView()
         {
             InitializeComponent();
+            DataContext = new ClassroomViewModel();
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView DashboardWindow = new MainWindowView();
+            MainWindowView DashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
             DashboardWindow.Show();
             this.Close();
         }
@@ -69,6 +72,18 @@ namespace ClassroomManagementApp1.Views
         private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             txtSearch.Visibility = Visibility.Visible;
+        }
+        private void boxSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                var searchText = boxSearch.Text; // Lấy văn bản từ TextBox
+                var command = DataContext?.GetType().GetProperty("SearchCommand")?.GetValue(DataContext) as ICommand; // Lấy command từ DataContext
+                if (command != null && command.CanExecute(searchText)) // Kiểm tra điều kiện thực thi
+                {
+                    command.Execute(searchText); // Thực hiện command
+                }
+            }
         }
     }
 }

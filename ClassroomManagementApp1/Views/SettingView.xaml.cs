@@ -1,4 +1,6 @@
-﻿using ClassroomManagementApp1.Views;
+﻿using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.Models;
+using ClassroomManagementApp1.Views;
 using MahApps.Metro.IconPacks;
 using Microsoft.Win32;
 using System;
@@ -28,7 +30,7 @@ namespace ClassroomManagementApp1.Views
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView DashboardWindow = new MainWindowView();
+            MainWindowView DashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
             DashboardWindow.Show();
             this.Close();
         }

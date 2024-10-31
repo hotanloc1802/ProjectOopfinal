@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassroomManagementApp1.Component;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using ClassroomManagementApp1.Component;
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -24,6 +25,8 @@ namespace ClassroomManagementApp1.Views
         public ClassInfoView()
         {
             InitializeComponent();
+            var classInfoBoxAssignments = new ClassInfoBoxAssignments(); // Tạo UserControl mà không cần truyền DataContext                                                 // Thêm UserControl vào giao diện
+            MainGrid.Children.Add(classInfoBoxAssignments);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {

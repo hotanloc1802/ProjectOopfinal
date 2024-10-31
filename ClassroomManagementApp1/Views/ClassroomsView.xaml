@@ -236,7 +236,7 @@
                             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                                 <Icon:PackIconMaterial Kind="Magnify" Foreground="#b897d1" VerticalAlignment="Center" Margin="7,0,0,0" Width="25" Height="25"/>
                                 <TextBox x:Name="boxSearch" Background="Transparent" BorderBrush="Transparent" Foreground="#b897d1"
-                                Width="227" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                                Width="227" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"  KeyDown="boxSearch_KeyDown" />
                             </StackPanel>
                         </Border>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
@@ -263,11 +263,9 @@
                     <Grid Grid.Row="2">
                         <Border x:Name="boDeadlines"  Background="White" CornerRadius="30" Margin="0,23,0,0">
                             <Border x:Name="boDeadline1" Background="Transparent" BorderBrush="Transparent">
-                                <StackPanel Margin="10,30,10,0">
-                                    <TextBlock Text="English" FontSize="34" FontFamily="Montserrat Bold" Foreground="#b897c6" />
-                                    <TextBlock Text="EX1: Travelling" FontSize="22" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,10,0,0"/>
-                                    <TextBlock Text="Thursday, October 3rd" FontSize="22" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,10,0,0"/>
-                                </StackPanel>
+                                <Grid>
+                                    <component:ClassroomListViewAssignments/>
+                                </Grid>
                             </Border>
                         </Border>
                     </Grid>

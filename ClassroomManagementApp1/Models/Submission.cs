@@ -15,7 +15,7 @@ namespace ClassroomManagementApp1.Models
         public string studentid { get; set; }
 
         [Range(0, 100, ErrorMessage = "Score must be between 0 and 100")]
-        public int score { get; set; }
+        public double score { get; set; }
 
         // Navigation Properties
         public Assignment Assignment { get; set; }

@@ -9,12 +9,17 @@ namespace ClassroomManagementApp1.ClassService
 {
     public class AssignmentService
     {
+        //1. Read DbContext
+
         private readonly AppDbContext _context;
+
+        //2. Constructor Service
 
         public AssignmentService(AppDbContext context)
         {
             _context = context;
         }
+        //3. Build Service
 
         // Lấy tất cả Assignment
         public async Task<List<Assignment>> GetAllAssignment()
@@ -32,6 +37,8 @@ namespace ClassroomManagementApp1.ClassService
                                  .OrderBy(a => a.duedate)  // Sắp xếp theo DueDate tăng dần
                                  .ToListAsync();
         }
+
+        // Lấy Assignment gần đến hạn nhất theo classid
         public async Task<Assignment> GetNearestAssignmentByClassID(string classId)
         {
             return await _context.Assignment
@@ -39,6 +46,7 @@ namespace ClassroomManagementApp1.ClassService
                                  .OrderBy(a => a.duedate)  // Sắp xếp theo DueDate tăng dần
                                  .FirstOrDefaultAsync(); // Lấy bản ghi đầu tiên (có DueDate gần nhất)
         }
+
         // Lấy danh sách assignment của học sinh theo studentId
         public async Task<List<Assignment>> GetAssignmentsByStudentId(string studentId)
         {

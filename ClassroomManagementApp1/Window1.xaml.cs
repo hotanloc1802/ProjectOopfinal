@@ -1,4 +1,5 @@
-﻿using ClassroomManagementApp1.Views;
+﻿using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.Views;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,7 @@ namespace ClassroomManagementApp1
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView DashboardWindow = new MainWindowView();
+            MainWindowView DashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
             DashboardWindow.Show();
             this.Close();
         }

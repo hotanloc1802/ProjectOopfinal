@@ -1,4 +1,5 @@
 ﻿using ClassroomManagementApp1;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using ClassroomManagementApp1.Data;
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -51,19 +52,43 @@ namespace ClassroomManagementApp1.Views
 
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
-            string username = boxUserName.Text;
-            string password = boxPassword.Password;
+            string connectionString = "Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=public";
 
-            // Check username and password
-            if (username == "Username" && password == "Password") //này là tao giả sử
+            // SQL query to check the user and get the studentId
+            string query = "SELECT studentid FROM \"public\".account WHERE username = @Username AND password = @Password";
+
+            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("User name or password is incorrect", "Login Fail", MessageBoxButton.OK, MessageBoxImage.Warning);
+                try
+                {
+                    connection.Open();
+                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", boxUserName.Text);
+                        command.Parameters.AddWithValue("@Password", boxPassword.Password);
+
+                        // Execute the query and retrieve studentId (if found)
+                        var result = command.ExecuteScalar();
+
+                        if (result != null) // User found, studentId retrieved
+                        {
+                            string studentId = result.ToString();
+                            StudentContext.Instance.SetStudentId(studentId);
+                            // Pass the studentId to MainWindow
+                            MainWindowView mainWindow = new MainWindowView(studentId);
+                            mainWindow.Show();
+                            this.Hide(); // Hide the login form
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tài khoản hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
             }
         }
     }

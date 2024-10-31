@@ -1,11 +1,9 @@
-﻿// File: Commands/SearchClassCommand.cs
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Input;
 using ClassroomManagementApp1.ViewModels;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using ClassroomManagementApp1.Views; // Giả sử `ClassViewModel` nằm trong namespace này
-
+using ClassroomManagementApp1.Views; 
 namespace ClassroomManagementApp1.Commands
 {
     public class SearchClassCommand : ICommand
@@ -26,19 +24,29 @@ namespace ClassroomManagementApp1.Commands
         {
             if (parameter is string classId && !string.IsNullOrEmpty(classId))
             {
-                await _classViewModel.LoadClassByIdAsync(classId); // Đợi phương thức hoàn thành
+                try
+                {
+                    await _classViewModel.LoadClassByIdAsync(classId); // Đợi phương thức hoàn thành
 
-                if (_classViewModel.SelectedClass != null) // Kiểm tra SelectedClass
-                {
-                    ShowClassInfoWindow(classId);
+                    if (_classViewModel.SelectedClass != null) // Kiểm tra SelectedClass
+                    {
+                        ShowClassInfoWindow(classId);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy lớp học với ID đã nhập.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Không tìm thấy lớp học với ID đã nhập.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
+            else
+            {
+                MessageBox.Show("ID lớp học không hợp lệ.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
-
 
         private void ShowClassInfoWindow(string classID)
         {

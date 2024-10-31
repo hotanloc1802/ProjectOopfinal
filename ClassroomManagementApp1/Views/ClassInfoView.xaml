@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
+            xmlns:component="clr-namespace:ClassroomManagementApp1.Component"
              mc:Ignorable="d" 
             Height="400" Width="600" Background="Transparent" ResizeMode="NoResize"
              AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
@@ -64,16 +65,15 @@
                         <TextBlock Text="{Binding ClassInfo.datebegin, StringFormat='{}{0:dd/MM/yyyy}'}"  FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" Grid.ColumnSpan="2" Margin="80,0,0,31" Grid.RowSpan="2"/>
                         <TextBlock Text="{Binding ClassInfo.dateend, StringFormat='{}{0:dd/MM/yyyy}'}" FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" Grid.Row="1" Grid.ColumnSpan="2" Margin="75,0,0,31" Grid.RowSpan="2"/>
                         <TextBlock Text="{Binding ClassInfo.Assignments.Count}" FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" Grid.Row="2" Grid.ColumnSpan="2" Margin="134,0,0,31" Grid.RowSpan="2"/>
-                        <TextBlock Text="5" FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" Grid.Column="1" Grid.Row="3" Margin="3,0,0,0"/>
+                        <TextBlock Text="{Binding AssignmentNotSubmitted.Count}" FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" Grid.Column="1" Grid.Row="3" Margin="3,0,0,0"/>
                     </Grid>
 
                 </Grid>
-                <Grid Grid.Column="2" Grid.Row="1">
+                <Grid   Grid.Column="2" Grid.Row="1">
                     <Border x:Name="boDeadline1" Background="White" CornerRadius="20" Margin="15,0,15,0">
-                        <StackPanel Margin="15,15,0,0">
-                            <TextBlock Text="EX1: Travelling" FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,10,0,0"/>
-                            <TextBlock Text="Thursday, October 3rd" FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" Margin="0,10,0,0"/>
-                        </StackPanel>
+                        <Grid x:Name="MainGrid" >
+                            
+                        </Grid>
                     </Border>
                 </Grid>
                 <Grid Grid.Row="2" Grid.ColumnSpan="3">

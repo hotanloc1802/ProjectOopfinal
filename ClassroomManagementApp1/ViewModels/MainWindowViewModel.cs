@@ -2,7 +2,6 @@
 using System.Windows.Input;
 using System.Windows;
 using System.Linq;
-using ClassroomManagementApp1.ViewModels.BoxClasses;
 using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
@@ -11,6 +10,7 @@ using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
+using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -49,17 +49,18 @@ namespace ClassroomManagementApp1.ViewModels
         public ObservableCollection<Class> Classes { get; set; } = new ObservableCollection<Class>();
 
         //5. Constructor mặc định, sử dụng phương thức CreateDbContext để tạo DbContext và khởi tạo ClassViewModel
-        public MainWindowViewModel() : this(CreateDbContext().Item1, CreateDbContext().Item2)
+        public MainWindowViewModel(string studentid) : this(CreateDbContext().Item1, CreateDbContext().Item2, studentid )
         {
         }
         // 6. Khởi tạo MainWindowViewModel
-        public MainWindowViewModel(ClassesService classService, AssignmentService assignmentService)
+        public MainWindowViewModel(ClassesService classService, AssignmentService assignmentService,string studentid)
         {
             _classService = classService;
             _assignmentService = assignmentService;
             ClassViewModel = new ClassViewModel(_classService);
             AssignmentViewModel = new AssignmentViewModel(_assignmentService);
             SearchCommand = new SearchClassCommand(ClassViewModel);
+            _studentId = studentid;
 
         }
         private static (ClassesService, AssignmentService) CreateDbContext()

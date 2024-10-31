@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
 using ClassroomManagementApp1.Views;
+using ClassroomManagementApp1.Data;
 
 
 namespace ClassroomManagementApp1.Views
@@ -29,7 +30,7 @@ namespace ClassroomManagementApp1.Views
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView DashboardWindow = new MainWindowView();
+            MainWindowView DashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
             DashboardWindow.Show();
             this.Close();
         }

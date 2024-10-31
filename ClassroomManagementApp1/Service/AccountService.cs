@@ -9,12 +9,18 @@ namespace ClassroomManagementApp1.ClassService
 {
     public class AccountService
     {
+        //1. Read DbContext
+
         private readonly AppDbContext _context;
+
+        //2. Constructor Service
 
         public AccountService(AppDbContext context)
         {
             _context = context;
         }
+
+        //3. Build Service
 
         public async Task<Account> GetAccountByStudentID(string studentId)
         {

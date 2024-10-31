@@ -10,34 +10,37 @@
     <Compile Update="Component\AssigmentListViewAssignments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\ClassInfo.xaml.cs">
+    <Compile Update="Component\ClassInfo\ClassInfo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\ClassroomListViewAssignments.xaml.cs">
+    <Compile Update="Component\ClassInfo\ClassInfoBoxAssignments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\ClassroomListViewClasses.xaml.cs">
+    <Compile Update="Component\Classroom\ClassroomListViewAssignments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\MainWindowBoxAssignments.xaml.cs">
+    <Compile Update="Component\Classroom\ClassroomListViewClasses.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\MainWindowBoxAssignments1.xaml.cs">
+    <Compile Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\MainWindowBoxAssignments2.xaml.cs">
+    <Compile Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\ClassroomBoxClasses\MainWindowBoxClasses.xaml.cs">
+    <Compile Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\ClassroomBoxClasses\MainWindowBoxClasses1.xaml.cs">
+    <Compile Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\ClassroomBoxClasses\MainWindowBoxClasses2.xaml.cs">
+    <Compile Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\MainWindowBoxStudentInfo.xaml.cs">
+    <Compile Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxStudentInfo.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\AssignmentsView.xaml.cs">
@@ -50,9 +53,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\ClassroomsView.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="Views\MainUI.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\MainWindowView.xaml.cs">
@@ -75,37 +75,37 @@
     <Page Update="Component\AssigmentListViewAssignments.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\ClassInfo.xaml">
+    <Page Update="Component\ClassInfo\ClassInfo.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\ClassroomListViewAssignments.xaml">
+    <Page Update="Component\ClassInfo\ClassInfoBoxAssignments.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\ClassroomListViewClasses.xaml">
+    <Page Update="Component\Classroom\ClassroomListViewAssignments.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\MainWindowBoxAssignments.xaml">
+    <Page Update="Component\Classroom\ClassroomListViewClasses.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\MainWindowBoxAssignments1.xaml">
+    <Page Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\MainWindowBoxAssignments2.xaml">
+    <Page Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\ClassroomBoxClasses\MainWindowBoxClasses.xaml">
+    <Page Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\ClassroomBoxClasses\MainWindowBoxClasses1.xaml">
+    <Page Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\ClassroomBoxClasses\MainWindowBoxClasses2.xaml">
+    <Page Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\MainWindowBoxStudentInfo.xaml">
+    <Page Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Component\MainWindow\MainWindowBoxStudentInfo.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AssignmentsView.xaml">
@@ -118,9 +118,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ClassroomsView.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\MainUI.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindowView.xaml">
