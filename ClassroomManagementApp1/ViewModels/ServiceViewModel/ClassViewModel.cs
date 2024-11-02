@@ -65,7 +65,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Assignments.Clear(); // Xóa các bài tập cũ
                 foreach (var asm in cls.Assignments)
                 {
-                    Assignments.Add(asm); // Thêm bài tập vào danh sách
+                    Assignments.Add(asm); // Thêm bài tập vào danh sách\
                 }
             }
             else

@@ -194,3 +194,7 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\ClassInfo\ClassInfoBoxAssignments.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classroom\ClassroomListViewAssignments.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classroom\ClassroomListViewClasses.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Window2.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Window2.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Window1.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Window1.baml

@@ -89,6 +89,22 @@ namespace ClassroomManagementApp1.ClassService
                 throw; // Reroute exception for higher-level handling if necessary
             }
         }
+        public async Task<Submission> GetSubmissionsByStudentIdAndAssignmentId(string studentId, string assignmentId)
+        {
+            try
+            {
+                return await _context.Submissions
+                    .Where(s => s.studentid == studentId && s.assignmentid == assignmentId)
+                    .FirstOrDefaultAsync();
+            }
+            catch (Exception ex)
+            {
+                // Ghi log hoặc hiển thị thông báo lỗi
+                Console.WriteLine($"Đã xảy ra lỗi khi truy vấn: {ex.Message}");
+                return null;
+            }
+        }
+
 
     }
 }

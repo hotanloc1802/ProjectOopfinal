@@ -42,7 +42,7 @@ namespace ClassroomManagementApp1.Views
         }
         private void BtnClass_Click(object sender, RoutedEventArgs e)
         {
-            ClassesView ClassWindow = new ClassesView();
+            ClassesView ClassWindow = new ClassesView("C001");
             ClassWindow.Show();
             this.Close();
         }

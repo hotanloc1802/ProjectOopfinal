@@ -345,14 +345,7 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
-                        <Ellipse Width="120" Height="120" Fill="#f6eefb" Stroke="Transparent" VerticalAlignment="Top" Margin="0,35,0,0"/>
-                        <Image Source="D:\final_lab\AppOop\AppOop\images\profile.png" Width="70" Height="70" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,60,0,0">
-                            <Image.Clip>
-                                <EllipseGeometry Center="35,35" RadiusX="35" RadiusY="35"/>
-                            </Image.Clip>
-                        </Image>
-                        <TextBlock Text="Ngo Thi Hong Ly" FontFamily="Montserrat" FontSize="17" FontWeight="ExtraBold" Foreground="#b897c6" Margin="0,160,0,0" HorizontalAlignment="Center"/>
-                        <TextBlock Text="Student" FontFamily="Montserrat" FontSize="12" FontWeight="Light" Foreground="#b897c6" HorizontalAlignment="Center" Margin="0,185,0,0"/>
+                        <component:MainWindowBoxStudentInfo/>
                     </Grid>
                 </Grid>
             </Grid>

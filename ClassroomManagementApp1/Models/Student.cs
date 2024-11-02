@@ -11,7 +11,7 @@ namespace ClassroomManagementApp1.Models
         [Key]
         public string studentid { get; set; }  // Thuộc tính khóa chính
 
-        public string studentemail { get; set; }
+        //public string studentemail { get; set; }
 
         public string studentname { get; set; }
 

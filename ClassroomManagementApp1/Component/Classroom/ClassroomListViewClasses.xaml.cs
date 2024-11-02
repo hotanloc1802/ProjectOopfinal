@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel;
+using ClassroomManagementApp1.Views;
 namespace ClassroomManagementApp1.Component
 {
     /// <summary>
@@ -24,5 +25,16 @@ namespace ClassroomManagementApp1.Component
             InitializeComponent();
             DataContext = new ClassroomListViewClassesViewModel();
         }
+        private void BtnClassroom1_Click(object sender, RoutedEventArgs e)
+        {
+            ClassesView ClassWindow = new ClassesView("C001");
+            ClassWindow.Show();
+            Window parentWindow = Window.GetWindow(this);
+            if (parentWindow != null)
+            {
+                parentWindow.Visibility = Visibility.Hidden;
+            }
+        }
+
     }
 }

@@ -25,6 +25,15 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 _selectedAccount = value;
             }
         }
+        private Student _selectedAccountStudent;
+        public Student SelectedAccountStudent
+        {
+            get => _selectedAccountStudent;
+            set
+            {
+                _selectedAccountStudent = value;
+            }
+        }
         public AccountViewModel(AccountService AccountService)
         {
             _accountService= AccountService;
@@ -43,6 +52,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             if (account != null)
             {
                 SelectedAccount = account; // Assign fetched account to SelectedAccount
+                SelectedAccountStudent = account.Student;
             }
         }
 

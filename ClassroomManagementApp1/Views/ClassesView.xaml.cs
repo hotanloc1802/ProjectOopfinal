@@ -1,4 +1,5 @@
 ﻿using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.ViewModels;
 using ClassroomManagementApp1.Views;
 using Microsoft.Win32;
 using System;
@@ -22,9 +23,10 @@ namespace ClassroomManagementApp1.Views
     /// </summary>
     public partial class ClassesView : Window
     {
-        public ClassesView()
+        public ClassesView(string classid)
         {
             InitializeComponent();
+            DataContext = new ClassesViewModel(classid);
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
@@ -48,6 +50,12 @@ namespace ClassroomManagementApp1.Views
         {
             SettingView SettingWindow = new SettingView();
             SettingWindow.Show();
+            this.Close();
+        }
+        private void SignOut_Click(object obj, RoutedEventArgs e)
+        {
+            SignInView SignInWindow = new SignInView();
+            SignInWindow.Show();
             this.Close();
         }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)

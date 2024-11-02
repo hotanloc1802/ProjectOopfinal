@@ -25,6 +25,7 @@ namespace ClassroomManagementApp1.ClassService
         public async Task<Account> GetAccountByStudentID(string studentId)
         {
             return await _context.Accounts
+                                 .Include(s=> s.Student)
                                  .Where(ac => ac.studentid == studentId)
                                  .FirstOrDefaultAsync();
         }

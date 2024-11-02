@@ -94,7 +94,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
             catch (Exception ex)
             {
                 // Xử lý lỗi nếu có
-                MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                //MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

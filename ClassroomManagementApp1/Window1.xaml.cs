@@ -39,12 +39,7 @@ namespace ClassroomManagementApp1
             ClassroomWindow.Show();
             this.Close();
         }
-        private void BtnClassroom1_Click(object sender, RoutedEventArgs e)
-        {
-            ClassesView ClassWindow = new ClassesView();
-            ClassWindow.Show();
-            this.Close();
-        }
+        
         private void BtnAssignment_Click(object sender, RoutedEventArgs e)
         {
             AssignmentsView AssignmentWindow = new AssignmentsView();

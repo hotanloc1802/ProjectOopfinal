@@ -82,11 +82,11 @@
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="4" Margin="20,0,20,0">
-                        <Button Width="75" Click="LogIn_Click">
-                            <Border  CornerRadius="20" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#b897d1">
-                                <TextBlock Text="LogIn" FontFamily="Montserrat" FontSize="15" Foreground="White" VerticalAlignment="Center" Padding="3" HorizontalAlignment="Center"/>
-                            </Border>
-                        </Button>
+                        <Border  CornerRadius="20" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#b897d1">
+                            <Button Width="75" Click="LogIn_Click">
+                            <TextBlock Text="LogIn" FontFamily="Montserrat" FontSize="15" Foreground="White" VerticalAlignment="Center" Padding="3" HorizontalAlignment="Center"/>
+                            </Button>
+                        </Border>
                     </Grid>
                 </Grid>
             </Grid>

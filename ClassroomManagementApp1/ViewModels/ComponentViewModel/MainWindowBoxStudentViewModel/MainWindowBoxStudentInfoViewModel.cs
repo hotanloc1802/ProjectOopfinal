@@ -55,12 +55,12 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
             {
                 // Load account data by student ID
                 await AccountViewModel.LoadAccountByStudentIDAsync(StudentContext.Instance.StudentId);
-                var _accountSelected = AccountViewModel.SelectedAccount;
+                var _accountSelectedname = AccountViewModel.SelectedAccountStudent.studentname;
 
-                if (_accountSelected != null)
+                if (_accountSelectedname != null)
                 {
                     // Set Item based on account data
-                    Item = new MainWindowBoxStudentInfoItem(_accountSelected.username, _accountSelected.userid);
+                    Item = new MainWindowBoxStudentInfoItem(_accountSelectedname, "5");
                 }
                 else
                 {

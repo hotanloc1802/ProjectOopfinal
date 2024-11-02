@@ -94,7 +94,18 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 throw; // Giữ lại để xử lý lỗi ở mức cao hơn nếu cần
             }
         }
-
+        public async Task LoadSubmissionsByStudentIdAndAssignmentId(string studentId, string assignmentId)
+        {
+            try
+            {
+                SelectedSubmission = await _submissionService.GetSubmissionsByStudentIdAndAssignmentId(studentId, assignmentId);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Đã xảy ra lỗi khi tải submissions: {ex.Message}");
+                SelectedSubmission = null; // Xử lý nếu cần thiết
+            }
+        }
 
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -78,11 +78,20 @@ namespace ClassroomManagementApp1.ViewModels
         private async void InitializeData(string classID)
         {
            await ClassViewModel.LoadClassByIdAsync(classID);
-           await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContext.Instance.StudentId);
+            try
+            {
+                await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContext.Instance.StudentId);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải submissions: {ex.Message}");
+            }
+
 
             ClassInfo = ClassViewModel.SelectedClass;
             var submissionList = SubmissionViewModel.Submissions;
             var assignmentsList = ClassInfo.Assignments;
+
             // Định dạng các bài tập và thêm vào danh sách định dạng
             foreach (var asm in assignmentsList)
             {
