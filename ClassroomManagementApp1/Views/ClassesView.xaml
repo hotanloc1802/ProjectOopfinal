@@ -32,7 +32,7 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" >
-                        <Image Source="D:\final_lab\AppOop\AppOop\images\logo.png" Stretch="Uniform" Width="130"/>
+                        <Image Source="/Image/logo.png" Stretch="Uniform" Width="130"/>
                     </StackPanel>
                     <StackPanel Grid.Row="1" Margin="0,100.7,0,0">
                         <Border CornerRadius="10" Padding="5,5,5,5" Margin="15,0,15,0" Width="162"  >
@@ -206,7 +206,7 @@
                                 <RowDefinition Height="5*"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row ="0">
-                                <Image Source="D:\final_lab\AppOop\AppOop\images\background.png" HorizontalAlignment="Left" Margin="70,0,0,-0.5"/>
+                                <Image Source="/Image/background.png"  HorizontalAlignment="Left" Margin="70,0,0,-0.5"/>
                                 <TextBlock Text="English" FontSize="70" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="120,0,0,0"/>
                             </Grid>
                             <Grid Grid.Row ="1" >

@@ -87,7 +87,7 @@ namespace ClassroomManagementApp1.Views
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message);
+                    
                 }
             }
         }

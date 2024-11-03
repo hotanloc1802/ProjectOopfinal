@@ -9,6 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\background.png" />
+    <None Remove="Image\backgroundSignIn.png" />
+    <None Remove="Image\logo.png" />
+    <None Remove="Image\profile.png" />
+    <None Remove="Image\WelcomeBack.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Models\" />
   </ItemGroup>
 
@@ -24,6 +32,14 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Image\background.png" />
+    <Resource Include="Image\backgroundSignIn.png" />
+    <Resource Include="Image\logo.png" />
+    <Resource Include="Image\profile.png" />
+    <Resource Include="Image\WelcomeBack.png" />
   </ItemGroup>
 
   <ItemGroup>

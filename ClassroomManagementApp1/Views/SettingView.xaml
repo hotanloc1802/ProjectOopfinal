@@ -25,7 +25,7 @@
 
             <!--Add logo-->
             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" Height="55" Width="56">
-                <Image Source="D:\final_lab\AppOop-20241025T081959Z-001\AppOop\AppOop\images\logo.png" Width="55" Height="55" Stretch="Uniform"/>
+                <Image Source="/Image/logo.png" Width="55" Height="55" Stretch="Uniform"/>
             </StackPanel>
             <!--Menu buttons-->
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0">
@@ -99,7 +99,7 @@
                     <TextBlock VerticalAlignment="Center" Text="Setting" FontSize="35" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6"/>
                     <Grid HorizontalAlignment="Right" VerticalAlignment="Center" >
                         <Ellipse Width="70" Height="70" Fill="white" Stroke="Transparent" VerticalAlignment="Top" />
-                        <Image Source="D:\final_lab\AppOop\AppOop\images\profile.png" Width="70" Height="70" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top">
+                        <Image Source="/Image/profile.png" Width="70" Height="70" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top">
                             <Image.Clip>
                                 <EllipseGeometry Center="35,35" RadiusX="35" RadiusY="35"/>
                             </Image.Clip>
@@ -113,7 +113,7 @@
                             <TextBlock Text="Profile Picture" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6"/>
                             <Grid Margin="60,0,0,0" >
                                 <Ellipse Width="40" Height="40" Fill="#f6eefb" Stroke="Transparent" VerticalAlignment="Top" />
-                                <Image x:Name="imgProfilePicture" Source="D:\final_lab\AppOop\AppOop\images\profile.png" Width="40" Height="40" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top">
+                                <Image x:Name="imgProfilePicture"  Source="/Image/profile.png" Width="40" Height="40" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Top">
                                     <Image.Clip>
                                         <EllipseGeometry Center="20,20" RadiusX="20" RadiusY="20"/>
                                     </Image.Clip>

@@ -38,7 +38,7 @@
                         <RowDefinition Height="auto"/>
                     </Grid.RowDefinitions>
                     <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,20,0,0" >
-                        <Image Source="D:\final_lab\AppOop\AppOop\images\logo.png" Stretch="Uniform" Width="130"/>
+                        <Image Source="/Image/logo.png" Stretch="Uniform" Width="130"/>
                     </StackPanel>
                     <StackPanel Grid.Row="1" Margin="0,100.7,0,0">
                         <Border CornerRadius="10" Padding="5,5,5,5" Margin="15,0,15,0" Width="162"  >
@@ -265,7 +265,7 @@
                                 FontSize="17" FontFamily="Montserrat"  HorizontalAlignment="Left" Margin="10,84,30,0" Foreground="Gray"/>
                                 <TextBlock Text="Join us on Thursday, 21st November, 2024."
                                 FontSize="17" FontFamily="Montserrat"  HorizontalAlignment="Left" Margin="10,110,30,0" Foreground="Gray"/>
-                                <Image Source="D:\final_lab\AppOop\AppOop\images\WelcomeBack.png"  Margin="370,12,70,12" Width="250"/>
+                                <Image Source="/Image/WelcomeBack.png" Margin="370,12,70,12" Width="250"/>
                             </Grid>
                         </Border>
                     </Grid>
