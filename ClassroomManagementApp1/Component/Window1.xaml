@@ -5,79 +5,83 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d"
-         Height="450" Width="800">
-    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-        <ListView ItemsSource="{Binding SubmissonAssignments}" ScrollViewer.VerticalScrollBarVisibility="Auto">
+        Height="690" Width="1000">
+    <ScrollViewer Height="698" Width="995">
+        <ListView ItemsSource="{Binding SubmissonAssignments}"  Height="695" Width="995"  >
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                    <Setter Property="Padding" Value="0"/>
+                    <Setter Property="Margin" Value="0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListViewItem">
+                                <Grid Background="{TemplateBinding Background}">
+                                    <ContentPresenter />
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
-            <DataTemplate>
-                <Grid>
-                    <Border Background="White" CornerRadius="0,20,20,0" Grid.Column="1"/>
-                    <Border CornerRadius="30,0,0,30" Background="#ebdef2" Grid.Column="1"/>
-                    <Grid>
+                <DataTemplate>
+
+                    <Grid Background="#ebdef2" Margin="0,15,0,15" >
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="5.5*"/>
-                            <RowDefinition Height="0.5*"/>
+                            <RowDefinition Height="80"/>
+                            <RowDefinition Height="70"/>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="150"/>
                         </Grid.RowDefinitions>
+                        <Border CornerRadius="50" Background="White" Grid.Row="0" Height="440"  Width="960" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.RowSpan="4" />
                         <Grid Grid.Row="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
-                                <RowDefinition Height="6*"/>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row ="0">
-                                    <Image Source="/Image/background.png" HorizontalAlignment="Left" Margin="50,15,0,0" Width="220" />
-                                <TextBlock Text="English" FontSize="40" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="85,15,0,0"/>
+                            <TextBlock Text="{Binding  description}" FontSize="25" FontFamily="Montserrat Bold" Foreground="Gray" Margin="55,30,0,0"/>
+                        </Grid>
+                        <Grid Grid.Row="1">
+                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="170" Margin="50,0,0,25">
+                                <TextBlock Text="Requirements" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" Margin="10,0,0,0"/>
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Row="2">
+                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="185" Margin="50,110,0,0">
+                                <TextBlock Text="Assignments" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+                            </Border>
+                        </Grid>
+                        <Grid Grid.Row="3">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="136*"/>
+                                <ColumnDefinition Width="531*"/>
+                                <ColumnDefinition Width="333*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10" Margin="50,15,50,30" Grid.ColumnSpan="3">
+                                <TextBlock Text="Link: " FontSize="25" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Center" Margin="30,0,0,0" />
+                            </Border>
+                            <Grid Grid.Column="1">
+                                <TextBox x:Name="FilePathTextBox" Margin="0,17,10,32" IsReadOnly="True"   FontSize="15">
+                                </TextBox>
                             </Grid>
-                            <Grid Grid.Row ="1">
+                            <Grid Grid.Column="2">
                                 <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="*"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
-                                <Border Background="White" CornerRadius="30" Grid.RowSpan="4" Margin="30,15,30,0"></Border>
-                                <Grid Grid.Row ="0">
-                                    <TextBlock Text="Lesson 1: Travelling" FontSize="20" FontFamily="Montserrat Bold" Foreground="Gray" Margin="70,30,0,0"/>
-                                </Grid>
-                                <Grid Grid.Row ="1">
-                                    <Border Background="#b897c6" CornerRadius="20" Margin="70,15,0,3" HorizontalAlignment="Left" Width="126">
-                                        <TextBlock Text="Materials" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Center" FontSize="20"/>
-                                    </Border>
-                                </Grid>
-                                <Grid Grid.Row="2">
-                                    <Border Background="#b897c6" CornerRadius="20" Margin="70,60,0,3" HorizontalAlignment="Left" Width="151">
-                                        <TextBlock Text="Assignments" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-                                    </Border>
-                                </Grid>
-                                <Grid Grid.Row="3" Margin="0,15,0,15">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.5*"/>
-                                        <ColumnDefinition Width="1*"/>
-                                        <ColumnDefinition Width="1.5*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Border BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10" Margin="70,0,50,0" Grid.ColumnSpan="3">
-                                        <TextBlock Text="EX1: " FontSize="25" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Center" Margin="30,0,0,0"/>
-                                    </Border>
-                                    <Grid Grid.Column="2" Margin="0,0,0,0">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                        </Grid.RowDefinitions>
-                                        <Border Background="#ed8890" BorderBrush="Transparent" CornerRadius="10" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0">
-                                            <Button >
-                                                <TextBlock Text="Submit" Foreground="Gray" FontSize="20" FontFamily="Montserrat" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Button>
-                                        </Border>
-                                        <Grid Grid.Row="1">
-                                            <TextBlock Text="Thursday, October 3rd" FontSize="20" FontFamily="Montserrat" Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Grid>
-                                    </Grid>
+                                <Border Margin="0,30,130,20" Background="#ed8890" BorderBrush="Transparent"  CornerRadius="10" HorizontalAlignment="Right" Width="148" >
+                                    <Button  Click="SubmitButton_Click">
+                                        <TextBlock Text="Submit" Foreground="Gray" FontSize="25" FontFamily="Montserrate" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Button>
+                                </Border>
+                                <Grid Grid.Row="1">
+                                    <TextBlock Text="{Binding duedate}" FontSize="15" FontFamily="Montserrate" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,50"/>
                                 </Grid>
                             </Grid>
                         </Grid>
+
                     </Grid>
-                </Grid>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ScrollViewer>
 </UserControl>

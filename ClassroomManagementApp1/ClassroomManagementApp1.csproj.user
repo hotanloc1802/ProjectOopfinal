@@ -70,9 +70,6 @@
     <Compile Update="Views\Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Window1.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Window2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

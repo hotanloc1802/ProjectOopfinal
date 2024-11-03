@@ -21,14 +21,43 @@ namespace ClassroomManagementApp1.ViewModels
         private readonly AssignmentService _assignmentService;
         private readonly SubmissionService _submissionService;
         public ObservableCollection<SubmissionAsignment> SubmissonAssignments { get; private set; } = new ObservableCollection<SubmissionAsignment>();
+        private string _selectedFilePath;
+        public string SelectedFilePath
+        {
+            get => _selectedFilePath;
+            set
+            {
+                _selectedFilePath = value;
+                OnPropertyChanged(nameof(SelectedFilePath));
+            }
+        }
 
-
+        private string _subject;
+        public string Subject
+        {
+            get => _subject;
+            set
+            {
+                _subject = value;
+                OnPropertyChanged(nameof(Subject));
+            }
+        }
+        private string _myclassid;
+        public string MyClassId
+        {
+            get => _myclassid;
+            set
+            {
+                _myclassid = value;
+                OnPropertyChanged(nameof(MyClassId));
+            }
+        }
         public class SubmissionAsignment 
         {
-            string duedate { get; set; }
-            string classname { get; set; }  
-            string description { get; set; }
-            string linksubmission { get; set; }
+            public string duedate { get; set; }
+            public string classname { get; set; }  
+            public string description { get; set; }
+            public string linksubmission { get; set; }
             public Assignment Assignment { get; set; }
             public SubmissionAsignment(string _classname, string _description, string _linksubmission, string _duedate)
             {
@@ -48,7 +77,7 @@ namespace ClassroomManagementApp1.ViewModels
             SubmissionViewModel = new SubmissionViewModel(_submissionService);
             AssignmentViewModel = new AssignmentViewModel(_assignmentService);
             ClassViewModel = new ClassViewModel(_classService);
-            
+            MyClassId = classID;
             InitializeData(classID);
         }
         private static (AssignmentService, SubmissionService, ClassesService) CreateDbContext()
@@ -71,17 +100,32 @@ namespace ClassroomManagementApp1.ViewModels
             await ClassViewModel.LoadClassByIdAsync(classID);
             var className = ClassViewModel.SelectedClass.Subject.subjectname;
             var assignmentList = ClassViewModel.Assignments;
-
+            Subject = ClassViewModel.SelectedClass.Subject.subjectname;
             foreach (var asm in assignmentList)
             {
-                await SubmissionViewModel.LoadSubmissionsByStudentIdAndAssignmentId("S001", asm.assignmentid);
+                await SubmissionViewModel.LoadSubmissionsByStudentIdAndAssignmentId(StudentContext.Instance.StudentId, asm.assignmentid);
                 var submission = SubmissionViewModel.SelectedSubmission;
-
+                DateTime dueDate = asm.duedate; 
+                string formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
                 if (submission != null)
                 {
-                    SubmissonAssignments.Add(new SubmissionAsignment (className, asm.description, submission.linksubmisson, asm.duedate.ToString()));
+                    SubmissonAssignments.Add(new SubmissionAsignment (className, asm.description, submission.linksubmisson, formattedDate));
                 }
             }
+
         }
+        private string GetDaySuffix(int day)
+        {
+            if (day >= 11 && day <= 13) return "th";
+            return (day % 10) switch
+            {
+                1 => "st",
+                2 => "nd",
+                3 => "rd",
+                _ => "th",
+            };
+        }
+
+
     }
 }

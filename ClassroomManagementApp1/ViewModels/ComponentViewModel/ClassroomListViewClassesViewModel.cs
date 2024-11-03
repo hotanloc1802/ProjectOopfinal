@@ -52,8 +52,9 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel
         {
             public Tuple<DateTime, DateTime> DateRange { get; set; }
             public int AssignmentCount { get; set; }
-            public ClassWithDateRange(string _classname, Tuple<DateTime, DateTime> _dateRange, int _assignmentcount)
+            public ClassWithDateRange(string _classid ,string _classname, Tuple<DateTime, DateTime> _dateRange, int _assignmentcount)
             {
+                classid = _classid;
                 classname = _classname;
                 DateRange = _dateRange;
                 AssignmentCount = _assignmentcount;
@@ -106,7 +107,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel
                 ListClassesWithDateRange = new ObservableCollection<ClassWithDateRange> { };
                 foreach (var cls in Listclasses)
                 {
-                    ListClassesWithDateRange.Add(new ClassWithDateRange(cls.classname, new Tuple<DateTime, DateTime>(cls.datebegin, cls.dateend), cls.Assignments.Count));
+                    ListClassesWithDateRange.Add(new ClassWithDateRange(cls.classid,cls.classname, new Tuple<DateTime, DateTime>(cls.datebegin, cls.dateend), cls.Assignments.Count));
                     // Hoặc bạn có thể thêm từng lớp một (cách hiện tại):
                     // foreach (var cls in ClassViewModel.Classes)
                     // {

@@ -27,14 +27,21 @@ namespace ClassroomManagementApp1.Component
         }
         private void BtnClassroom1_Click(object sender, RoutedEventArgs e)
         {
-            ClassesView ClassWindow = new ClassesView("C001");
-            ClassWindow.Show();
-            Window parentWindow = Window.GetWindow(this);
-            if (parentWindow != null)
+            // Lấy classid từ CommandParameter
+            if (sender is Button button && button.CommandParameter is string classid)
             {
-                parentWindow.Visibility = Visibility.Hidden;
+                ClassesView classWindow = new ClassesView(classid);
+                classWindow.Show();
+
+                // Ẩn cửa sổ cha nếu tồn tại
+                Window parentWindow = Window.GetWindow(this);
+                if (parentWindow != null)
+                {
+                    parentWindow.Visibility = Visibility.Hidden;
+                }
             }
         }
+
 
     }
 }

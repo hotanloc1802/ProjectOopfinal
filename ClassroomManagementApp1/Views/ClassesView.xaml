@@ -191,69 +191,20 @@
                         </Border>
                     </Grid>
                 </Grid>
+                <Border Background="White" CornerRadius="0,20,20,0" Grid.Column="1"/>
+                <Border CornerRadius="30,0,0,30" Background="#ebdef2" Grid.Column="1">
+                </Border>
                 <Grid Grid.Column="1">
-                    <Border Background="White" CornerRadius="0,20,20,0" Grid.Column="1"/>
-                    <Border CornerRadius="30,0,0,30" Background="#ebdef2" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="5*"/>
+                    </Grid.RowDefinitions>
+                    <Image Source="D:\final_lab\AppOop\AppOop\images\background.png" HorizontalAlignment="Left" Margin="70,0,199.8,-0.5"/>
+                    <Border Margin="80,0,0,0">
+                        <TextBlock Text="{Binding Subject}" FontSize="40" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6" VerticalAlignment="Center" Margin="0,0,550,0" HorizontalAlignment="Center"/>
                     </Border>
-                    <Grid Grid.Column="1" Margin="0,0,0,0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="5*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid Grid.Row="0" Margin="0,30,0,0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="5*"/>
-                            </Grid.RowDefinitions>
-                            <Grid Grid.Row ="0">
-                                <Image Source="/Image/background.png"  HorizontalAlignment="Left" Margin="70,0,0,-0.5"/>
-                                <TextBlock Text="English" FontSize="70" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="120,0,0,0"/>
-                            </Grid>
-                            <Grid Grid.Row ="1" >
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="170"/>
-                                </Grid.RowDefinitions>
-                                <Border Background="White" CornerRadius="30" Grid.RowSpan="4" Margin="30,20,30,0" ></Border>
-                                <Grid Grid.Row ="0">
-                                    <TextBlock Text="Lesson 1: Travelling" FontSize="25" FontFamily="Montserrat Bold" Foreground="Gray" Margin="60,40,0,0" />
-                                </Grid>
-                                <Grid Grid.Row ="1" >
-                                    <Border  Background="#b897c6" CornerRadius="20" Margin="60,15,0,3" HorizontalAlignment="Left" Width="161" >
-                                        <TextBlock Text="Materials" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Center" FontSize="25"/>
-                                    </Border>
-                                </Grid>
-                                <Grid Grid.Row="2" >
-                                    <Border  Background="#b897c6" CornerRadius="20" Margin="60,150,0,3" HorizontalAlignment="Left" Width="185">
-                                        <TextBlock Text="Assignments" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
-                                    </Border>
-                                </Grid>
-                                <Grid Grid.Row="3" >
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="0.5*"/>
-                                        <ColumnDefinition Width="1.5*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Border BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10" Margin="60,15,50,30" Grid.ColumnSpan="3">
-                                        <TextBlock Text="EX1: " FontSize="25" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Center" Margin="30,0,0,0" />
-                                    </Border>
-                                    <Grid Grid.Column="2">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                            <RowDefinition Height="*"/>
-                                        </Grid.RowDefinitions>
-                                        <Border Margin="0,30,144,20" Background="#ed8890" BorderBrush="Transparent"  CornerRadius="10" HorizontalAlignment="Right" Width="148">
-                                            <TextBlock Text="Submit" Foreground="Gray" FontSize="25" FontFamily="Montserrate" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Border>
-                                        <Grid Grid.Row="1">
-                                            <TextBlock Text="Thursday, October 3rd" FontSize="25" FontFamily="Montserrate" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,0,0,60"/>
-                                        </Grid>
-                                    </Grid>
-                                </Grid>
-                            </Grid>
-                        </Grid>
+                    <Grid Grid.Row="1" Margin="0,20,0,0">
+                        <component:Window1 Margin="40,0,0,0" ClassId="{Binding MyClassId}" />
                     </Grid>
                 </Grid>
             </Grid>
