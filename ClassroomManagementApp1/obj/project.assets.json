@@ -195,7 +195,7 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "MahApps.Metro.IconPacks.Core/5.0.1": {
+      "MahApps.Metro.IconPacks.Core/5.1.0": {
         "type": "package",
         "dependencies": {
           "System.Text.Json": "8.0.5"
@@ -442,10 +442,10 @@
           "Microsoft.WindowsDesktop.App.WPF"
         ]
       },
-      "MahApps.Metro.IconPacks.Material/5.0.1": {
+      "MahApps.Metro.IconPacks.Material/5.1.0": {
         "type": "package",
         "dependencies": {
-          "MahApps.Metro.IconPacks.Core": "5.0.1"
+          "MahApps.Metro.IconPacks.Core": "5.1.0"
         },
         "compile": {
           "lib/net8.0-windows7.0/MahApps.Metro.IconPacks.Material.dll": {
@@ -2316,10 +2316,10 @@
         "mahapps.metro.iconpacks.coolicons.nuspec"
       ]
     },
-    "MahApps.Metro.IconPacks.Core/5.0.1": {
-      "sha512": "fw8zJ/cIyv5HnpNQ/ozMOi/4gA6bw/ahum7YkSVSLSSU0womy1wTunTyoKK4LiUT7oQhUGrTaReCmx4VyQtFtw==",
+    "MahApps.Metro.IconPacks.Core/5.1.0": {
+      "sha512": "DBvN+gsmx5iryZO4VCcrYH1iaV1o5Qwed+IZ4bElvfRqUcNs3+sqA6Y2lPYdzLDDtuEZ681fkWyEzlxe5f1pcQ==",
       "type": "package",
-      "path": "mahapps.metro.iconpacks.core/5.0.1",
+      "path": "mahapps.metro.iconpacks.core/5.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2335,7 +2335,7 @@
         "lib/uap10.0.18362/MahApps.Metro.IconPacks.Core.pri",
         "lib/uap10.0.18362/MahApps.Metro.IconPacks.Core.xml",
         "logo_small.png",
-        "mahapps.metro.iconpacks.core.5.0.1.nupkg.sha512",
+        "mahapps.metro.iconpacks.core.5.1.0.nupkg.sha512",
         "mahapps.metro.iconpacks.core.nuspec"
       ]
     },
@@ -2627,10 +2627,10 @@
         "mahapps.metro.iconpacks.lucide.nuspec"
       ]
     },
-    "MahApps.Metro.IconPacks.Material/5.0.1": {
-      "sha512": "WHJbIn804tRofDE6ZF+yQZcj/bB2Y2Iv34CM6vPD0WtC7TWxXQZVtBOoCRu4cEXlgJ/u5+tE9FTFeFRO5M4RVQ==",
+    "MahApps.Metro.IconPacks.Material/5.1.0": {
+      "sha512": "RWh43z0Ddd3jS0ktXpU6Y2DbvaNV8gY8uBVfmOuy7LrRzcLhd0ywUkWQrH1F3m6ODIO1vgMI5vEcKgqXP58s9Q==",
       "type": "package",
-      "path": "mahapps.metro.iconpacks.material/5.0.1",
+      "path": "mahapps.metro.iconpacks.material/5.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2647,7 +2647,7 @@
         "lib/uap10.0.18362/MahApps.Metro.IconPacks.Material.xml",
         "lib/uap10.0.18362/MahApps.Metro.IconPacks.Material/MahApps.Metro.IconPacks.Material.xr.xml",
         "logo_small.png",
-        "mahapps.metro.iconpacks.material.5.0.1.nupkg.sha512",
+        "mahapps.metro.iconpacks.material.5.1.0.nupkg.sha512",
         "mahapps.metro.iconpacks.material.nuspec"
       ]
     },
@@ -5155,6 +5155,7 @@
     "net8.0-windows7.0": [
       "EntityFramework >= 6.5.1",
       "MahApps.Metro.IconPacks >= 5.0.1",
+      "MahApps.Metro.IconPacks.Material >= 5.1.0",
       "MaterialDesignThemes >= 5.1.0",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Abstractions >= 8.0.10",
@@ -5169,11 +5170,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
       "projectName": "ClassroomManagementApp1",
-      "projectPath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5214,6 +5215,10 @@
           "MahApps.Metro.IconPacks": {
             "target": "Package",
             "version": "[5.0.1, )"
+          },
+          "MahApps.Metro.IconPacks.Material": {
+            "target": "Package",
+            "version": "[5.1.0, )"
           },
           "MaterialDesignThemes": {
             "target": "Package",

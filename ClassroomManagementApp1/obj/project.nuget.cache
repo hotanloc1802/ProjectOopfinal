@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "383tOhjnL9c=",
+  "dgSpecHash": "42DBMOUFX74=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -12,7 +12,7 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.circumicons\\5.0.1\\mahapps.metro.iconpacks.circumicons.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.codicons\\5.0.1\\mahapps.metro.iconpacks.codicons.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.coolicons\\5.0.1\\mahapps.metro.iconpacks.coolicons.5.0.1.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.core\\5.0.1\\mahapps.metro.iconpacks.core.5.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.core\\5.1.0\\mahapps.metro.iconpacks.core.5.1.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.entypo\\5.0.1\\mahapps.metro.iconpacks.entypo.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.evaicons\\5.0.1\\mahapps.metro.iconpacks.evaicons.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.feathericons\\5.0.1\\mahapps.metro.iconpacks.feathericons.5.0.1.nupkg.sha512",
@@ -25,7 +25,7 @@
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.ionicons\\5.0.1\\mahapps.metro.iconpacks.ionicons.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.jamicons\\5.0.1\\mahapps.metro.iconpacks.jamicons.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.lucide\\5.0.1\\mahapps.metro.iconpacks.lucide.5.0.1.nupkg.sha512",
-    "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.material\\5.0.1\\mahapps.metro.iconpacks.material.5.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.material\\5.1.0\\mahapps.metro.iconpacks.material.5.1.0.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.materialdesign\\5.0.1\\mahapps.metro.iconpacks.materialdesign.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.materiallight\\5.0.1\\mahapps.metro.iconpacks.materiallight.5.0.1.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\mahapps.metro.iconpacks.memoryicons\\5.0.1\\mahapps.metro.iconpacks.memoryicons.5.0.1.nupkg.sha512",
