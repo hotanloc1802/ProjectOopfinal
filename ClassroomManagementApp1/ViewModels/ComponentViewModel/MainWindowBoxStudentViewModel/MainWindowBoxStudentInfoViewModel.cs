@@ -5,6 +5,7 @@ using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Windows;
+using System.Windows.Media.Imaging;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStudentViewModel
 {
@@ -12,7 +13,6 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
     {
         private MainWindowBoxStudentInfoItem _item; // Private field for backing store
         public AccountViewModel AccountViewModel { get; private set; }
-
         private readonly AccountService _accountService;
 
         // Public property for data binding
@@ -33,7 +33,17 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
             AccountViewModel = new AccountViewModel(_accountService);
             InitializeData();
         }
+        private BitmapImage _profileImage;
 
+        public BitmapImage ProfileImage
+        {
+            get => _profileImage;
+            private set
+            {
+                _profileImage = value;
+                OnPropertyChanged(nameof(ProfileImage));
+            }
+        }
         // Method to create and return AccountService instance
         private static AccountService CreateAccountService()
         {
@@ -55,6 +65,9 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
             {
                 // Load account data by student ID
                 await AccountViewModel.LoadAccountByStudentIDAsync(StudentContext.Instance.StudentId);
+                await AccountViewModel.GetProfileImageAsync();
+                ProfileImage = AccountViewModel.ProfileImage;
+
                 var _accountSelectedname = AccountViewModel.SelectedAccountStudent.studentname;
 
                 if (_accountSelectedname != null)
