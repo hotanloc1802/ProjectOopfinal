@@ -20,6 +20,7 @@ namespace ClassroomManagementApp1.ViewModels
         private readonly ClassesService _classService;
         private readonly AssignmentService _assignmentService;
         private readonly SubmissionService _submissionService;
+        public ObservableCollection<Assignment> AssignmentNotSubmitted { get; set; } = new ObservableCollection<Assignment>();
         public ObservableCollection<SubmissionAsignment> SubmissonAssignments { get; private set; } = new ObservableCollection<SubmissionAsignment>();
         private string _selectedFilePath;
         public string SelectedFilePath
@@ -59,11 +60,10 @@ namespace ClassroomManagementApp1.ViewModels
             public string description { get; set; }
             public string linksubmission { get; set; }
             public Assignment Assignment { get; set; }
-            public SubmissionAsignment(string _classname, string _description, string _linksubmission, string _duedate)
+            public SubmissionAsignment(string _classname, string _description, string _duedate)
             {
                 classname = _classname;
                 description = _description;
-                linksubmission = _linksubmission;
                 duedate = _duedate;
 
             }
@@ -97,20 +97,31 @@ namespace ClassroomManagementApp1.ViewModels
         }
         private async void InitializeData(string classID)
         {
+            
             await ClassViewModel.LoadClassByIdAsync(classID);
             var className = ClassViewModel.SelectedClass.Subject.subjectname;
             var assignmentList = ClassViewModel.Assignments;
+            await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContext.Instance.StudentId);
+            var submissionList = SubmissionViewModel.Submissions;
             Subject = ClassViewModel.SelectedClass.Subject.subjectname;
             foreach (var asm in assignmentList)
             {
-                await SubmissionViewModel.LoadSubmissionsByStudentIdAndAssignmentId(StudentContext.Instance.StudentId, asm.assignmentid);
-                var submission = SubmissionViewModel.SelectedSubmission;
+                bool isSubmitted = submissionList.Any(sms => sms.assignmentid == asm.assignmentid );
+                if (!isSubmitted)
+                {
+                    AssignmentNotSubmitted.Add(asm);
+                }
+            }
+            foreach (var asm in AssignmentNotSubmitted)
+            {
+                //await SubmissionViewModel.LoadSubmissionsByStudentIdAndAssignmentId(StudentContext.Instance.StudentId, asm.assignmentid);
+                //var submission = SubmissionViewModel.SelectedSubmission;
                 DateTime dueDate = asm.duedate; 
                 string formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
-                if (submission != null)
-                {
-                    SubmissonAssignments.Add(new SubmissionAsignment (className, asm.description, submission.linksubmisson, formattedDate));
-                }
+                //if (submission != null)
+                //{
+                    SubmissonAssignments.Add(new SubmissionAsignment (className, asm.description, formattedDate));
+                //}
             }
 
         }

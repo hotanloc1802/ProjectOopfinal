@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d"
         Height="690" Width="1000">
-    <ScrollViewer Height="698" Width="995">
+    <ScrollViewer >
         <ListView ItemsSource="{Binding SubmissonAssignments}"  Height="695" Width="995"  >
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
@@ -60,7 +60,7 @@
                                 <TextBlock Text="Link: " FontSize="25" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Center" Margin="30,0,0,0" />
                             </Border>
                             <Grid Grid.Column="1">
-                                <TextBox x:Name="FilePathTextBox" Margin="0,17,10,32" IsReadOnly="True"   FontSize="15">
+                                <TextBox x:Name="FilePathTextBox" Foreground="Gray" FontFamily="Montserrate" Margin="0,17,10,32" IsReadOnly="True"   FontSize="15">
                                 </TextBox>
                             </Grid>
                             <Grid Grid.Column="2">

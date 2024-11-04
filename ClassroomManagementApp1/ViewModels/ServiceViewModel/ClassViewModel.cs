@@ -93,8 +93,11 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         public async Task LoadAssignmentsByClassIdAsync(string classId)
         {
             var cls = await _classService.GetClassById(classId);
+
             if (cls != null) // Kiểm tra xem lớp học có tồn tại không
             {
+                Classes.Clear();
+                SelectedClass = cls;
                 Assignments.Clear(); // Xóa các bài tập cũ
                 foreach (var assignment in cls.Assignments)
                 {
