@@ -15,7 +15,7 @@ using Microsoft.Win32;
 using System.IO;
 using ClassroomManagementApp1.Views;
 using ClassroomManagementApp1.Data;
-
+using ClassroomManagementApp1.ViewModels;
 
 namespace ClassroomManagementApp1.Views
 {
@@ -27,6 +27,7 @@ namespace ClassroomManagementApp1.Views
         public AssignmentsView()
         {
             InitializeComponent();
+            DataContext = new AssignmentsViewModel();
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
@@ -39,17 +40,17 @@ namespace ClassroomManagementApp1.Views
             ClassroomsView ClassroomWindow = new ClassroomsView();
             ClassroomWindow.Show();
             this.Close();
-        }
-        private void BtnAssignment_Click(object sender, RoutedEventArgs e)
-        {
-            AssignmentsView AssignmentWindow = new AssignmentsView();
-            AssignmentWindow.Show();
-            this.Close();
-        }
+        }        
         private void Setting_Click(object obj, RoutedEventArgs e)
         {
             SettingView SettingWindow = new SettingView();
             SettingWindow.Show();
+            this.Close();
+        }
+        private void SignOut_Click(object obj, RoutedEventArgs e)
+        {
+            SignInView SignInWindow = new SignInView();
+            SignInWindow.Show();
             this.Close();
         }
         private void SubmitButton_Click(object sender, RoutedEventArgs e)

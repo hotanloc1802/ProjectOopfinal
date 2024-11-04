@@ -88,10 +88,10 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel
             try
             {
                 await AssignmentViewModel.LoadAssignmentsByStudentId("S001");
-                MessageBox.Show(AssignmentViewModel.Assignments.Count.ToString());
                 Listassignments = new ObservableCollection<Assignment>(AssignmentViewModel.Assignments);
                 int halfCount = Listassignments.Count / 2;
                 FirstHalfAssignments = new ObservableCollection<Assignment>(Listassignments.Take(halfCount));
+                MessageBox.Show(FirstHalfAssignments[0].classid);
                 SecondHalfAssignments = new ObservableCollection<Assignment>(Listassignments.Skip(halfCount).Take(halfCount));
 
             }

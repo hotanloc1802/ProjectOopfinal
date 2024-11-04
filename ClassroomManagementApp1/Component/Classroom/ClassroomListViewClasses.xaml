@@ -13,7 +13,7 @@
     <Grid>
         <ListView ItemsSource="{Binding ListClassesWithDateRange}" ScrollViewer.VerticalScrollBarVisibility="Visible"
           ScrollViewer.CanContentScroll="False"
-          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,0,0,5" Height="200" BorderBrush="Transparent" Click="BtnClassroom1_Click" CommandParameter="{Binding classid}"  >

@@ -42,6 +42,9 @@ namespace ClassroomManagementApp1.Component
             }
         }
 
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
     }
 }

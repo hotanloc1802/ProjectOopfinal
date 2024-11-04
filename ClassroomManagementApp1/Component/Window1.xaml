@@ -6,28 +6,7 @@
         xmlns:local="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d"
         Height="690" Width="1000">
-    <ScrollViewer Height="698" Width="995">
-        <ListView ItemsSource="{Binding SubmissonAssignments}"  Height="695" Width="995"  >
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="BorderBrush" Value="Transparent"/>
-                    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-                    <Setter Property="Padding" Value="0"/>
-                    <Setter Property="Margin" Value="0"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListViewItem">
-                                <Grid Background="{TemplateBinding Background}">
-                                    <ContentPresenter />
-                                </Grid>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ListView.ItemContainerStyle>
-            <ListView.ItemTemplate>
-                <DataTemplate>
+
 
                     <Grid Background="#ebdef2" Margin="0,15,0,15" >
                         <Grid.RowDefinitions>
@@ -80,8 +59,5 @@
                         </Grid>
 
                     </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ScrollViewer>
+               
 </UserControl>

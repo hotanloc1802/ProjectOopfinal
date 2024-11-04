@@ -5164,19 +5164,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\lyngo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
+      "projectUniqueName": "D:\\HK5\\OOP\\DOAN\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
       "projectName": "ClassroomManagementApp1",
-      "projectPath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\source\\repos\\ClassroomManagementApp1\\ClassroomManagementApp1\\obj\\",
+      "projectPath": "D:\\HK5\\OOP\\DOAN\\ClassroomManagementApp1\\ClassroomManagementApp1.csproj",
+      "packagesPath": "C:\\Users\\lyngo\\.nuget\\packages\\",
+      "outputPath": "D:\\HK5\\OOP\\DOAN\\ClassroomManagementApp1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lyngo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

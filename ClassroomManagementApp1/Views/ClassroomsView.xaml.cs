@@ -85,5 +85,10 @@ namespace ClassroomManagementApp1.Views
                 }
             }
         }
+
+        private void ClassroomListViewClasses_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -247,7 +247,7 @@
                         <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
                     </Grid>
                     <Grid Grid.Row="2" >
-                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,0,0,10" Height="548" VerticalAlignment="Bottom"/>
+                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,0,0,10" Height="548" VerticalAlignment="Bottom" Loaded="ClassroomListViewClasses_Loaded"/>
                     </Grid>
                 </Grid>
 
