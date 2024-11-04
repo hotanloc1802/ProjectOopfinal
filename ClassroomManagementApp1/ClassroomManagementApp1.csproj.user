@@ -7,7 +7,10 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Component\AssigmentListViewAssignments.xaml.cs">
+    <Compile Update="Component\Assignment\AssigmentListViewAssignments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\Assignment\AssignmentListViewAssignments2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Component\ClassInfo\ClassInfo.xaml.cs">
@@ -73,15 +76,15 @@
     <Compile Update="Views\Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="AssignmentsDraft.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Window2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Component\AssigmentListViewAssignments.xaml">
+    <Page Update="Component\Assignment\AssigmentListViewAssignments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\Assignment\AssignmentListViewAssignments2.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Component\ClassInfo\ClassInfo.xaml">
@@ -145,9 +148,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Window1.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="AssignmentsDraft.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Window2.xaml">

@@ -6,9 +6,7 @@
         xmlns:local="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d"
         Height="690" Width="1000">
-<<<<<<< HEAD
 
-=======
     <ScrollViewer >
         <ListView ItemsSource="{Binding SubmissonAssignments}"  Height="695" Width="995"  >
             <ListView.ItemContainerStyle>
@@ -31,7 +29,6 @@
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
->>>>>>> Loc
 
                     <Grid Background="#ebdef2" Margin="0,15,0,15" >
                         <Grid.RowDefinitions>
@@ -84,5 +81,8 @@
                         </Grid>
 
                     </Grid>
-               
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ScrollViewer>
 </UserControl>

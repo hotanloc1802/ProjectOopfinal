@@ -27,7 +27,7 @@ namespace ClassroomManagementApp1.Views
         public AssignmentsView()
         {
             InitializeComponent();
-            DataContext = new AssignmentsViewModel();
+            //DataContext = new AssignmentsViewModel();
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
@@ -47,10 +47,8 @@ namespace ClassroomManagementApp1.Views
             SettingWindow.Show();
             this.Close();
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> Loc
+
         private void SignOut_Click(object obj, RoutedEventArgs e)
         {
             SignInView SignInWindow = new SignInView();
