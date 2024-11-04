@@ -63,9 +63,15 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             {
                 SelectedClass = cls; // Gán lớp học vào property để hiển thị
                 Assignments.Clear(); // Xóa các bài tập cũ
-                foreach (var asm in cls.Assignments)
+                foreach (var assignment in cls.Assignments)
                 {
-                    Assignments.Add(asm); // Thêm bài tập vào danh sách\
+                    // Cập nhật trạng thái của bài tập
+                    assignment.UpdateStatus();
+                    // Chỉ thêm bài tập nếu còn thời hạn
+                    if (assignment.status == 1) // 1 là còn hạn
+                    {
+                        Assignments.Add(assignment); // Thêm bài tập vào danh sách
+                    }
                 }
             }
             else
@@ -99,12 +105,20 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Classes.Clear();
                 SelectedClass = cls;
                 Assignments.Clear(); // Xóa các bài tập cũ
+
                 foreach (var assignment in cls.Assignments)
                 {
-                    Assignments.Add(assignment); // Thêm bài tập vào danh sách
+                    // Cập nhật trạng thái của bài tập
+                    assignment.UpdateStatus();
+                    // Chỉ thêm bài tập nếu còn thời hạn
+                    if (assignment.status == 1) // 1 là còn hạn
+                    {
+                        Assignments.Add(assignment); // Thêm bài tập vào danh sách
+                    }
                 }
             }
         }
+
 
         // PropertyChanged event handler for UI updates
         public event PropertyChangedEventHandler PropertyChanged;

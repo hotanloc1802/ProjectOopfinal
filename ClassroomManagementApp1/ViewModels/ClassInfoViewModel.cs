@@ -87,15 +87,14 @@ namespace ClassroomManagementApp1.ViewModels
                 MessageBox.Show($"Lỗi khi tải submissions: {ex.Message}");
             }
 
-
             ClassInfo = ClassViewModel.SelectedClass;
             var submissionList = SubmissionViewModel.Submissions;
-            var assignmentsList = ClassInfo.Assignments;
-
+            var assignmentsList = ClassViewModel.Assignments.ToList();
             // Định dạng các bài tập và thêm vào danh sách định dạng
             foreach (var asm in assignmentsList)
             {
                 var date = asm.duedate.ToString("dd/MM/yyyy");
+                
                 AssignmentsFormattedList.Add(new AssignmentFormated(date, asm.description));
             }
 

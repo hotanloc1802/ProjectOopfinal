@@ -125,13 +125,15 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxCla
                 {
                     int countNotSubmitted = 0;
                     await ClassViewModel.LoadAssignmentsByClassIdAsync(cls.classid);// lay tat ca bt theo classid
+                    var assignmentsList = ClassViewModel.Assignments.ToList();
                     SetDateRange(cls.datebegin, cls.dateend);
                     await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContext.Instance.StudentId);
-                    ClassInfo = ClassViewModel.SelectedClass;
+                    //ClassInfo = ClassViewModel.SelectedClass;
                     var submissionList = SubmissionViewModel.Submissions;
-                    var assignmentsList = ClassInfo.Assignments;
+                    //var assignmentsList = ClassInfo.Assignments;
                     foreach (var asm in assignmentsList)
                     {
+                        
                         bool isSubmitted = submissionList.Any(sms => sms.assignmentid == asm.assignmentid);
                         if (!isSubmitted)
                         {

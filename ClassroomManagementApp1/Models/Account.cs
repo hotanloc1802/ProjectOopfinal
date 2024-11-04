@@ -20,5 +20,6 @@ namespace ClassroomManagementApp1.Models
 
         // Tham chiếu đến Student
         public Student Student { get; set; }
+        public byte[] profilepicture { get; set; }
     }
 }

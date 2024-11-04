@@ -70,6 +70,7 @@ namespace ClassroomManagementApp1.ViewModels
         {
             try
             {
+                
                 // Tải 3 lớp gần nhất của sinh viên và hiển thị
                 await ClassViewModel.LoadClassesByStudentIdAsync(StudentContext.Instance.StudentId);
                 ListAssignment.Clear();

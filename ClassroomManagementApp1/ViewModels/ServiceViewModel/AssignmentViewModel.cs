@@ -68,6 +68,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Assignments.Clear();
                 foreach (var assignment in assignments)
                 {
+                    
                     Assignments.Add(assignment);
                 }
             }

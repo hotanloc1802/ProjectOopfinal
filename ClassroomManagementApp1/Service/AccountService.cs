@@ -29,7 +29,11 @@ namespace ClassroomManagementApp1.ClassService
                                  .Where(ac => ac.studentid == studentId)
                                  .FirstOrDefaultAsync();
         }
-
-
+        public async Task<byte[]> GetProfilePicture(string userId)
+        {
+            var account = await _context.Accounts.FindAsync(userId);
+            return account?.profilepicture; // Trả về hình ảnh nếu có
+        }
+        
     }
 }

@@ -1,28 +1,36 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Models;
-using ClassroomManagementApp1.Views;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
-    public class AccountViewModel
+    public class AccountViewModel : INotifyPropertyChanged
     {
         private readonly AccountService _accountService;
-
-        // ObservableCollection to notify UI of changes
         private Account _selectedAccount;
+        private BitmapImage _profileImage;
+
+        public BitmapImage ProfileImage
+        {
+            get => _profileImage;
+            private set
+            {
+                _profileImage = value;
+                OnPropertyChanged(nameof(ProfileImage));
+            }
+        }
+
         public Account SelectedAccount
         {
             get => _selectedAccount;
             set
             {
                 _selectedAccount = value;
+                OnPropertyChanged(nameof(SelectedAccount));
+                LoadProfileImage(); // Load image when the account is selected
             }
         }
         private Student _selectedAccountStudent;
@@ -34,9 +42,9 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 _selectedAccountStudent = value;
             }
         }
-        public AccountViewModel(AccountService AccountService)
+        public AccountViewModel(AccountService accountService)
         {
-            _accountService= AccountService;
+            _accountService = accountService;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -56,5 +64,30 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
+        public async void LoadProfileImage()
+        {
+            if (SelectedAccount != null)
+            {
+                ProfileImage = await GetProfileImageAsync();
+            }
+        }
+
+        public async Task<BitmapImage> GetProfileImageAsync()
+        {
+            if (SelectedAccount?.profilepicture != null)
+            {
+                using (var ms = new MemoryStream(SelectedAccount.profilepicture))
+                {
+                    var image = new BitmapImage();
+                    image.BeginInit();
+                    image.StreamSource = ms;
+                    image.CacheOption = BitmapCacheOption.OnLoad;
+                    image.EndInit();
+                    image.Freeze();
+                    return image;
+                }
+            }
+            return null; // Hoặc hình ảnh mặc định
+        }
     }
 }

@@ -22,5 +22,18 @@ namespace ClassroomManagementApp1.Models
         public ICollection<Submission> Submissions { get; set; }
 
         public Class Class { get; set; }
+        [NotMapped]
+        public int status { get; set; }
+        public void UpdateStatus()
+        {
+            if (duedate >= DateTime.Now)
+            {
+                status = 1; // Còn hạn
+            }
+            else
+            {
+                status = 0; // Hết hạn
+            }
+        }
     }
 }
