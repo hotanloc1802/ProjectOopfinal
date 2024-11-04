@@ -47,6 +47,10 @@ namespace ClassroomManagementApp1.Views
             SettingWindow.Show();
             this.Close();
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> Loc
         private void SignOut_Click(object obj, RoutedEventArgs e)
         {
             SignInView SignInWindow = new SignInView();

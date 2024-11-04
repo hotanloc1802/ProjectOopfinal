@@ -13,13 +13,15 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxCla
         public string _datebegin { get; }
         public string _dateend { get; }
 
-        public MainWindowBoxClassesItem(string classname, string teachername, int assignmentcount, string datebegin, string dateend)
+        public string _classid { get; }
+        public MainWindowBoxClassesItem(string classname, string teachername, int assignmentcount, string datebegin, string dateend, string classid)
         {
             _classname = classname;
             _teachername = teachername;
             _assignmentcount = assignmentcount;
             _datebegin = datebegin;
             _dateend = dateend;
+            _classid = classid;
         }
     }
 

@@ -84,11 +84,17 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
                 await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(StudentContext.Instance.StudentId);
                 var ClassList = ClassViewModel.Classes.ToList();
                 await AssignmentViewModel.LoadNearestAssignmentByClassIDAsync(ClassList[0].classid);
-                Item1 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, AssignmentViewModel.NearestAssignment.duedate.ToString("dd/MM/yyyy"));
+                DateTime dueDate = AssignmentViewModel.NearestAssignment.duedate;
+                string formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
+                Item1 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, formattedDate);
                 await AssignmentViewModel.LoadNearestAssignmentByClassIDAsync(ClassList[1].classid);
-                Item2 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, AssignmentViewModel.NearestAssignment.duedate.ToString("dd/MM/yyyy"));
+                dueDate = AssignmentViewModel.NearestAssignment.duedate;
+                formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
+                Item2 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, formattedDate);
                 await AssignmentViewModel.LoadNearestAssignmentByClassIDAsync(ClassList[2].classid);
-                Item3 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, AssignmentViewModel.NearestAssignment.duedate.ToString("dd/MM/yyyy"));
+                dueDate = AssignmentViewModel.NearestAssignment.duedate;
+                formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
+                Item3 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, formattedDate);
 
             }
             catch (Exception ex)
@@ -97,7 +103,17 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
                 //MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        private string GetDaySuffix(int day)
+        {
+            if (day >= 11 && day <= 13) return "th";
+            return (day % 10) switch
+            {
+                1 => "st",
+                2 => "nd",
+                3 => "rd",
+                _ => "th",
+            };
+        }
     }
 
 }
