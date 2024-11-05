@@ -17,6 +17,7 @@ namespace ClassroomManagementApp1.Models
 
         public int studentgrade { get; set; }
 
+        public DateOnly studentbirth {  get; set; }
         // Liên kết 1-n với ClassStudent
         public ICollection<ClassStudent> ClassStudents { get; set; } = new List<ClassStudent>();
 

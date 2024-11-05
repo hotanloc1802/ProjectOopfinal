@@ -10,9 +10,10 @@
         mc:Ignorable="d" 
         Title="MainWindowView" Height="760" Width="1280" Background="Transparent" ResizeMode="NoResize"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Border Background="#ebdef2" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3" Padding="20" >
+    <Border Background="#ebdef2" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
+         Padding="20" >
         <Border CornerRadius="40" Height="716" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1236">
-            <Grid>
+            <Grid Margin="0,0,0,15" HorizontalAlignment="Center" Width="1176" Height="686" VerticalAlignment="Bottom">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.8*"/>
                     <ColumnDefinition Width="4.2*"/>
@@ -192,7 +193,7 @@
                     </Grid>
                 </Grid>
                 <Border Background="White" CornerRadius="0,20,20,0" Grid.Column="1"/>
-                <Border CornerRadius="30,0,0,30" Background="#ebdef2" Grid.Column="1">
+                <Border CornerRadius="20,0,0,20" Background="#ebdef2" Grid.Column="1">
                 </Border>
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>

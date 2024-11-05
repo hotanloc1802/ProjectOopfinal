@@ -64,7 +64,7 @@ namespace ClassroomManagementApp1.ViewModels
 
         }
         private static (ClassesService, AssignmentService) CreateDbContext()
-        {
+        { 
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
             optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
             var context = new AppDbContext(optionsBuilder.Options);

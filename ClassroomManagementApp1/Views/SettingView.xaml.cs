@@ -16,7 +16,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using ClassroomManagementApp1.ViewModels;
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -27,6 +27,7 @@ namespace ClassroomManagementApp1.Views
         public SettingView()
         {
             InitializeComponent();
+            DataContext = new SettingViewModel(StudentContext.Instance.StudentId);
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
@@ -38,6 +39,12 @@ namespace ClassroomManagementApp1.Views
         {
             ClassroomsView ClassroomWindow = new ClassroomsView();
             ClassroomWindow.Show();
+            this.Close();
+        }
+        private void BtnClassroom1_Click(object sender, RoutedEventArgs e)
+        {
+            ClassesView ClassWindow = new ClassesView("C001");
+            ClassWindow.Show();
             this.Close();
         }
         private void BtnAssignment_Click(object sender, RoutedEventArgs e)
@@ -52,9 +59,25 @@ namespace ClassroomManagementApp1.Views
             SettingWindow.Show();
             this.Close();
         }
+        private void SignOut_Click(object obj, RoutedEventArgs e)
+        {
+            SignInView SignInWindow = new SignInView();
+            SignInWindow.Show();
+            this.Close();
+        }
+        private void ChangeInfo_Click(object obj, RoutedEventArgs e)
+        {
+            ChangeInfoView ChangeInfoWindow = new ChangeInfoView();
+            ChangeInfoWindow.Show();
+        }
+        private void ChangePass_Click(object obj, RoutedEventArgs e)
+        {
+            ChangePassView ChangePassWindow = new ChangePassView();
+            ChangePassWindow.Show();
+        }
         //Change Password
         private bool isEditingPassword = false;
-        private void btnChangeSave_Click(object sender, RoutedEventArgs e)
+       /* private void btnChangeSave_Click(object sender, RoutedEventArgs e)
         {
             if (isEditingPassword)
             {
@@ -102,6 +125,6 @@ namespace ClassroomManagementApp1.Views
 
                 // Bạn có thể thêm code lưu đường dẫn của ảnh nếu muốn lưu ảnh được chọn
             }
-        }
+        }*/
     }
 }

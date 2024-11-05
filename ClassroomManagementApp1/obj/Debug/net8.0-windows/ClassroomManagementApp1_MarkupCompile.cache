@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\App.xaml
-22-887355292
+24-1866319554
 
-651704250660
+681483526734
 2571428542017
-Component\AssigmentListViewAssignments.xaml;Component\ClassInfo\ClassInfo.xaml;Component\ClassInfo\ClassInfoBoxAssignments.xaml;Component\Classroom\ClassroomListViewAssignments.xaml;Component\Classroom\ClassroomListViewClasses.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml;Component\MainWindow\MainWindowBoxStudentInfo.xaml;Component\Window1.xaml;Views\AssignmentsView.xaml;Views\ClassesView.xaml;Views\ClassInfoView.xaml;Views\ClassroomsView.xaml;Views\MainWindowView.xaml;Views\SettingView.xaml;Views\SignInView.xaml;Views\Window1.xaml;Window2.xaml;
+Component\AssigmentListViewAssignments.xaml;Component\ClassInfo\ClassInfo.xaml;Component\ClassInfo\ClassInfoBoxAssignments.xaml;Component\Classroom\ClassroomListViewAssignments.xaml;Component\Classroom\ClassroomListViewClasses.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml;Component\MainWindow\MainWindowBoxStudentInfo.xaml;Component\Window1.xaml;Views\AssignmentsView.xaml;Views\ChangeInfoView.xaml;Views\ChangePassView.xaml;Views\ClassesView.xaml;Views\ClassInfoView.xaml;Views\ClassroomsView.xaml;Views\MainWindowView.xaml;Views\SettingView.xaml;Views\SignInView.xaml;Views\Window1.xaml;Window2.xaml;
 
 False
 

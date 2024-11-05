@@ -49,6 +49,12 @@
     <Compile Update="Views\AssignmentsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\ChangeInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ChangePassView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\ClassesView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,6 +121,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AssignmentsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChangeInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChangePassView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\ClassesView.xaml">

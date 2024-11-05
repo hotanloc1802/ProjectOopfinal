@@ -394,3 +394,7 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ref
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.pdb
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.genruntimeconfig.cache
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ref\ClassroomManagementApp1.dll
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangeInfoView.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangeInfoView.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangePassView.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangePassView.baml
