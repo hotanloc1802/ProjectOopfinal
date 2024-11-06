@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,7 @@ namespace ClassroomManagementApp1.Views
         public ChangePassView()
         {
             InitializeComponent();
+            DataContext = new ChangeViewModel(StudentContext.Instance.StudentId, this);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
@@ -70,6 +73,21 @@ namespace ClassroomManagementApp1.Views
             else
             {
                 txtConfirm.Visibility = Visibility.Collapsed;
+            }
+        }
+        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            // Update the ViewModel when the password changes
+            var passwordBox = sender as PasswordBox;
+            if (passwordBox != null)
+            {
+                // Access the ViewModel via DataContext
+                var viewModel = this.DataContext as ChangeViewModel;
+                if (viewModel != null)
+                {
+                    // Update the PassWord property
+                    viewModel.PassWord = passwordBox.Password;
+                }
             }
         }
     }

@@ -15,6 +15,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         private readonly StudentService _studentService;
         public ObservableCollection<Student> Students { get; set; }
 
+       
         private Student _selectedStudent;
         public Student SelectedStudent
         {
@@ -65,10 +66,20 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             var student = await _studentService.GetStudentById(studentId);
             SelectedStudent = student; // Gán vào SelectedStudent để hiển thị chi tiết
         }
+        /*public async Task<bool> UpdateAccountAsync(string studentId)
+        {
+
+            // Pass the current ViewModel values to the service layer for updating the database
+            MessageBox.Show(this.StudentName);
+            return await _studentService.UpdateAccountAsync(studentId, this);
+        }
+        */
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
     }
 }

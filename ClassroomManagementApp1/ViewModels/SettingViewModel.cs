@@ -63,8 +63,7 @@ namespace ClassroomManagementApp1.ViewModels
         private async void InitializeData(string studentid)
         {
             await AccountViewModel.LoadAccountByStudentIDAsync(studentid);
-            StudentInfo = new studentinfo(AccountViewModel.SelectedAccountStudent.studentname,AccountViewModel.SelectedAccountStudent.studentbirth.ToString("dd/MM/yyyy"),AccountViewModel.SelectedAccount.username);
-            MessageBox.Show(StudentInfo.dateofbirth);
+            StudentInfo = new studentinfo(AccountViewModel.SelectedAccountStudent.studentname,AccountViewModel.SelectedAccountStudent.studentbirth,AccountViewModel.SelectedAccount.username);
         }
     }
 }

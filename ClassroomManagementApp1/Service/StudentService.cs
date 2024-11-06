@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
+using ClassroomManagementApp1.ViewModels.ServiceViewModels;
+using System.Security.Principal;
 
 namespace ClassroomManagementApp1.ClassService
 {
@@ -59,5 +61,34 @@ namespace ClassroomManagementApp1.ClassService
             return await _context.Students
                 .FirstOrDefaultAsync(s => s.studentid == studentId); // Lấy học sinh theo mã sinh viên
         }
+       /* public async Task<bool> UpdateAccountAsync(string studentId, StudentViewModel studentViewModel)
+        {
+            var student = await _context.Students.FirstOrDefaultAsync(s => s.studentid == studentId);
+
+            if (student == null)
+            {
+                return false;
+            }
+
+            // Update the fields of the student entity from the ViewModel
+            student.studentname = studentViewModel.StudentName;
+            student.studentbirth = DateTime.ParseExact(studentViewModel.StudentBirth, "dd/MM/yyyy", null);
+
+            try
+            {
+                _context.Students.Update(student);
+                await _context.SaveChangesAsync();
+                return true;  // Indicate success
+            }
+            catch (Exception ex)
+            {
+                // Handle exception if needed
+                Console.WriteLine(ex.Message);
+                return false;  // Indicate failure
+            }
+        }
+        */
+
+
     }
 }

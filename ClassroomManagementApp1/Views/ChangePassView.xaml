@@ -34,11 +34,11 @@
                     <Border  BorderBrush="#b897c6" BorderThickness="0.5" Margin="20,20,50,20" CornerRadius="10">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <TextBox x:Name="boxPass" Background="Transparent" BorderBrush="Transparent" Foreground="#b897d1"
-                            Width="298" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocusPass" LostFocus="TextBox_LostFocusPass" Margin="20,0,0,0"/>
+                   Width="298" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocusPass" LostFocus="TextBox_LostFocusPass" Margin="20,0,0,0"/>
                         </StackPanel>
                     </Border>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="30,0,0,0">
-                        <TextBlock x:Name="txtPass" Text="New password" FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" IsHitTestVisible="False" Margin="12,0,0,0" Width="270"  />
+                        <TextBox x:Name="txtPass"  Text="{Binding ResetPassword1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" Margin="20,0,0,0" Width="270" />
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="0" Margin="30,30,0,0">
@@ -48,11 +48,11 @@
                     <Border  BorderBrush="#b897c6" BorderThickness="0.5" Margin="20,20,50,20" CornerRadius="10">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <TextBox x:Name="boxConfirm" Background="Transparent" BorderBrush="Transparent" Foreground="#b897d1"
-                                Width="298" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocusConfirm" LostFocus="TextBox_LostFocusConfirm" Margin="20,0,0,0"/>
+                                    Width="298" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocusConfirm" LostFocus="TextBox_LostFocusConfirm" Margin="20,0,0,0"/>
                         </StackPanel>
                     </Border>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="30,0,0,0">
-                        <TextBlock x:Name="txtConfirm" Text="Confirm Password" FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" IsHitTestVisible="False" Margin="12,0,0,0" Width="270"  />
+                        <TextBox x:Name="txtConfirm"  Text="{Binding ResetPassword2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" Margin="20,0,0,0" Width="270" />
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="3" Grid.Column="0" Margin="30,30,0,0">
@@ -60,7 +60,7 @@
                 </Grid>
                 <Grid Grid.Row="3" Grid.Column="1">
                     <Border BorderBrush="#b897c6" BorderThickness="0.5" Margin="20,20,50,20" CornerRadius="10">
-                        <PasswordBox  FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" Margin="20,0,0,0"/>
+                        <PasswordBox PasswordChanged="PasswordBox_PasswordChanged"  FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" Margin="20,0,0,0"/>
                     </Border>
                 </Grid>
                 <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
@@ -78,7 +78,7 @@
                     </Border>
                     <Grid Grid.Column="1">
                        <Border Background="#b897d1" HorizontalAlignment="Left" VerticalAlignment="Center" CornerRadius="10" Margin="10,10,0,0">
-                            <Button Height="26" Click="Ok_Click">
+                            <Button Height="26" Command="{Binding ChangePassCommand}">
                                 <StackPanel Width="38" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                                     <TextBlock
                                       Text="OK" FontFamily="Montserrat" FontSize="17" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  />

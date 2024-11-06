@@ -11,6 +11,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
     {
         private readonly AccountService _accountService;
         private Account _selectedAccount;
+        
         private BitmapImage _profileImage;
 
         public BitmapImage ProfileImage
@@ -22,7 +23,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 OnPropertyChanged(nameof(ProfileImage));
             }
         }
-
+        
         public Account SelectedAccount
         {
             get => _selectedAccount;
@@ -89,5 +90,6 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
             return null; // Hoặc hình ảnh mặc định
         }
+       
     }
 }

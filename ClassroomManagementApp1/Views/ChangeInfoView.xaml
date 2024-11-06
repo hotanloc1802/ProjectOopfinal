@@ -5,9 +5,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
             xmlns:component="clr-namespace:ClassroomManagementApp1.Component"
+            xmlns:convert="clr-namespace:ClassroomManagementApp1.ValueConverter"
              mc:Ignorable="d" 
             Height="400" Width="600" Background="Transparent" ResizeMode="NoResize"
              AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <convert:PasswordToStringConverter x:Key="PasswordConverter" />
+    </Window.Resources>
     <Border Background="#ebdef2" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
         Padding="20">
         <Border CornerRadius="40" >
@@ -31,15 +35,25 @@
                     <TextBlock Text="New Student Name:  " FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6"/>
                 </Grid>
                 <Grid Grid.Row="1" Grid.Column="1">
-                    <Border  BorderBrush="#b897c6" BorderThickness="0.5" Margin="20,20,50,20" CornerRadius="10">
+                    <Border BorderBrush="#b897c6" BorderThickness="0.5" Margin="20,20,50,20" CornerRadius="10">
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <TextBox x:Name="boxName" Background="Transparent" BorderBrush="Transparent" Foreground="#b897d1"
-                                Width="298" VerticalAlignment="Center" Padding="5,5" GotFocus="TextBox_GotFocusName" LostFocus="TextBox_LostFocusName" Margin="20,0,0,0"/>
+                 Width="298" VerticalAlignment="Center" Padding="5,5" 
+                 GotFocus="TextBox_GotFocusName" LostFocus="TextBox_LostFocusName" Margin="20,0,0,0"/>
                         </StackPanel>
                     </Border>
+
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="30,0,0,0">
-                        <TextBlock x:Name="txtName" Text="Ho Tan Loc" FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" IsHitTestVisible="False" Margin="20,0,0,0" Width="270"  />
+                        <TextBox x:Name="txtName" 
+         Text="{Binding StudentName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+         FontSize="17" 
+         FontFamily="Montserrat Bold" 
+         Foreground="#b897c6" 
+         Margin="20,0,0,0" 
+         Width="270" />
+
                     </StackPanel>
+
                 </Grid>
                 <Grid Grid.Row="2" Grid.Column="0" Margin="30,30,0,0">
                     <TextBlock Text="New Date Of Birth:  " FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6"/>
@@ -52,7 +66,14 @@
                         </StackPanel>
                     </Border>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="30,0,0,0">
-                        <TextBlock x:Name="txtBirth" Text="18/2/2004" FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" IsHitTestVisible="False" Margin="20,0,0,0" Width="270"  />
+                        <TextBox x:Name="txtBirth" 
+         Text="{Binding StudentBirth, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+         FontSize="17" 
+         FontFamily="Montserrat Bold" 
+         Foreground="#b897c6" 
+         Margin="20,0,0,0" 
+         Width="270" />
+
                     </StackPanel>
                 </Grid>
                 <Grid Grid.Row="3" Grid.Column="0" Margin="30,30,0,0">
@@ -60,7 +81,8 @@
                 </Grid>
                 <Grid Grid.Row="3" Grid.Column="1">
                     <Border BorderBrush="#b897c6" BorderThickness="0.5" Margin="20,20,50,20" CornerRadius="10">
-                        <PasswordBox  FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" Margin="20,0,0,0"/>
+                        <PasswordBox PasswordChanged="PasswordBox_PasswordChanged" FontSize="17" FontFamily="Montserrat Bold" Foreground="#b897c6" Margin="20,0,0,0" />
+
                     </Border>
                 </Grid>
                 <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">
@@ -78,7 +100,7 @@
                     </Border>
                     <Grid Grid.Column="1">
                         <Border Background="#b897d1" HorizontalAlignment="Left" VerticalAlignment="Center" CornerRadius="10" Margin="10,10,0,0">
-                            <Button Height="26" Click="Ok_Click">
+                            <Button Height="26" Command="{Binding ChangeAccountCommand}">
                                 <StackPanel Width="38" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                                     <TextBlock
                   Text="OK" FontFamily="Montserrat" FontSize="17" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"  />

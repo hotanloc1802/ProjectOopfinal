@@ -43,7 +43,7 @@ namespace ClassroomManagementApp1.Views
         }
         private void BtnClassroom1_Click(object sender, RoutedEventArgs e)
         {
-            ClassesView ClassWindow = new ClassesView("C001");
+            ClassesView ClassWindow = new ClassesView(StudentContext.Instance.StudentId);
             ClassWindow.Show();
             this.Close();
         }
@@ -75,6 +75,14 @@ namespace ClassroomManagementApp1.Views
             ChangePassView ChangePassWindow = new ChangePassView();
             ChangePassWindow.Show();
         }
+        public void RefreshWindow()
+        {
+            // Code to refresh the window, such as reloading data or resetting controls.
+            // Example: Reload data for a ListView or re-bind collections.
+            DataContext = null;  // Reset the data context if necessary
+            DataContext = this;  // Reassign the data context or refresh data here
+        }
+
         //Change Password
         private bool isEditingPassword = false;
        /* private void btnChangeSave_Click(object sender, RoutedEventArgs e)

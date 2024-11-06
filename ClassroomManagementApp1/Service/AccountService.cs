@@ -34,6 +34,10 @@ namespace ClassroomManagementApp1.ClassService
             var account = await _context.Accounts.FindAsync(userId);
             return account?.profilepicture; // Trả về hình ảnh nếu có
         }
-        
+        public async Task UpdateAccountAsync(Account account)
+        {
+            _context.Accounts.Update(account); // Cập nhật học sinh
+            await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+        }
     }
 }
