@@ -13,7 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel;
 using ClassroomManagementApp1.Views;
-namespace ClassroomManagementApp1.Component
+using ClassroomManagementApp1.ViewModels;
+using ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListViewModel;
+namespace ClassroomManagementApp1.Component.Classroom
 {
     /// <summary>
     /// Interaction logic for ClassroomListViewClasses.xaml

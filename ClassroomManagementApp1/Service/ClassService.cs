@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Windows;
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
 using Microsoft.EntityFrameworkCore;
@@ -54,6 +55,7 @@ namespace ClassroomManagementApp1.ClassService
         // Lấy thông tin lớp học theo classId (bao gồm giáo viên và môn học)
         public async Task<Class> GetClassById(string classId)
         {
+           
             return await _context.Classes
                 .Include(c => c.Teacher) // Bao gồm thông tin giáo viên
                 .Include(c => c.Subject) // Bao gồm thông tin môn học

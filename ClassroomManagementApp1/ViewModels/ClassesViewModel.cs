@@ -97,7 +97,6 @@ namespace ClassroomManagementApp1.ViewModels
         }
         private async void InitializeData(string classID)
         {
-            
             await ClassViewModel.LoadClassByIdAsync(classID);
             var className = ClassViewModel.SelectedClass.Subject.subjectname;
             var assignmentList = ClassViewModel.Assignments;

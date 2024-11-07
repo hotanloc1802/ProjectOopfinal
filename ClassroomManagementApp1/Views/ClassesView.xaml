@@ -205,7 +205,7 @@
                         <TextBlock Text="{Binding Subject}" FontSize="40" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6" VerticalAlignment="Center" Margin="0,0,550,0" HorizontalAlignment="Center"/>
                     </Border>
                     <Grid Grid.Row="1" Margin="0,20,0,0">
-                        <component:Window1 Margin="40,0,0,0" ClassId="{Binding MyClassId}" />
+                        <component:ClassesListViewClasses Margin="40,0,0,0" ClassId="{Binding MyClassId}" />
                     </Grid>
                 </Grid>
             </Grid>

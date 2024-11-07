@@ -97,7 +97,7 @@
                             </Button>
                         </Border>
                         <Border Background="Transparent" CornerRadius="10" Padding="5,5,5,5" Margin="15,0,15,0" Width="162"  >
-                            <Button x:Name="btnAssignment" Style="{StaticResource menuButton}"  Width="158" Margin="-5,5,0,5"  Click="BtnClass_Click">
+                            <Button x:Name="btnAssignment" Style="{StaticResource menuButton}"  Width="158" Margin="-5,5,0,5"  Click="BtnAssignment_Click">
                                 <Button.Triggers>
                                     <!-- Trigger khi di chuột vào Button -->
                                     <EventTrigger RoutedEvent="UIElement.MouseEnter">

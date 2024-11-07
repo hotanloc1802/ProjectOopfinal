@@ -6,19 +6,14 @@
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/iconpacks"
         xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
-        xmlns:component="clr-namespace:ClassroomManagementApp1.Component"
+        xmlns:component="clr-namespace:ClassroomManagementApp1.Component.Classroom"
         mc:Ignorable="d"
             Title="MainWindowView" Height="760" Width="1280" Background="Transparent" ResizeMode="NoResize"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Border Background="#ebdef2" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
+    <Border Background="#f6eefb" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
         Padding="20" >
         <Border CornerRadius="40" Height="716" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1236">
-            <Border.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Color="#ebdef2" Offset="0" />
-                    <GradientStop Color="#ebdef2" Offset="1" />
-                </LinearGradientBrush>
-            </Border.Background>
+            
             <Grid Margin="0,0,0,15" HorizontalAlignment="Center" Width="1176" Height="686" VerticalAlignment="Bottom">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.8*"/>
@@ -244,13 +239,23 @@
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="1" Margin="30,30,30,0">
-                        <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
+                        <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="32"/>
                     </Grid>
                     <Grid Grid.Row="2" >
-                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,0,0,10" Height="548" VerticalAlignment="Bottom"/>
+                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,15,0,0" Height="548" VerticalAlignment="Bottom"/>
                     </Grid>
                 </Grid>
-
+                <Grid Grid.Column="2">
+                    <Border>
+                        <Border.Background>
+                            <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                                <GradientStop Color="white" Offset="0"/>
+                                <GradientStop Color="#f6eefb" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.Background>
+                    </Border>
+                    <Border CornerRadius="0,20,20,0" Background="#ebdef2"/>
+                </Grid>
                 <Grid Grid.Column="2">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="75"/>
@@ -260,8 +265,8 @@
                     <Grid Grid.Row="1"  Margin="30,30,30,0">
                         <TextBlock Text="Deadlines:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
                     </Grid>
-                    <Grid Grid.Row="2">
-                        <Border x:Name="boDeadlines"  Background="White" CornerRadius="30" Margin="0,23,0,0">
+                    <Grid Grid.Row="2" Margin="20,0,20,0">
+                        <Border x:Name="boDeadlines"  Background="White" CornerRadius="20" Margin="0,23,0,60">
                             <Border x:Name="boDeadline1" Background="Transparent" BorderBrush="Transparent">
                                 <Grid>
                                     <component:ClassroomListViewAssignments/>

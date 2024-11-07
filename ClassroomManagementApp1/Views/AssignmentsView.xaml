@@ -9,7 +9,7 @@
         xmlns:component="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen" WindowStyle="None" AllowsTransparency="True" 
         Title="AssignmentsDraft" Height="760" Width="1280" Background="Transparent" ResizeMode="NoResize">
-    <Border Background="#ebdef2" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
+    <Border Background="#f6eefb" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
         Padding="20" >
         <Border CornerRadius="40" Height="716" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1236">
             <Grid Margin="0,0,0,15" HorizontalAlignment="Center" Width="1176" Height="686" VerticalAlignment="Bottom">
@@ -17,10 +17,7 @@
                     <ColumnDefinition Width="0.8*"/>
                     <ColumnDefinition Width="4.2*"/>
                 </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="71*"/>
-                    <RowDefinition Height="615*"/>
-                </Grid.RowDefinitions>
+
                 <Border CornerRadius="20 0 0 20" ClipToBounds="True" Background="White" Grid.Row="0"  Grid.RowSpan="2">
                     <Border  CornerRadius="20 0 0 20" ClipToBounds="True" Margin="0,0,-5,0">
                         <Border.Background>
@@ -230,7 +227,7 @@
                     </Grid>
                 </Grid>
 
-                <Grid Grid.Column="1" Grid.RowSpan="2">
+                <Grid Grid.Column="1">
                     <Border>
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
@@ -241,19 +238,21 @@
                     </Border>
                     <Border CornerRadius="20" Background="#ebdef2"/>
                 </Grid>
-                <Grid Grid.Column="1" Grid.Row="0">
-                    <TextBlock VerticalAlignment="Bottom" Margin="20,0,0,0" Text="Your Assignments:" Foreground="Gray" FontFamily="Montserrat" FontSize="32"/>
-                </Grid>
-                <Grid Grid.Column="1" Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="0">
-
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="71"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock VerticalAlignment="Bottom" Margin="20,0,0,0" Text="Your Assignments:" Foreground="Gray" FontFamily="Montserrat" FontSize="32"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <component:AssigmentListViewAssignments/>
                     </Grid>
                 </Grid>
             </Grid>
         </Border>
     </Border>
 </Window>
+

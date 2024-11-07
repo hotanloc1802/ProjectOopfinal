@@ -81,6 +81,7 @@ namespace ClassroomManagementApp1.ClassService
         {
             var assignments = await _context.Assignment
                                  .Where(a => a.Class.ClassStudents.Any(cs => cs.studentid == studentId)) // Lọc theo studentId
+                                 .Include(a => a.Class)
                                  .OrderBy(a => a.duedate) // Sắp xếp theo DueDate tăng dần
                                  .ToListAsync();
 

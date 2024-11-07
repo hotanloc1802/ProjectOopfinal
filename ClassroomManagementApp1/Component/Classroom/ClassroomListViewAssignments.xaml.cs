@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClassroomManagementApp1.ViewModels;
-namespace ClassroomManagementApp1.Component
+namespace ClassroomManagementApp1.Component.Classroom
 {
     /// <summary>
     /// Interaction logic for ClassroomListViewAssignments.xaml

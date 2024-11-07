@@ -218,7 +218,6 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\bin\Debug\net8.0-windows\Npg
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\bin\Debug\net8.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\bin\Debug\net8.0-windows\System.Text.Json.dll
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.csproj.AssemblyReference.cache
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\AssigmentListViewAssignments.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\ClassInfo\ClassInfo.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\ClassInfo\ClassInfoBoxAssignments.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classroom\ClassroomListViewAssignments.g.cs
@@ -230,7 +229,6 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Com
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindow\MainWindowBoxStudentInfo.g.cs
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Window1.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\AssignmentsView.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangeInfoView.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangePassView.g.cs
@@ -240,8 +238,6 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Vie
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\MainWindowView.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\SettingView.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\SignInView.g.cs
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\Window1.g.cs
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Window2.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1_MarkupCompile.cache
@@ -362,7 +358,6 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\bin\Debug\net8.0-windows\run
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\App.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\AssigmentListViewAssignments.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\ClassInfo\ClassInfo.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\ClassInfo\ClassInfoBoxAssignments.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classroom\ClassroomListViewAssignments.baml
@@ -374,7 +369,6 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Com
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\MainWindow\MainWindowBoxStudentInfo.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Window1.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\AssignmentsView.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangeInfoView.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\ChangePassView.baml
@@ -384,8 +378,6 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Vie
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\MainWindowView.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\SettingView.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\SignInView.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\Window1.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Window2.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.g.resources
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.AssemblyInfoInputs.cache
@@ -398,3 +390,7 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ref
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.pdb
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ClassroomManagementApp1.genruntimeconfig.cache
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\ref\ClassroomManagementApp1.dll
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Assignment\AssigmentListViewAssignments.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Assignment\AssigmentListViewAssignments.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classes\ClassesListViewClasses.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classes\ClassesListViewClasses.baml

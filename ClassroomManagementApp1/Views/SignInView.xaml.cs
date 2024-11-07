@@ -49,7 +49,25 @@ namespace ClassroomManagementApp1.Views
                 txtPassword.Visibility = Visibility.Visible;
             }
         }
+        private void boxUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                boxPassword.Focus(); // Move focus to PasswordBox
+            }
+        }
 
+        // Event to handle Enter key for login after entering Password
+        private void boxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                if (!string.IsNullOrEmpty(boxUserName.Text) && !string.IsNullOrEmpty(boxPassword.Password))
+                {
+                    LogIn_Click(sender, e); // Trigger the login function
+                }
+            }
+        }
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
             string connectionString = "Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=public";

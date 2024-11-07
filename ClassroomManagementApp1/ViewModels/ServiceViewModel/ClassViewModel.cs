@@ -58,6 +58,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         // Lấy thông tin của một lớp học theo ClassID
         public async Task LoadClassByIdAsync(string classId)
         {
+
             var cls = await _classService.GetClassById(classId);
             if (cls != null) // Kiểm tra xem lớp học có tồn tại không
             {
@@ -80,7 +81,6 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 SelectedClass = null;
             }
         }
-
         public async Task LoadClassesByStudentIdAsync(string studentId)
         {
             var classList = await _classService.GetClassesByStudentId(studentId);
