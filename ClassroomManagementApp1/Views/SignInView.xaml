@@ -58,8 +58,7 @@
                         </Grid>
                         <Grid Grid.Column="1" Margin="0,0,15,0">
                             <TextBox x:Name="boxUserName" Foreground="#b897d1" FontFamily="Montserrat" Background="Transparent"  BorderBrush="Transparent" 
-                             VerticalAlignment="Center" Padding="5,5" 
-                            GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                             VerticalAlignment="Center" Padding="5,5" KeyDown="boxUserName_KeyDown" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
                             <TextBlock x:Name="txtUserName" FontSize="13" Text="User Name" FontFamily="Montserrat" Foreground="#b897d1" 
                              VerticalAlignment="Center" IsHitTestVisible="False"/>
                         </Grid>
@@ -75,8 +74,7 @@
                         </Grid>
                         <Grid Grid.Column="1" Margin="0,0,15,0">
                             <PasswordBox x:Name="boxPassword" Foreground="#b897d1" FontFamily="Montserrat" Background="Transparent"  BorderBrush="Transparent" 
-                            VerticalAlignment="Center" Padding="5,5" 
-                            GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
+                            VerticalAlignment="Center" Padding="5,5" KeyDown="boxPassword_KeyDown" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus"/>
                             <TextBlock x:Name="txtPassword" FontSize="13" Text="Password" FontFamily="Montserrat" Foreground="#b897d1" 
                              VerticalAlignment="Center" IsHitTestVisible="False"/>
                         </Grid>

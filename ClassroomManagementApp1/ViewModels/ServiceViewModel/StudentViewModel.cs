@@ -25,11 +25,12 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 OnPropertyChanged();
             }
         }
-
         public StudentViewModel(StudentService studentService)
         {
             _studentService = studentService;
+            Students = new ObservableCollection<Student>();
         }
+
         // Tải tất cả học sinh
         public async Task LoadAllStudentsAsync()
         {

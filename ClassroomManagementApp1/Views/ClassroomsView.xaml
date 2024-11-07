@@ -244,10 +244,10 @@
                         </StackPanel>
                     </Grid>
                     <Grid Grid.Row="1" Margin="30,30,30,0">
-                        <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
+                        <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="32"/>
                     </Grid>
                     <Grid Grid.Row="2" >
-                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,0,0,10" Height="548" VerticalAlignment="Bottom" Loaded="ClassroomListViewClasses_Loaded"/>
+                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,15,0,0" Height="548" VerticalAlignment="Bottom" Loaded="ClassroomListViewClasses_Loaded"/>
                     </Grid>
                 </Grid>
 
@@ -261,7 +261,7 @@
                         <TextBlock Text="Deadlines:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
                     </Grid>
                     <Grid Grid.Row="2">
-                        <Border x:Name="boDeadlines"  Background="White" CornerRadius="30" Margin="0,23,0,0">
+                        <Border x:Name="boDeadlines"  Background="White" CornerRadius="20" Margin="0,23,0,60">
                             <Border x:Name="boDeadline1" Background="Transparent" BorderBrush="Transparent">
                                 <Grid>
                                     <component:ClassroomListViewAssignments/>

@@ -1,5 +1,4 @@
-﻿using ClassroomManagementApp1.ViewModels.ComponentViewModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,18 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ClassroomManagementApp1.ViewModels.ComponentViewModel;
 
 namespace ClassroomManagementApp1.Component
 {
     /// <summary>
-    /// Interaction logic for AssignmentListViewAssignments2.xaml
+    /// Interaction logic for AdminClassInfoView.xaml
     /// </summary>
-    public partial class AssignmentListViewAssignments2 : UserControl
+    public partial class AdminClassInfoView : UserControl
     {
-        public AssignmentListViewAssignments2()
+        public AdminClassInfoView()
         {
             InitializeComponent();
-            DataContext = new AssignmentListViewAssignmentsViewModel();
+            DataContext = new AdminClassInfoViewModel();
+        }
+        private void classDataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            MessageBox.Show("Selection Changed!");
         }
     }
 }

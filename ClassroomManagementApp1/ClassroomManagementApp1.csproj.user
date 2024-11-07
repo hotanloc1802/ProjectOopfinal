@@ -7,10 +7,19 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Component\Assignment\AssigmentListViewAssignments.xaml.cs">
+    <Compile Update="Component\AdminAssignmentInfoView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Component\Assignment\AssignmentListViewAssignments2.xaml.cs">
+    <Compile Update="Component\Admin\AdminClassInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\Admin\AdminStudentInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\Admin\AdminTeacherInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\Assignment\AssigmentListViewAssignments.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Component\ClassInfo\ClassInfo.xaml.cs">
@@ -73,6 +82,9 @@
     <Compile Update="Views\SignInView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -81,10 +93,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Component\Assignment\AssigmentListViewAssignments.xaml">
+    <Page Update="Component\AdminAssignmentInfoView.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Component\Assignment\AssignmentListViewAssignments2.xaml">
+    <Page Update="Component\Admin\AdminClassInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\Admin\AdminStudentInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\Admin\AdminTeacherInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\Assignment\AssigmentListViewAssignments.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Component\ClassInfo\ClassInfo.xaml">
@@ -145,6 +166,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SignInView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Window1.xaml">

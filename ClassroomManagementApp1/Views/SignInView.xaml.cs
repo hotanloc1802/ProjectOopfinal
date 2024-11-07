@@ -1,19 +1,10 @@
 ﻿using ClassroomManagementApp1;
 using Npgsql;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using ClassroomManagementApp1.Data;
+
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -26,7 +17,7 @@ namespace ClassroomManagementApp1.Views
             InitializeComponent();
         }
 
-        //Hide text in text box
+        // Hide text in text box when focused
         private void TextBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (sender == boxUserName)
@@ -38,6 +29,8 @@ namespace ClassroomManagementApp1.Views
                 txtPassword.Visibility = Visibility.Collapsed;
             }
         }
+
+        // Show text in text box when lost focus and no text is entered
         private void TextBox_LostFocus(object sender, RoutedEventArgs e)
         {
             if (sender == boxUserName && string.IsNullOrWhiteSpace(boxUserName.Text))
@@ -50,6 +43,28 @@ namespace ClassroomManagementApp1.Views
             }
         }
 
+        // Event to handle Enter key for moving from Username to Password
+        private void boxUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                boxPassword.Focus(); // Move focus to PasswordBox
+            }
+        }
+
+        // Event to handle Enter key for login after entering Password
+        private void boxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                if (!string.IsNullOrEmpty(boxUserName.Text) && !string.IsNullOrEmpty(boxPassword.Password))
+                {
+                    LogIn_Click(sender, e); // Trigger the login function
+                }
+            }
+        }
+
+        // Login function to check user credentials in the database
         private void LogIn_Click(object sender, RoutedEventArgs e)
         {
             string connectionString = "Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=public";
@@ -74,6 +89,7 @@ namespace ClassroomManagementApp1.Views
                         {
                             string studentId = result.ToString();
                             StudentContext.Instance.SetStudentId(studentId);
+
                             // Pass the studentId to MainWindow
                             MainWindowView mainWindow = new MainWindowView(studentId);
                             mainWindow.Show();
@@ -87,7 +103,7 @@ namespace ClassroomManagementApp1.Views
                 }
                 catch (Exception ex)
                 {
-                    
+                    MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message, "Đăng nhập thất bại", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }

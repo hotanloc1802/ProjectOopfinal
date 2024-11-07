@@ -248,16 +248,7 @@
                         <TextBlock VerticalAlignment="Bottom" Margin="20,0,0,0" Text="Your Assignments:" Foreground="Gray" FontFamily="Montserrat" FontSize="32"/>
                     </Grid>
                     <Grid Grid.Row="1">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.5*"/>
-                            <ColumnDefinition Width="0.5*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0" Margin="30,20,25,0">
-                             <component:AssigmentListViewAssignments/>
-                        </Grid>
-                        <Grid Grid.Column="1" Margin="25,20,30,0">
-                            <component:AssignmentListViewAssignments2/>
-                        </Grid>
+                        <component:AssigmentListViewAssignments/>
                     </Grid>
                 </Grid>
             </Grid>

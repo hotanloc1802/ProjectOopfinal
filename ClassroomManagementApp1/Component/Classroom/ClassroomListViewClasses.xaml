@@ -16,7 +16,7 @@
           ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="ListView_SelectionChanged">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,0,0,5" Height="200" BorderBrush="Transparent" Click="BtnClassroom1_Click" CommandParameter="{Binding classid}"  >
+                    <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,0,0,-10" Height="200" BorderBrush="Transparent" Click="BtnClassroom1_Click" CommandParameter="{Binding classid}"  >
                         <Border Height="170" Width="689" CornerRadius="10" Background="#b897c6">
                             <Grid Grid.Column="1" VerticalAlignment="Center">
                                 <Grid.ColumnDefinitions>
