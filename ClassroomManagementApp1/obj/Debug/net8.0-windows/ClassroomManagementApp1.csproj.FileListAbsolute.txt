@@ -394,3 +394,5 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Com
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Assignment\AssigmentListViewAssignments.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classes\ClassesListViewClasses.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classes\ClassesListViewClasses.baml
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\Window1.g.cs
+C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\Window1.baml

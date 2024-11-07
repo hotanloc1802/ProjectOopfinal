@@ -15,7 +15,9 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
     {
         private MainWindowBoxClassesItem _item; // Private field for backing store
         public ClassViewModel ClassViewModel { get; private set; }
+        public SubmissionViewModel SubmissionViewModel { get; private set; }
         private readonly ClassesService _classService;
+        private readonly SubmissionService _submissionService;
         private List<Tuple<DateTime, DateTime>> _dateRanges = new List<Tuple<DateTime, DateTime>>();
         public ObservableCollection<ClassWithDateRange> _listclasswithdaterange { get; set; }
         public ObservableCollection<ClassWithDateRange> ListClassesWithDateRange
@@ -73,24 +75,29 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         }
 
         // Constructor with ClassService dependency
-        public ClassroomListViewClassesViewModel(ClassesService classService)
+        public ClassroomListViewClassesViewModel(ClassesService classService, SubmissionService submissionService)
         {
             _classService = classService;
             ClassViewModel = new ClassViewModel(_classService);
+            _submissionService = submissionService;
+            SubmissionViewModel = new SubmissionViewModel(_submissionService);
             InitializeData();
         }
 
         // Method to create and return ClassesService instance
-        private static ClassesService CreateClassService()
+        private static (ClassesService, SubmissionService) CreateDbContext()
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
             optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
             var context = new AppDbContext(optionsBuilder.Options);
-            return new ClassesService(context);
-        }
 
+            var classService = new ClassesService(context);
+            var submissionService = new SubmissionService(context);
+
+            return (classService, submissionService);
+        }
         // Default constructor that uses CreateClassService
-        public ClassroomListViewClassesViewModel() : this(CreateClassService())
+        public ClassroomListViewClassesViewModel() : this(CreateDbContext().Item1, CreateDbContext().Item2)
         {
         }
 
@@ -99,15 +106,26 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         {
             try
             {
-                // Load classes by student ID
-                await ClassViewModel.LoadClassesByStudentIdAsync(StudentContext.Instance.StudentId);
-
+               await ClassViewModel.LoadClassesByStudentIdAsync(StudentContext.Instance.StudentId);   
                 // Gán cả danh sách các lớp vào ObservableCollection
                 Listclasses = new ObservableCollection<Class>(ClassViewModel.Classes);
                 ListClassesWithDateRange = new ObservableCollection<ClassWithDateRange> { };
                 foreach (var cls in Listclasses)
                 {
-                    ListClassesWithDateRange.Add(new ClassWithDateRange(cls.classid, cls.classname, new Tuple<DateTime, DateTime>(cls.datebegin, cls.dateend), cls.Assignments.Count));
+                    await ClassViewModel.LoadAssignmentsByClassIdAsync(cls.classid);
+                    var assignmentsList = ClassViewModel.Assignments.ToList();
+                    await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContext.Instance.StudentId);
+                    var submissionList = SubmissionViewModel.Submissions;
+                    int countNotSubmitted = 0;
+                    foreach (var asm in assignmentsList)
+                    {
+                        bool isSubmitted = submissionList.Any(sms => sms.assignmentid == asm.assignmentid);
+                        if (!isSubmitted)
+                        {
+                            countNotSubmitted++;
+                        }
+                    }
+                        ListClassesWithDateRange.Add(new ClassWithDateRange(cls.classid, cls.classname, new Tuple<DateTime, DateTime>(cls.datebegin, cls.dateend), countNotSubmitted));
                     // Hoặc bạn có thể thêm từng lớp một (cách hiện tại):
                     // foreach (var cls in ClassViewModel.Classes)
                     // {

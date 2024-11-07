@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Height="690" Width="1000">
     <ScrollViewer >
-        <ListView ItemsSource="{Binding SubmissonAssignments}"  Height="695" Width="995"  >
+        <ListView ItemsSource="{Binding SubmissonAssignments}"  Height="695" Width="995" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False"
+          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="Background" Value="Transparent"/>
@@ -36,27 +37,27 @@
                             <RowDefinition Height="150"/>
                             <RowDefinition Height="150"/>
                         </Grid.RowDefinitions>
-                        <Border CornerRadius="50" Background="White" Grid.Row="0" Height="440"  Width="960" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.RowSpan="4" />
+                        <Border CornerRadius="50" Background="White" Grid.Row="0" Height="440"  Width="900" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.RowSpan="4" />
                         <Grid Grid.Row="0">
                             <TextBlock Text="{Binding  description}" FontSize="25" FontFamily="Montserrat Bold" Foreground="Gray" Margin="55,30,0,0"/>
                         </Grid>
                         <Grid Grid.Row="1">
-                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="170" Margin="50,0,0,25">
+                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="170" Margin="100,0,0,25">
                                 <TextBlock Text="Requirements" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" Margin="10,0,0,0"/>
                             </Border>
                         </Grid>
                         <Grid Grid.Row="2">
-                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="185" Margin="50,110,0,0">
+                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="185" Margin="100,110,0,0">
                                 <TextBlock Text="Assignments" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
                             </Border>
                         </Grid>
                         <Grid Grid.Row="3">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="136*"/>
-                                <ColumnDefinition Width="531*"/>
-                                <ColumnDefinition Width="333*"/>
+                                <ColumnDefinition Width="68*"/>
+                                <ColumnDefinition Width="241*"/>
+                                <ColumnDefinition Width="191*"/>
                             </Grid.ColumnDefinitions>
-                            <Border BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10" Margin="50,15,50,30" Grid.ColumnSpan="3">
+                            <Border BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10" Margin="100,15,90,30" Grid.ColumnSpan="3">
                                 <TextBlock Text="Link: " FontSize="25" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Center" Margin="30,0,0,0" />
                             </Border>
                             <Grid Grid.Column="1">
@@ -68,13 +69,13 @@
                                     <RowDefinition Height="*"/>
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
-                                <Border Margin="0,30,130,20" Background="#ed8890" BorderBrush="Transparent"  CornerRadius="10" HorizontalAlignment="Right" Width="148" >
+                                <Border Margin="0,30,130,0" Background="#C7E4FF" BorderBrush="Transparent"  CornerRadius="10" HorizontalAlignment="Right" Width="148" >
                                     <Button  Click="SubmitButton_Click">
                                         <TextBlock Text="Submit" Foreground="Gray" FontSize="25" FontFamily="Montserrate" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     </Button>
                                 </Border>
                                 <Grid Grid.Row="1">
-                                    <TextBlock Text="{Binding duedate}" FontSize="15" FontFamily="Montserrate" Foreground="Gray" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="30,0,0,50"/>
+                                    <TextBlock Text="{Binding duedate}" FontSize="15" FontFamily="Montserrate" Foreground="Gray" VerticalAlignment="Top" Margin="69,4,0,0" HorizontalAlignment="Left" Width="223"/>
                                 </Grid>
                             </Grid>
                         </Grid>

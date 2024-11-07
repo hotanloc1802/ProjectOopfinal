@@ -73,6 +73,9 @@
     <Compile Update="Views\SignInView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Component\Assignment\AssigmentListViewAssignments.xaml">
@@ -139,6 +142,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SignInView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Window1.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

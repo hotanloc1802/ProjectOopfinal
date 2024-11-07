@@ -9,6 +9,7 @@
     <ListView ItemsSource="{Binding AssignmentsFormattedList}"
               ScrollViewer.VerticalScrollBarVisibility="Auto"
               ScrollViewer.HorizontalScrollBarVisibility="Auto">
+        
         <ListView.ItemTemplate>
             <DataTemplate>
                 <Grid>

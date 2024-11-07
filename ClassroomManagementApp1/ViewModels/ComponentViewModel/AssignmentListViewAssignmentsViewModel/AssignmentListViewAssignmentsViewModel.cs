@@ -4,6 +4,7 @@ using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -120,7 +121,8 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
                         // Kiểm tra Class và duedate không phải null
                         if (asm1.Class != null && asm1.duedate != null)
                         {
-                            FirstHalfAssignments.Add(new item(asm1.Class.classname, asm1.description, asm1.duedate.ToString()));
+                            string formattedDate1 = asm1.duedate.ToString("dddd, MMMM d") + GetDaySuffix(asm1.duedate.Day) + asm1.duedate.ToString(", yyyy");
+                            FirstHalfAssignments.Add(new item(asm1.Class.classname, asm1.description, formattedDate1));
                         }
                         else
                         {
@@ -134,7 +136,8 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
                         // Kiểm tra Class và duedate không phải null
                         if (asm2.Class != null && asm2.duedate != null)
                         {
-                            SecondHalfAssignments.Add(new item(asm2.Class.classname, asm2.description, asm2.duedate.ToString()));
+                            string formattedDate2 = asm2.duedate.ToString("dddd, MMMM d") + GetDaySuffix(asm2.duedate.Day) + asm2.duedate.ToString(", yyyy");
+                            SecondHalfAssignments.Add(new item(asm2.Class.classname, asm2.description, formattedDate2));
                         }
                         else
                         {
@@ -155,6 +158,17 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
                 MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
+        }
+        private string GetDaySuffix(int day)
+        {
+            if (day >= 11 && day <= 13) return "th";
+            return (day % 10) switch
+            {
+                1 => "st",
+                2 => "nd",
+                3 => "rd",
+                _ => "th",
+            };
         }
 
     }

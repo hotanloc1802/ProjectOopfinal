@@ -10,7 +10,7 @@
         mc:Ignorable="d" 
         Title="MainWindowView" Height="380" Width="640" Background="Transparent" ResizeMode="NoResize"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
-    <Border Background="#ebdef2" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
+    <Border Background="#f6eefb" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
         Padding="20" >
         <Border CornerRadius="40">
             <Grid>
