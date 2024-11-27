@@ -62,7 +62,12 @@ namespace ClassroomManagementApp1.ClassService
                 .Include(c=> c.Assignments)
                 .FirstOrDefaultAsync(c => c.classid == classId); // Lọc theo classId
         }
-
+        public async Task<List<Class>> GetAllClassesAsync()
+        {
+            return await _context.Classes
+                .AsNoTracking() // Không theo dõi thực thể, tránh xung đột khi cập nhật
+                .ToListAsync();
+        }
         // Lấy các lớp học mà học sinh đã đăng ký (bao gồm giáo viên và môn học)
         public async Task<List<Class>> GetClassesByStudentId(string studentId)
         {

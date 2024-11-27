@@ -17,7 +17,7 @@ namespace ClassroomManagementApp1.Models
         // Khóa ngoại chỉ định
         [ForeignKey("Student")]
         public string studentid { get; set; }
-
+        public string role { get; set; }
         // Tham chiếu đến Student
         public Student Student { get; set; }
         public byte[] profilepicture { get; set; }

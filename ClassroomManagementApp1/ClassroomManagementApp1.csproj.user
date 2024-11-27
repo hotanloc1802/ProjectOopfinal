@@ -46,6 +46,15 @@
     <Compile Update="Component\Classes\ClassesListViewClasses.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\AdminClassView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminStudentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminTeacherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\AssignmentsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -115,6 +124,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Component\Classes\ClassesListViewClasses.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminClassView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminStudentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminTeacherView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\AssignmentsView.xaml">

@@ -72,8 +72,8 @@ namespace ClassroomManagementApp1.Views
         {
             string connectionString = "Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=public";
 
-            // SQL query to check the user and get the studentId
-            string query = "SELECT studentid FROM \"public\".account WHERE username = @Username AND password = @Password";
+            // SQL query to check the user and get the studentId and role
+            string query = "SELECT studentid, role FROM \"public\".account WHERE username = @Username AND password = @Password";
 
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
             {
@@ -85,29 +85,44 @@ namespace ClassroomManagementApp1.Views
                         command.Parameters.AddWithValue("@Username", boxUserName.Text);
                         command.Parameters.AddWithValue("@Password", boxPassword.Password);
 
-                        // Execute the query and retrieve studentId (if found)
-                        var result = command.ExecuteScalar();
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (reader.Read()) // User found
+                            {
+                                string studentId = reader["studentid"].ToString();
+                                string role = reader["role"].ToString();
 
-                        if (result != null) // User found, studentId retrieved
-                        {
-                            string studentId = result.ToString();
-                            StudentContext.Instance.SetStudentId(studentId);
-                            // Pass the studentId to MainWindow
-                            MainWindowView mainWindow = new MainWindowView(studentId);
-                            mainWindow.Show();
-                            this.Hide(); // Hide the login form
-                        }
-                        else
-                        {
-                            MessageBox.Show("Tài khoản hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButton.OK, MessageBoxImage.Error);
+                                // Set the studentId in context
+                                StudentContext.Instance.SetStudentId(studentId);
+
+                                if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
+                                {
+                                    // Open Admin interface
+                                    AdminStudentView adminWindow = new AdminStudentView();
+                                    adminWindow.Show();
+                                }
+                                else
+                                {
+                                    // Open Normal interface
+                                    MainWindowView mainWindow = new MainWindowView(studentId);
+                                    mainWindow.Show();
+                                }
+
+                                this.Hide(); // Hide the login form
+                            }
+                            else
+                            {
+                                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    
+                    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
+
     }
 }

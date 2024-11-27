@@ -13,9 +13,16 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
     public class StudentViewModel : INotifyPropertyChanged
     {
         private readonly StudentService _studentService;
-        public ObservableCollection<Student> Students { get; set; }
-
-       
+        private ObservableCollection<Student> _students;
+        public ObservableCollection<Student> Students
+        {
+            get => _students;
+            set
+            {
+                _students = value;
+                OnPropertyChanged(nameof(Students)); // Thông báo UI cập nhật
+            }
+        }
         private Student _selectedStudent;
         public Student SelectedStudent
         {
@@ -29,7 +36,9 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 
         public StudentViewModel(StudentService studentService)
         {
+
             _studentService = studentService;
+            Students = new ObservableCollection<Student>();
         }
         // Tải tất cả học sinh
         public async Task LoadAllStudentsAsync()

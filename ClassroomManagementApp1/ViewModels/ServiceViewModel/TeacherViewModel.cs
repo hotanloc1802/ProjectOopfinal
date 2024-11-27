@@ -33,11 +33,10 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         {
             _teacherService = teacherService;
             Teachers = new ObservableCollection<Teacher>();
-            LoadTeachers();  // Tải danh sách giáo viên ban đầu
         }
 
         // Phương thức tải tất cả giáo viên
-        private async void LoadTeachers()
+        public async Task LoadTeachers()
         {
             var teacherList = await _teacherService.GetAllTeachersAsync();
             Teachers.Clear();
@@ -51,7 +50,6 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         public async Task AddTeacher(Teacher teacher)
         {
             await _teacherService.AddTeacherAsync(teacher);
-            LoadTeachers();  // Tải lại danh sách giáo viên sau khi thêm
         }
 
         // Cập nhật thông tin giáo viên
@@ -61,7 +59,6 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             {
                 await _teacherService.UpdateTeacherAsync(SelectedTeacher);
             }
-            LoadTeachers();  // Tải lại danh sách giáo viên sau khi cập nhật
         }
 
         // Xóa giáo viên
@@ -73,7 +70,6 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Teachers.Remove(SelectedTeacher);
                 SelectedTeacher = null;
             }
-            LoadTeachers();  // Tải lại danh sách giáo viên sau khi xóa
         }
         public async Task<string> GetTeacherInfo(string teacherid)
         {

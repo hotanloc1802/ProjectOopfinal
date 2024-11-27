@@ -43,7 +43,15 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Classes.Add(cls);
             }
         }
-
+        public async Task LoadAllClassAsync()
+        {
+            var classesList = await _classService.GetAllClassesAsync();
+            Classes.Clear();
+            foreach (var classe in classesList)
+            {
+                Classes.Add(classe);
+            }
+        }
         // Tải 3 lớp gần nhất theo StudentID
         public async Task LoadTop3NearestClassesByStudentIdAsync(string studentId)
         {

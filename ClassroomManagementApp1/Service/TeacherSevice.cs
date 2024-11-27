@@ -35,6 +35,7 @@ namespace ClassroomManagementApp1.ClassService
                                  .ToListAsync(); // Trả về danh sách giáo viên
         }
 
+
         // Sửa thông tin giáo viên
         public async Task UpdateTeacherAsync(Teacher teacher)
         {
