@@ -1,0 +1,13 @@
+# Loại bỏ thư mục Visual Studio
+.vs/
+
+# Loại bỏ các thư mục không cần theo dõi
+ConsoleApp1/
+New folder/
+WpfApp1/
+WpfApp2/
+WpfApp3/
+learnc#/
+test_windowform/
+web_quan_li_coffee/
+
