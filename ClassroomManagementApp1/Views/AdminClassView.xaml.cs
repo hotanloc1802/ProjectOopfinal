@@ -39,18 +39,23 @@ namespace ClassroomManagementApp1.Views
             Window.Show();
             this.Close();
         }
-        /*private void boxSearch_KeyDown(object sender, KeyEventArgs e)
+
+        private void btnAssignment_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.Enter)
-            {
-                //var searchText = boxSearch.Text;
-                var command = DataContext?.GetType().GetProperty("SearchCommand")?.GetValue(DataContext) as ICommand;
-                if (command != null && command.CanExecute(searchText))
-                {
-                    command.Execute(searchText);
-                }
-            }
-        }*/
+
+        }
+        /*private void boxSearch_KeyDown(object sender, KeyEventArgs e)
+{
+   if (e.Key == Key.Enter)
+   {
+       //var searchText = boxSearch.Text;
+       var command = DataContext?.GetType().GetProperty("SearchCommand")?.GetValue(DataContext) as ICommand;
+       if (command != null && command.CanExecute(searchText))
+       {
+           command.Execute(searchText);
+       }
+   }
+}*/
 
 
 

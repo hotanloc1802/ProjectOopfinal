@@ -27,7 +27,6 @@
                         <ColumnDefinition Width="0.25*"/>
                         <ColumnDefinition Width="0.25*"/>
                         <ColumnDefinition Width="0.25*"/>
-                        <ColumnDefinition Width="0.25*"/>
                     </Grid.ColumnDefinitions>
                     <Grid Grid.Column="0">
                         <Button x:Name="btnStudent" Height="71" Background="Transparent" BorderBrush="Transparent" Click ="Btn_ChangeViewToStudent" >
@@ -42,11 +41,6 @@
                     <Grid Grid.Column="2">
                         <Button x:Name="btnClassroom" Height="71" Background="Transparent" BorderBrush="Transparent" Click ="Btn_ChangeViewToClasses">
                             <TextBlock Text="Classrooms" FontFamily="Montserrat" FontSize="30" Foreground="#959595"/>
-                        </Button>
-                    </Grid>
-                    <Grid Grid.Column="4">
-                        <Button x:Name="btnAssignment" Height="71" Background="Transparent" BorderBrush="Transparent">
-                            <TextBlock Text="Assignments" FontFamily="Montserrat" FontSize="30" Foreground="#959595"/>
                         </Button>
                     </Grid>
                 </Grid>
