@@ -1,14 +1,12 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Commands;
 using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.Views;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Input;
+using System.Windows;
+using ClassroomManagementApp1.Factory;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -23,8 +21,9 @@ namespace ClassroomManagementApp1.ViewModels
 
         public ICommand ChangeAccountCommand { get; private set; }
         public ICommand ChangePassCommand { get; private set; }
+
         public ChangeViewModel(string studentId, Window window)
-            : this(CreateDbContext().Item1, CreateDbContext().Item2, studentId, window)
+            : this(ServiceFactory.CreateAccountService(), ServiceFactory.CreateStudentService(), studentId, window)
         {
         }
 
@@ -39,21 +38,9 @@ namespace ClassroomManagementApp1.ViewModels
 
             LoadAccountInformation(studentId).ConfigureAwait(false);
 
-            // Initialize the command with the action and a condition for execution
+            // Initialize commands
             ChangeAccountCommand = new RelayCommand(async _ => await ChangeAccount(studentId));
             ChangePassCommand = new RelayCommand(async _ => await ChangePass(studentId));
-        }
-
-        private static (AccountService, StudentService) CreateDbContext()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-
-            var accountService = new AccountService(context);
-            var studentService = new StudentService(context);
-
-            return (accountService, studentService);
         }
 
         private string studentname;
@@ -88,6 +75,7 @@ namespace ClassroomManagementApp1.ViewModels
                 OnPropertyChanged(nameof(PassWord));
             }
         }
+
         private string resetpassword1;
         public string ResetPassword1
         {
@@ -98,6 +86,7 @@ namespace ClassroomManagementApp1.ViewModels
                 OnPropertyChanged(nameof(ResetPassword1));
             }
         }
+
         private string resetpassword2;
         public string ResetPassword2
         {
@@ -108,6 +97,7 @@ namespace ClassroomManagementApp1.ViewModels
                 OnPropertyChanged(nameof(ResetPassword2));
             }
         }
+
         // Load the current account information for the specified student ID
         private async Task LoadAccountInformation(string studentId)
         {
@@ -127,24 +117,22 @@ namespace ClassroomManagementApp1.ViewModels
             var checkpass = AccountViewModel.SelectedAccount.password;
             if (checkpass == null)
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please fill in all the required information!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else if (checkpass != PassWord)
             {
-                MessageBox.Show("Sai mật khẩu, vui lòng nhập lại", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Incorrect password, please try again.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
                 try
                 {
-                    // Check if the new information is valid
                     if (string.IsNullOrEmpty(StudentName) || string.IsNullOrEmpty(StudentBirth))
                     {
-                        MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                        MessageBox.Show("Please fill in all the required information!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                         return;
                     }
 
-                    // Update the student information
                     var student = await _studentService.GetStudentById(studentId);
                     if (student != null)
                     {
@@ -152,41 +140,39 @@ namespace ClassroomManagementApp1.ViewModels
                         student.studentbirth = StudentBirth;
 
                         await _studentService.UpdateStudentAsync(student);
-                        MessageBox.Show("Thông tin sinh viên đã được cập nhật!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Student information has been updated!", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                        // Close the window after update
                         _window.Close();  // Close the window
-                        SettingView newSettingView = new SettingView();
-                        //var newViewModel = new SettingViewModel(StudentContext.Instance.StudentId);
-                        //newSettingView.DataContext = newViewModel;
-                        newSettingView.Show();
+                        new SettingView().Show();
                     }
                     else
                     {
-                        MessageBox.Show("Không tìm thấy thông tin sinh viên!", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                        MessageBox.Show("Student information not found!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
+
+        // Command method to update the password in the database
         private async Task ChangePass(string studentId)
         {
             await AccountViewModel.LoadAccountByStudentIDAsync(studentId);
             var checkpass = AccountViewModel.SelectedAccount.password;
-            if ( ResetPassword1 == null || ResetPassword2 == null)
+            if (string.IsNullOrEmpty(ResetPassword1) || string.IsNullOrEmpty(ResetPassword2))
             {
-                MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please fill in all the required information!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else if (ResetPassword1 != ResetPassword2)
             {
-                MessageBox.Show("Vui lòng xác nhận lại mật khẩu mới!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Please confirm the new password again!", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
-            else if(checkpass != PassWord)
+            else if (checkpass != PassWord)
             {
-                MessageBox.Show("Sai mật khẩu, vui lòng nhập lại", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Incorrect password, please try again.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
             else
             {
@@ -195,15 +181,11 @@ namespace ClassroomManagementApp1.ViewModels
                 {
                     account.password = ResetPassword1;
                     await _accountService.UpdateAccountAsync(account);
-                }
-                MessageBox.Show("Thông tin mật khẩu đã được cập nhật!", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Password has been updated!", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
 
-                // Close the window after update
-                _window.Close();  // Close the window
-                SettingView newSettingView = new SettingView();
-                //var newViewModel = new SettingViewModel(StudentContext.Instance.StudentId);
-                //newSettingView.DataContext = newViewModel;
-                newSettingView.Show();
+                    _window.Close();  // Close the window
+                    new SettingView().Show();
+                }
             }
         }
     }

@@ -1,12 +1,7 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
@@ -14,10 +9,10 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
     {
         private readonly TeacherService _teacherService;
 
+        // Collection of teachers to notify UI of changes
         public ObservableCollection<Teacher> Teachers { get; set; }
 
-
-        // Thuộc tính để hiển thị thông tin giáo viên đang chọn
+        // Property to display the currently selected teacher
         private Teacher _selectedTeacher;
         public Teacher SelectedTeacher
         {
@@ -29,13 +24,14 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
+        // Constructor to initialize the TeacherService dependency
         public TeacherViewModel(TeacherService teacherService)
         {
             _teacherService = teacherService;
             Teachers = new ObservableCollection<Teacher>();
         }
 
-        // Phương thức tải tất cả giáo viên
+        // Load all teachers asynchronously
         public async Task LoadTeachers()
         {
             var teacherList = await _teacherService.GetAllTeachersAsync();
@@ -46,13 +42,13 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
-        // Thêm giáo viên mới
+        // Add a new teacher
         public async Task AddTeacher(Teacher teacher)
         {
             await _teacherService.AddTeacherAsync(teacher);
         }
 
-        // Cập nhật thông tin giáo viên
+        // Update the currently selected teacher's information
         public async Task UpdateTeacher()
         {
             if (SelectedTeacher != null)
@@ -61,7 +57,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
-        // Xóa giáo viên
+        // Delete the currently selected teacher
         public async Task DeleteTeacher()
         {
             if (SelectedTeacher != null)
@@ -71,6 +67,8 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 SelectedTeacher = null;
             }
         }
+
+        // Get information of a teacher by their ID
         public async Task<string> GetTeacherInfo(string teacherid)
         {
             var teachers = await _teacherService.GetAllTeachersAsync();
@@ -82,7 +80,10 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
             return "Teacher not found.";
         }
+
+        // Event to notify UI of property changes
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

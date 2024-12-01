@@ -5,27 +5,32 @@ using System.Linq;
 using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
+using ClassroomManagementApp1.DesignPattern;
 using ClassroomManagementApp1.Commands;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
+using ClassroomManagementApp1.Factory;
 
 namespace ClassroomManagementApp1.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
-        // 1. Tạo các instance của các ViewModel
+        // 1. Create instances of required ViewModels
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
         private readonly ClassesService _classService;
         private readonly AssignmentService _assignmentService;
-        // 2. Tạo các instance phương thức Relaycommand
+
+        // 2. Create instances for RelayCommand
         public ICommand SearchCommand { get; }
-        // 3. Tạo các instance của component
+
+        // 3. Create instances of components
         public MainWindowBoxClassesViewModel MainWindowBoxClassesViewModel { get; set; }
-        // 4. Tạo các biến lưu trữ
+
+        // 4. Variables to store data
         private string _studentId;
         public string StudentId
         {
@@ -36,61 +41,55 @@ namespace ClassroomManagementApp1.ViewModels
                 OnPropertyChanged(nameof(StudentId));
             }
         }
-        private string _classtId;
+
+        private string _classId;
         public string ClassId
         {
-            get => _classtId;
+            get => _classId;
             set
             {
-                _classtId = value;
+                _classId = value;
                 OnPropertyChanged(nameof(ClassId));
             }
         }
+
         public ObservableCollection<Class> Classes { get; set; } = new ObservableCollection<Class>();
 
-        //5. Constructor mặc định, sử dụng phương thức CreateDbContext để tạo DbContext và khởi tạo ClassViewModel
-        public MainWindowViewModel(string studentid) : this(CreateDbContext().Item1, CreateDbContext().Item2, studentid )
+        // 5. Default constructor, uses CreateDbContext to initialize DbContext and ClassViewModel
+        public MainWindowViewModel(string studentId) : this(ServiceFactory.CreateClassesService(),ServiceFactory.CreateAssignmentService(), studentId)
         {
         }
-        // 6. Khởi tạo MainWindowViewModel
-        public MainWindowViewModel(ClassesService classService, AssignmentService assignmentService,string studentid)
+
+        // 6. Constructor to initialize MainWindowViewModel
+        public MainWindowViewModel(ClassesService classService, AssignmentService assignmentService, string studentId)
         {
             _classService = classService;
             _assignmentService = assignmentService;
             ClassViewModel = new ClassViewModel(_classService);
             AssignmentViewModel = new AssignmentViewModel(_assignmentService);
             SearchCommand = new SearchClassCommand(ClassViewModel);
-            _studentId = studentid;
+            _studentId = studentId;
 
-        }
-        private static (ClassesService, AssignmentService) CreateDbContext()
-        { 
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            var classesService = new ClassesService(context);
-            var assignmentService = new AssignmentService(context);
-            return (classesService, assignmentService);
+            InitializeData();
         }
         private async void InitializeData()
         {
             try
             {
-                // Tải 3 lớp gần nhất của sinh viên và hiển thị
-                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync("S001");
+                // Load the top 3 nearest classes for the student and display
+                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(_studentId);
 
-                // Tải dữ liệu assignment theo classId (có thể thay đổi classId theo ý bạn)
+                // Load assignment data for the first classId (can change classId as needed)
                 if (ClassViewModel.Classes.Any())
                 {
-                    var firstClassId = ClassViewModel.Classes.First().classid; // Lấy classId của lớp đầu tiên
+                    var firstClassId = ClassViewModel.Classes.First().classid; // Get classId of the first class
                     await AssignmentViewModel.LoadAssignmentsByClassIDAsync(firstClassId);
                 }
-
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có
-                MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Handle errors if any
+                MessageBox.Show($"Error occurred while loading data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

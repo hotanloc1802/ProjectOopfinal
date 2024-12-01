@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\App.xaml
-29-1402873410
+25344096264
 
-871919755475
+79659744990
 2571428542017
-Component\Admin\AdminClassInfoView.xaml;Component\Admin\AdminStudentInfoView.xaml;Component\Admin\AdminTeacherInfoView.xaml;Component\Assignment\AssigmentListViewAssignments.xaml;Component\Classes\ClassesListViewClasses.xaml;Component\ClassInfo\ClassInfo.xaml;Component\ClassInfo\ClassInfoBoxAssignments.xaml;Component\Classroom\ClassroomListViewAssignments.xaml;Component\Classroom\ClassroomListViewClasses.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml;Component\MainWindow\MainWindowBoxStudentInfo.xaml;Views\AdminClassView.xaml;Views\AdminStudentView.xaml;Views\AdminTeacherView.xaml;Views\AssignmentsView.xaml;Views\ChangeInfoView.xaml;Views\ChangePassView.xaml;Views\ClassesView.xaml;Views\ClassInfoView.xaml;Views\ClassroomsView.xaml;Views\MainWindowView.xaml;Views\SettingView.xaml;Views\SignInView.xaml;Views\Window1.xaml;
+Component\Assignment\AssigmentListViewAssignments.xaml;Component\Classes\ClassesListViewClasses.xaml;Component\ClassInfo\ClassInfo.xaml;Component\ClassInfo\ClassInfoBoxAssignments.xaml;Component\Classroom\ClassroomListViewAssignments.xaml;Component\Classroom\ClassroomListViewClasses.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml;Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml;Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml;Component\MainWindow\MainWindowBoxStudentInfo.xaml;Views\AdminClassView.xaml;Views\AdminStudentView.xaml;Views\AdminTeacherView.xaml;Views\AssignmentsView.xaml;Views\ChangeInfoView.xaml;Views\ChangePassView.xaml;Views\ClassesView.xaml;Views\ClassInfoView.xaml;Views\ClassroomsView.xaml;Views\MainWindowView.xaml;Views\SettingView.xaml;Views\SignInView.xaml;
 
-True
+False
 

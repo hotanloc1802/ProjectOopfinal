@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Input;
 
-namespace ClassroomManagementApp1.Commands // Tạo namespace cho RelayCommand
+namespace ClassroomManagementApp1.Commands // Create namespace for RelayCommand
 {
     public class RelayCommand : ICommand
     {

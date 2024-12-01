@@ -2,6 +2,7 @@
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
+using ClassroomManagementApp1.DesignPattern;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ using System.Windows;
 using System.Collections.ObjectModel;
 using ClassroomManagementApp1.Component;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
+using ClassroomManagementApp1.Factory;
+
 namespace ClassroomManagementApp1.ViewModels
 {
     public class ClassroomListViewAssignmentViewModel : ViewModelBase
@@ -53,28 +56,17 @@ namespace ClassroomManagementApp1.ViewModels
             ListAssignment = new ObservableCollection<Assignment>();
             InitializeData();
         }
-        private static (ClassesService, AssignmentService) CreateDbContext()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            var classesService = new ClassesService(context);
-            var assignmentService = new AssignmentService(context);
-            return (classesService, assignmentService);
-
-        }
-        public ClassroomListViewAssignmentViewModel () : this(CreateDbContext().Item1, CreateDbContext().Item2)
+        public ClassroomListViewAssignmentViewModel() : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateAssignmentService())
         {
         }
         private async void InitializeData()
         {
             try
             {
-                
-                // Tải 3 lớp gần nhất của sinh viên và hiển thị
-                await ClassViewModel.LoadClassesByStudentIdAsync(StudentContext.Instance.StudentId);
+                // Load the 3 nearest classes of the student and display them
+                await ClassViewModel.LoadClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
                 ListAssignment.Clear();
-                var assignmentsList  = ClassViewModel.Assignments;
+                var assignmentsList = ClassViewModel.Assignments;
                 foreach (var asm in assignmentsList)
                 {
                     var date = asm.duedate.ToString("dd/MM/yyyy");
@@ -83,11 +75,9 @@ namespace ClassroomManagementApp1.ViewModels
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có
-                MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Handle errors if any
+                MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
     }
-
 }

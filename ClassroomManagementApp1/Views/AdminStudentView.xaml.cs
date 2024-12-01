@@ -25,7 +25,7 @@ namespace ClassroomManagementApp1.Views
         public AdminStudentView()
         {
             InitializeComponent();
-            DataContext = new AdminViewModel();
+            DataContext = new AdminStudentViewModel();
         }
         private void Btn_ChangeViewToClasses(object sender, RoutedEventArgs e)
         {

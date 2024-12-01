@@ -394,14 +394,6 @@ C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Com
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Assignment\AssigmentListViewAssignments.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classes\ClassesListViewClasses.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Classes\ClassesListViewClasses.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\Window1.g.cs
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\Window1.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Admin\AdminClassInfoView.g.cs
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Admin\AdminStudentInfoView.g.cs
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Admin\AdminTeacherInfoView.g.cs
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Admin\AdminClassInfoView.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Admin\AdminStudentInfoView.baml
-C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Component\Admin\AdminTeacherInfoView.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\AdminStudentView.g.cs
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\AdminStudentView.baml
 C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\Views\AdminClassView.g.cs

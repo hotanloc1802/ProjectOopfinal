@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations.Schema;
 using ClassroomManagementApp1.Models;
+
 namespace ClassroomManagementApp1.Models
 {
     public class Account
@@ -14,11 +15,13 @@ namespace ClassroomManagementApp1.Models
         public string userid { get; set; }
         public string username { get; set; }
         public string password { get; set; }
-        // Khóa ngoại chỉ định
+
+        // Foreign key specification
         [ForeignKey("Student")]
         public string studentid { get; set; }
         public string role { get; set; }
-        // Tham chiếu đến Student
+
+        // Reference to Student
         public Student Student { get; set; }
         public byte[] profilepicture { get; set; }
     }

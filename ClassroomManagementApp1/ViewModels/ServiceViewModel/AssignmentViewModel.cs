@@ -1,13 +1,7 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Models;
-using ClassroomManagementApp1.Views;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
@@ -17,7 +11,10 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 
         // ObservableCollection to notify UI of changes
         public ObservableCollection<Assignment> Assignments { get; set; } = new ObservableCollection<Assignment>();
+
         private Assignment _nearestAssignment;
+
+        // Property to store the nearest assignment
         public Assignment NearestAssignment
         {
             get => _nearestAssignment;
@@ -26,9 +23,11 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 _nearestAssignment = value;
             }
         }
+
+        // Constructor to initialize AssignmentService
         public AssignmentViewModel(AssignmentService assignmentService)
         {
-            _assignmentService = assignmentService;// Initialize the class service
+            _assignmentService = assignmentService; // Initialize the assignment service
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -37,6 +36,8 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        // Load all assignments asynchronously
         public async Task LoadAllAssignmentsAsync()
         {
             var assignmentList = await _assignmentService.GetAllAssignment();
@@ -46,6 +47,8 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Assignments.Add(asm);
             }
         }
+
+        // Load assignments by class ID asynchronously
         public async Task LoadAssignmentsByClassIDAsync(string classID)
         {
             var assignmentList = await _assignmentService.GetAssignmentByClassID(classID);
@@ -55,20 +58,23 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Assignments.Add(asm);
             }
         }
+
+        // Load the nearest assignment by class ID asynchronously
         public async Task LoadNearestAssignmentByClassIDAsync(string classID)
         {
             var nearest = await _assignmentService.GetNearestAssignmentByClassID(classID);
             NearestAssignment = nearest;
         }
-        public async Task LoadAssignmentsByStudentId(string studentid)
+
+        // Load assignments for a specific student by their ID
+        public async Task LoadAssignmentsByStudentId(string studentId)
         {
-            if (!string.IsNullOrEmpty(studentid))
+            if (!string.IsNullOrEmpty(studentId))
             {
-                var assignments = await _assignmentService.GetAssignmentsByStudentId(studentid);
+                var assignments = await _assignmentService.GetAssignmentsByStudentId(studentId);
                 Assignments.Clear();
                 foreach (var assignment in assignments)
                 {
-                    
                     Assignments.Add(assignment);
                 }
             }

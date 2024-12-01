@@ -1,8 +1,5 @@
-﻿C:\Users\ADMIN\source\repos\ClassroomManagementApp1\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\App.xaml;;
-FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Component\Admin\AdminClassInfoView.xaml;;
-FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Component\Admin\AdminStudentInfoView.xaml;;
-FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Component\Admin\AdminTeacherInfoView.xaml;;
 FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Component\Assignment\AssigmentListViewAssignments.xaml;;
 FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Component\Classes\ClassesListViewClasses.xaml;;
 FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Component\ClassInfo\ClassInfo.xaml;;
@@ -28,5 +25,4 @@ FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Views\ClassroomsView.xaml;;
 FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Views\MainWindowView.xaml;;
 FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Views\SettingView.xaml;;
 FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Views\SignInView.xaml;;
-FC:\Users\ADMIN\source\repos\ClassroomManagementApp1\Views\Window1.xaml;;
 

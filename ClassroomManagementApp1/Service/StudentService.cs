@@ -22,7 +22,7 @@ namespace ClassroomManagementApp1.ClassService
 
         // 3. Build Service
 
-        // Thêm học sinh mới
+        // Add a new student
         public async Task AddStudentAsync(Student student)
         {
             if (student == null)
@@ -32,15 +32,15 @@ namespace ClassroomManagementApp1.ClassService
             await _context.SaveChangesAsync();
         }
 
-        // Lấy tất cả học sinh
+        // Get all students
         public async Task<List<Student>> GetAllStudentsAsync()
         {
             return await _context.Students
-                .AsNoTracking() // Không theo dõi thực thể, tránh xung đột khi cập nhật
+                .AsNoTracking() // Do not track entities to avoid update conflicts
                 .ToListAsync();
         }
 
-        // Sửa thông tin của một học sinh
+        // Update student information
         public async Task UpdateStudentAsync(Student student)
         {
             if (student == null)
@@ -59,7 +59,7 @@ namespace ClassroomManagementApp1.ClassService
             }
         }
 
-        // Xóa học sinh
+        // Delete a student
         public async Task DeleteStudentAsync(string studentId)
         {
             if (string.IsNullOrEmpty(studentId))
@@ -73,7 +73,7 @@ namespace ClassroomManagementApp1.ClassService
             }
         }
 
-        // Lấy học sinh theo ID
+        // Get student by ID
         public async Task<Student> GetStudentById(string studentId)
         {
             if (string.IsNullOrEmpty(studentId))
@@ -84,7 +84,7 @@ namespace ClassroomManagementApp1.ClassService
                 .FirstOrDefaultAsync(s => s.studentid == studentId);
         }
 
-        // Cập nhật danh sách học sinh
+        // Update a list of students
         public async Task UpdateStudentsAsync(IEnumerable<Student> students)
         {
             if (students == null)
@@ -95,7 +95,7 @@ namespace ClassroomManagementApp1.ClassService
                 var existingStudent = await _context.Students.FindAsync(student.studentid);
                 if (existingStudent != null)
                 {
-                    // Cập nhật thông tin
+                    // Update information
                     existingStudent.studentname = student.studentname;
                     existingStudent.studentemail = student.studentemail;
                     existingStudent.studentgrade = student.studentgrade;
@@ -105,7 +105,7 @@ namespace ClassroomManagementApp1.ClassService
                 }
                 else
                 {
-                    // Nếu học sinh không tồn tại, thêm mới
+                    // If the student does not exist, add it
                     await _context.Students.AddAsync(student);
                 }
             }

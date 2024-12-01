@@ -1,16 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore; // Thay đổi từ System.Data.Entity sang Microsoft.EntityFrameworkCore
+﻿using Microsoft.EntityFrameworkCore; // Changed from System.Data.Entity to Microsoft.EntityFrameworkCore
 using ClassroomManagementApp1.Models;
 
 namespace ClassroomManagementApp1.Data
 {
     public class AppDbContext : DbContext
     {
-        // Constructor mặc định sử dụng tên chuỗi kết nối từ App.config hoặc cấu hình khác
+        // Default constructor using the connection string name from App.config or other configurations
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
 
-        // Các DbSet tương ứng với các models
+        // DbSets corresponding to models
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Student> Students { get; set; }
@@ -20,34 +20,34 @@ namespace ClassroomManagementApp1.Data
         public DbSet<Assignment> Assignment { get; set; }
         public DbSet<Submission> Submissions { get; set; }
 
-        // Cấu hình model và ánh xạ bảng
-        protected override void OnModelCreating(ModelBuilder modelBuilder) // Thay đổi từ DbModelBuilder sang ModelBuilder
+        // Model configuration and table mapping
+        protected override void OnModelCreating(ModelBuilder modelBuilder) // Changed from DbModelBuilder to ModelBuilder
         {
-            // Ánh xạ bảng student
+            // Map table "student"
             modelBuilder.Entity<Student>().ToTable("student", "public");
 
-            // Ánh xạ bảng teacher
+            // Map table "teacher"
             modelBuilder.Entity<Teacher>().ToTable("teacher", "public");
 
-            // Ánh xạ bảng class
+            // Map table "class"
             modelBuilder.Entity<Class>().ToTable("class", "public");
 
-            // Ánh xạ bảng assignment
+            // Map table "assignment"
             modelBuilder.Entity<Assignment>().ToTable("assignment", "public");
 
-            // Ánh xạ bảng classstudent
+            // Map table "classstudent"
             modelBuilder.Entity<ClassStudent>().ToTable("classstudent", "public");
 
-            // Ánh xạ bảng account
+            // Map table "account"
             modelBuilder.Entity<Account>().ToTable("account", "public");
 
-            // Ánh xạ bảng subject
+            // Map table "subject"
             modelBuilder.Entity<Subject>().ToTable("subject", "public");
 
-            // Ánh xạ bảng submission
+            // Map table "submission"
             modelBuilder.Entity<Submission>().ToTable("submission", "public");
 
-            // Thiết lập khóa chính cho ClassStudent (nhiều-nhiều)
+            // Set primary key for ClassStudent (many-to-many)
             modelBuilder.Entity<ClassStudent>()
                 .HasKey(cs => new { cs.classid, cs.studentid });
         }

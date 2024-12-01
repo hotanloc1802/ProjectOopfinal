@@ -10,10 +10,10 @@ namespace ClassroomManagementApp1.Data
     {
         private static StudentContext _instance;
 
-        // Thuộc tính để lưu trữ studentId
+        // Property to store studentId
         public string StudentId { get; private set; }
 
-        // Khởi tạo singleton
+        // Initialize singleton
         private StudentContext() { }
 
         public static StudentContext Instance
@@ -28,11 +28,10 @@ namespace ClassroomManagementApp1.Data
             }
         }
 
-        // Phương thức để đặt studentId
+        // Method to set studentId
         public void SetStudentId(string studentId)
         {
             StudentId = studentId;
         }
     }
-
 }

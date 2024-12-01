@@ -1,5 +1,7 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.DesignPattern;
+using ClassroomManagementApp1.Factory;
 using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
@@ -84,20 +86,8 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
             InitializeData();
         }
 
-        // Method to create and return ClassesService instance
-        private static (ClassesService, SubmissionService) CreateDbContext()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-
-            var classService = new ClassesService(context);
-            var submissionService = new SubmissionService(context);
-
-            return (classService, submissionService);
-        }
         // Default constructor that uses CreateClassService
-        public ClassroomListViewClassesViewModel() : this(CreateDbContext().Item1, CreateDbContext().Item2)
+        public ClassroomListViewClassesViewModel() : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateSubmissionService())
         {
         }
 
@@ -106,7 +96,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         {
             try
             {
-               await ClassViewModel.LoadClassesByStudentIdAsync(StudentContext.Instance.StudentId);   
+                await ClassViewModel.LoadClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
                 // Gán cả danh sách các lớp vào ObservableCollection
                 Listclasses = new ObservableCollection<Class>(ClassViewModel.Classes);
                 ListClassesWithDateRange = new ObservableCollection<ClassWithDateRange> { };
@@ -114,7 +104,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
                 {
                     await ClassViewModel.LoadAssignmentsByClassIdAsync(cls.classid);
                     var assignmentsList = ClassViewModel.Assignments.ToList();
-                    await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContext.Instance.StudentId);
+                    await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContextSingleton.Instance.StudentId);
                     var submissionList = SubmissionViewModel.Submissions;
                     int countNotSubmitted = 0;
                     foreach (var asm in assignmentsList)
@@ -125,7 +115,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
                             countNotSubmitted++;
                         }
                     }
-                        ListClassesWithDateRange.Add(new ClassWithDateRange(cls.classid, cls.classname, new Tuple<DateTime, DateTime>(cls.datebegin, cls.dateend), countNotSubmitted));
+                    ListClassesWithDateRange.Add(new ClassWithDateRange(cls.classid, cls.classname, new Tuple<DateTime, DateTime>(cls.datebegin, cls.dateend), countNotSubmitted));
                     // Hoặc bạn có thể thêm từng lớp một (cách hiện tại):
                     // foreach (var cls in ClassViewModel.Classes)
                     // {

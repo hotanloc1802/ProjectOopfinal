@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Input;
 using ClassroomManagementApp1.ViewModels;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using ClassroomManagementApp1.Views; 
+using ClassroomManagementApp1.Views;
 namespace ClassroomManagementApp1.Commands
 {
     public class SearchClassCommand : ICommand
@@ -15,10 +15,10 @@ namespace ClassroomManagementApp1.Commands
             _classViewModel = classViewModel ?? throw new ArgumentNullException(nameof(classViewModel));
         }
 
-         public bool CanExecute(object parameter)
-    {
-        return parameter is string classId && !string.IsNullOrEmpty(classId);
-    }
+        public bool CanExecute(object parameter)
+        {
+            return parameter is string classId && !string.IsNullOrEmpty(classId);
+        }
 
         public async void Execute(object parameter)
         {
@@ -26,25 +26,25 @@ namespace ClassroomManagementApp1.Commands
             {
                 try
                 {
-                    await _classViewModel.LoadClassByIdAsync(classId); // Đợi phương thức hoàn thành
+                    await _classViewModel.LoadClassByIdAsync(classId); // Wait for the method to complete
 
-                    if (_classViewModel.SelectedClass != null) // Kiểm tra SelectedClass
+                    if (_classViewModel.SelectedClass != null) // Check SelectedClass
                     {
                         ShowClassInfoWindow(classId);
                     }
                     else
                     {
-                        MessageBox.Show("Không tìm thấy lớp học với ID đã nhập.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show("Class with the entered ID was not found.", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
             else
             {
-                MessageBox.Show("ID lớp học không hợp lệ.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Invalid class ID.", "Notification", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
 

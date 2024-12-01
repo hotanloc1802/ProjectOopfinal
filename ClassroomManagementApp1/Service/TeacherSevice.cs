@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
+
 namespace ClassroomManagementApp1.ClassService
 {
     public class TeacherService
@@ -19,46 +20,46 @@ namespace ClassroomManagementApp1.ClassService
         {
             _context = context;
         }
+
         // 3. Build Service
 
-        // Thêm giáo viên
+        // Add a teacher
         public async Task AddTeacherAsync(Teacher teacher)
         {
-            await _context.Teachers.AddAsync(teacher); // Thêm giáo viên vào DbSet
-            await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+            await _context.Teachers.AddAsync(teacher); // Add teacher to DbSet
+            await _context.SaveChangesAsync(); // Save changes to the database
         }
 
-        // Lấy tất cả giáo viên
+        // Get all teachers
         public async Task<List<Teacher>> GetAllTeachersAsync()
         {
             return await _context.Teachers
-                                 .ToListAsync(); // Trả về danh sách giáo viên
+                                 .ToListAsync(); // Return a list of teachers
         }
 
-
-        // Sửa thông tin giáo viên
+        // Update teacher information
         public async Task UpdateTeacherAsync(Teacher teacher)
         {
-            _context.Teachers.Update(teacher); // Cập nhật thông tin giáo viên
-            await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+            _context.Teachers.Update(teacher); // Update teacher information
+            await _context.SaveChangesAsync(); // Save changes to the database
         }
 
-        // Xóa giáo viên
+        // Delete a teacher
         public async Task DeleteTeacherAsync(string teacherId)
         {
-            var teacher = await _context.Teachers.FindAsync(teacherId); // Tìm giáo viên theo ID
+            var teacher = await _context.Teachers.FindAsync(teacherId); // Find teacher by ID
             if (teacher != null)
             {
-                _context.Teachers.Remove(teacher); // Xóa giáo viên
-                await _context.SaveChangesAsync(); // Lưu thay đổi vào cơ sở dữ liệu
+                _context.Teachers.Remove(teacher); // Remove teacher
+                await _context.SaveChangesAsync(); // Save changes to the database
             }
         }
 
-        // Lấy thông tin giáo viên theo ID
+        // Get teacher information by ID
         public async Task<Teacher> GetTeacherByIdAsync(string teacherId)
         {
             return await _context.Teachers
-                                 .FirstOrDefaultAsync(t => t.teacherid == teacherId); // Lọc theo teacherId
+                                 .FirstOrDefaultAsync(t => t.teacherid == teacherId); // Filter by teacherId
         }
     }
 }

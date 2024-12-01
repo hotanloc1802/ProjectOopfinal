@@ -14,6 +14,8 @@ using System.Collections.ObjectModel;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
 using ClassroomManagementApp1.Component;
 using System.Windows;
+using ClassroomManagementApp1.Factory;
+using ClassroomManagementApp1.DesignPattern;
 namespace ClassroomManagementApp1.ViewModels
 {
     public class SettingViewModel : ViewModelBase
@@ -42,7 +44,7 @@ namespace ClassroomManagementApp1.ViewModels
                 OnPropertyChanged(nameof(StudentInfo));
             }
         }
-        public SettingViewModel(string studentid) : this(CreateDbContext() , studentid)
+        public SettingViewModel(string studentid) : this(ServiceFactory.CreateAccountService() , studentid)
         {
         }
          public SettingViewModel(AccountService accountService ,string studentid)
@@ -52,17 +54,10 @@ namespace ClassroomManagementApp1.ViewModels
             InitializeData(studentid);
 
         }
-        private static AccountService CreateDbContext()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            var accountService = new AccountService(context);
-            return (accountService);
-        }
+        
         private async void InitializeData(string studentid)
         {
-            await AccountViewModel.LoadAccountByStudentIDAsync(studentid);
+            await AccountViewModel.LoadAccountByStudentIDAsync(StudentContextSingleton.Instance.StudentId);
             StudentInfo = new studentinfo(AccountViewModel.SelectedAccountStudent.studentname,AccountViewModel.SelectedAccountStudent.studentbirth,AccountViewModel.SelectedAccount.username);
         }
     }

@@ -1,38 +1,32 @@
 ﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.Models;
-using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using ClassroomManagementApp1.Factory;
+using ClassroomManagementApp1.DesignPattern;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
+using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListViewModel
 {
     public class ClassroomListViewAssignmentsViewModel : ViewModelBase
     {
-        private MainWindowBoxAssignmentsItem _item; // Private field for backing store
+        private MainWindowBoxAssignmentsItem _item;
 
         public AssignmentViewModel AssignmentViewModel { get; private set; }
         private ObservableCollection<Assignment> _listassignments = new ObservableCollection<Assignment>();
+
         public ObservableCollection<Assignment> Listassignments
         {
             get => _listassignments;
             set
             {
                 _listassignments = value;
-                OnPropertyChanged(nameof(Listassignments)); // Thông báo đúng tên thuộc tính
+                OnPropertyChanged(nameof(Listassignments)); // Notify the correct property name
             }
         }
 
-        private readonly AssignmentService _assignmentService;
-
-        // Public property for data binding
         public MainWindowBoxAssignmentsItem Item
         {
             get => _item;
@@ -42,42 +36,35 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
                 OnPropertyChanged(nameof(Item)); // Notify that Item has changed
             }
         }
+
+        // Constructor using Dependency Injection for AssignmentService
         public ClassroomListViewAssignmentsViewModel(AssignmentService assignmentService)
         {
-            _assignmentService = assignmentService;
-            AssignmentViewModel = new AssignmentViewModel(_assignmentService);
+            AssignmentViewModel = new AssignmentViewModel(assignmentService);
             InitializeData();
         }
 
-        // Method to create and return ClassesService instance
-        private static AssignmentService CreateAssignmenService()
+        // Default constructor using Factory Pattern
+        public ClassroomListViewAssignmentsViewModel()
+            : this(ServiceFactory.CreateAssignmentService())
         {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            return new AssignmentService(context);
         }
 
-        // Default constructor that uses CreateClassService
-        public ClassroomListViewAssignmentsViewModel() : this(CreateAssignmenService())
-        {
-        }
         private async void InitializeData()
         {
             try
             {
-                await AssignmentViewModel.LoadAssignmentsByStudentId(StudentContext.Instance.StudentId);
-                Listassignments = new ObservableCollection<Assignment>(AssignmentViewModel.Assignments);
+                // Load assignments for the logged-in student
+                await AssignmentViewModel.LoadAssignmentsByStudentId(StudentContextSingleton.Instance.StudentId);
 
-
+                // Update Listassignments
+                Listassignments = new ObservableCollection<Assignment>(AssignmentViewModel.Assignments ?? new ObservableCollection<Assignment>());
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có
-                MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Handle any errors
+                MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
     }
-
 }

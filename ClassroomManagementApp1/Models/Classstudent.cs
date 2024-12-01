@@ -14,6 +14,7 @@ namespace ClassroomManagementApp1.Models
         [Key, Column(Order = 1)]
         [ForeignKey("Student")]
         public string studentid { get; set; }
+
         // Navigation Properties
         public Class Class { get; set; }
         public Student Student { get; set; }

@@ -62,19 +62,12 @@
                                     <TextBlock Text="Save" FontFamily="Montserrat" FontSize="15" Foreground="White" VerticalAlignment="Center" Padding="3" HorizontalAlignment="Center"/>
                                 </Button>
                             </Border>
-                            <Border  CornerRadius="20" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#b897d1" Margin="50,0,0,0">
-                                <Button Width="75" >
-                                    <TextBlock Text="Cancel" FontFamily="Montserrat" FontSize="15" Foreground="White" VerticalAlignment="Center" Padding="3" HorizontalAlignment="Center"/>
-                                </Button>
-                            </Border>
-                            <Button x:Name="btnAdd" Height="68" Width="114" Background="Transparent" BorderBrush="Transparent"  Command="{Binding AddClassCommand}" Margin="600,0,0,0">
+                            <Border  CornerRadius="20" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#b897d1" Margin="50,0,0,0"/>
+                            <Button x:Name="btnAdd" Height="68" Width="114" Background="Transparent" BorderBrush="Transparent"  Command="{Binding AddClassCommand}" Margin="795,0,0,0">
                                 <Icon:PackIconMaterial Kind="PlusCircle" Foreground="#b897d1" Width="80" Height="34"/>
                             </Button>
                             <Button x:Name="btnDelete" Height="68" Width="114" Background="Transparent" BorderBrush="Transparent"  Command="{Binding DeleteClassCommand}" CommandParameter="{Binding SelectedItem, ElementName=studentDataGrid}">
                                 <Icon:PackIconMaterial Kind="MinusCircle" Foreground="#b897d1" Width="80" Height="34"/>
-                            </Button>
-                            <Button x:Name="btnEdit" Height="68" Width="114" Background="Transparent" BorderBrush="Transparent">
-                                <Icon:PackIconMaterial Kind="PencilCircle" Foreground="#b897d1" Width="80" Height="34"/>
                             </Button>
                         </StackPanel>
                     </Grid>

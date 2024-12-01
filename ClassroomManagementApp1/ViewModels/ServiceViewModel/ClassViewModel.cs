@@ -1,10 +1,7 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Models;
-using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
@@ -17,32 +14,35 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         public ObservableCollection<Assignment> Assignments { get; set; } = new ObservableCollection<Assignment>();
         public ObservableCollection<HashSet<Tuple<string, string>>> StudentSubmisson { get; set; } = new ObservableCollection<HashSet<Tuple<string, string>>>();
 
-        private Class _selectedClass; // Chỉ sử dụng một thuộc tính cho lớp học đã chọn
+        private Class _selectedClass; // Property for the selected class
         public Class SelectedClass
         {
             get => _selectedClass;
             set
             {
                 _selectedClass = value;
-                OnPropertyChanged(nameof(SelectedClass)); // Thông báo UI về sự thay đổi
+                OnPropertyChanged(nameof(SelectedClass)); // Notify UI of the change
             }
         }
 
+        // Constructor to initialize the ClassesService dependency
         public ClassViewModel(ClassesService classService)
         {
             _classService = classService;
         }
 
-        // Tải tất cả các lớp học
-        public async Task LoadAllClassesAsync(string studentid)
+        // Load all classes for a student
+        public async Task LoadAllClassesAsync(string studentId)
         {
-            var classList = await _classService.GetAllClassesByStudentId(studentid);
+            var classList = await _classService.GetAllClassesByStudentId(studentId);
             Classes.Clear();
             foreach (var cls in classList)
             {
                 Classes.Add(cls);
             }
         }
+
+        // Load all classes (without filtering by student)
         public async Task LoadAllClassAsync()
         {
             var classesList = await _classService.GetAllClassesAsync();
@@ -52,7 +52,8 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Classes.Add(classe);
             }
         }
-        // Tải 3 lớp gần nhất theo StudentID
+
+        // Load the top 3 nearest classes for a student by student ID
         public async Task LoadTop3NearestClassesByStudentIdAsync(string studentId)
         {
             var classList = await _classService.GetTop3NearestClassesByStudentId(studentId);
@@ -63,32 +64,33 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
-        // Lấy thông tin của một lớp học theo ClassID
+        // Load information for a specific class by ClassID
         public async Task LoadClassByIdAsync(string classId)
         {
-
             var cls = await _classService.GetClassById(classId);
-            if (cls != null) // Kiểm tra xem lớp học có tồn tại không
+            if (cls != null) // Check if the class exists
             {
-                SelectedClass = cls; // Gán lớp học vào property để hiển thị
-                Assignments.Clear(); // Xóa các bài tập cũ
+                SelectedClass = cls; // Set the selected class
+                Assignments.Clear(); // Clear old assignments
                 foreach (var assignment in cls.Assignments)
                 {
-                    // Cập nhật trạng thái của bài tập
+                    // Update the status of the assignment
                     assignment.UpdateStatus();
-                    // Chỉ thêm bài tập nếu còn thời hạn
-                    if (assignment.status == 1) // 1 là còn hạn
+                    // Add the assignment only if it's still valid
+                    if (assignment.status == 1) // 1 means the assignment is still valid
                     {
-                        Assignments.Add(assignment); // Thêm bài tập vào danh sách
+                        Assignments.Add(assignment);
                     }
                 }
             }
             else
             {
-                // Xử lý nếu lớp học không tồn tại (tuỳ theo yêu cầu của bạn)
+                // Handle cases where the class does not exist
                 SelectedClass = null;
             }
         }
+
+        // Load all classes and assignments for a student
         public async Task LoadClassesByStudentIdAsync(string studentId)
         {
             var classList = await _classService.GetClassesByStudentId(studentId);
@@ -103,30 +105,29 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
-        // Tải bài tập theo ClassID
+        // Load assignments for a specific class by ClassID
         public async Task LoadAssignmentsByClassIdAsync(string classId)
         {
             var cls = await _classService.GetClassById(classId);
 
-            if (cls != null) // Kiểm tra xem lớp học có tồn tại không
+            if (cls != null) // Check if the class exists
             {
                 Classes.Clear();
                 SelectedClass = cls;
-                Assignments.Clear(); // Xóa các bài tập cũ
+                Assignments.Clear(); // Clear old assignments
 
                 foreach (var assignment in cls.Assignments)
                 {
-                    // Cập nhật trạng thái của bài tập
+                    // Update the status of the assignment
                     assignment.UpdateStatus();
-                    // Chỉ thêm bài tập nếu còn thời hạn
-                    if (assignment.status == 1) // 1 là còn hạn
+                    // Add the assignment only if it's still valid
+                    if (assignment.status == 1) // 1 means the assignment is still valid
                     {
-                        Assignments.Add(assignment); // Thêm bài tập vào danh sách
+                        Assignments.Add(assignment);
                     }
                 }
             }
         }
-
 
         // PropertyChanged event handler for UI updates
         public event PropertyChangedEventHandler PropertyChanged;

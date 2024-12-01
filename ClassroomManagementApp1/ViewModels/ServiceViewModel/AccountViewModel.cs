@@ -2,7 +2,6 @@
 using ClassroomManagementApp1.Models;
 using System.ComponentModel;
 using System.IO;
-using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 
 namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
@@ -11,9 +10,10 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
     {
         private readonly AccountService _accountService;
         private Account _selectedAccount;
-        
+
         private BitmapImage _profileImage;
 
+        // Property for binding the profile image
         public BitmapImage ProfileImage
         {
             get => _profileImage;
@@ -23,7 +23,8 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 OnPropertyChanged(nameof(ProfileImage));
             }
         }
-        
+
+        // Property for binding the selected account
         public Account SelectedAccount
         {
             get => _selectedAccount;
@@ -31,10 +32,13 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             {
                 _selectedAccount = value;
                 OnPropertyChanged(nameof(SelectedAccount));
-                LoadProfileImage(); // Load image when the account is selected
+                LoadProfileImage(); // Load profile image when an account is selected
             }
         }
+
         private Student _selectedAccountStudent;
+
+        // Property for binding the student related to the selected account
         public Student SelectedAccountStudent
         {
             get => _selectedAccountStudent;
@@ -43,11 +47,14 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 _selectedAccountStudent = value;
             }
         }
+
+        // Constructor accepting an AccountService dependency
         public AccountViewModel(AccountService accountService)
         {
             _accountService = accountService;
         }
 
+        // Event for property change notification
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged(string propertyName)
@@ -55,6 +62,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        // Load account information by student ID
         public async Task LoadAccountByStudentIDAsync(string studentId)
         {
             var account = await _accountService.GetAccountByStudentID(studentId);
@@ -65,6 +73,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
+        // Load the profile image of the selected account
         public async void LoadProfileImage()
         {
             if (SelectedAccount != null)
@@ -73,6 +82,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
+        // Get the profile image asynchronously
         public async Task<BitmapImage> GetProfileImageAsync()
         {
             if (SelectedAccount?.profilepicture != null)
@@ -84,12 +94,11 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                     image.StreamSource = ms;
                     image.CacheOption = BitmapCacheOption.OnLoad;
                     image.EndInit();
-                    image.Freeze();
+                    image.Freeze(); // Freeze to make it thread-safe
                     return image;
                 }
             }
-            return null; // Hoặc hình ảnh mặc định
+            return null; // Or return a default image
         }
-       
     }
 }

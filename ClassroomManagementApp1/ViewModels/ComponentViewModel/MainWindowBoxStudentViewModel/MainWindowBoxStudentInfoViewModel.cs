@@ -1,11 +1,11 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
+using ClassroomManagementApp1.DesignPattern;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Windows;
 using System.Windows.Media.Imaging;
+using System.Windows;
+using ClassroomManagementApp1.Factory;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStudentViewModel
 {
@@ -26,15 +26,9 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
             }
         }
 
-        // Constructor with AccountService dependency
-        public MainWindowBoxStudentInfoViewModel(AccountService accountService)
-        {
-            _accountService = accountService;
-            AccountViewModel = new AccountViewModel(_accountService);
-            InitializeData();
-        }
         private BitmapImage _profileImage;
 
+        // Profile image property for data binding
         public BitmapImage ProfileImage
         {
             get => _profileImage;
@@ -44,17 +38,17 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
                 OnPropertyChanged(nameof(ProfileImage));
             }
         }
-        // Method to create and return AccountService instance
-        private static AccountService CreateAccountService()
+
+        // Constructor with AccountService dependency
+        public MainWindowBoxStudentInfoViewModel(AccountService accountService)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            return new AccountService(context);
+            _accountService = accountService;
+            AccountViewModel = new AccountViewModel(_accountService);
+            InitializeData();
         }
 
         // Default constructor that uses CreateAccountService
-        public MainWindowBoxStudentInfoViewModel() : this(CreateAccountService())
+        public MainWindowBoxStudentInfoViewModel() : this(ServiceFactory.CreateAccountService())
         {
         }
 
@@ -64,26 +58,26 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
             try
             {
                 // Load account data by student ID
-                await AccountViewModel.LoadAccountByStudentIDAsync(StudentContext.Instance.StudentId);
+                await AccountViewModel.LoadAccountByStudentIDAsync(StudentContextSingleton.Instance.StudentId);
                 await AccountViewModel.GetProfileImageAsync();
                 ProfileImage = AccountViewModel.ProfileImage;
 
-                var _accountSelectedname = AccountViewModel.SelectedAccountStudent.studentname;
+                var selectedStudentName = AccountViewModel.SelectedAccountStudent.studentname;
 
-                if (_accountSelectedname != null)
+                if (selectedStudentName != null)
                 {
                     // Set Item based on account data
-                    Item = new MainWindowBoxStudentInfoItem(_accountSelectedname, "5");
+                    Item = new MainWindowBoxStudentInfoItem(selectedStudentName, "5");
                 }
                 else
                 {
-                    MessageBox.Show("Không tìm thấy thông tin tài khoản của sinh viên.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
+                    MessageBox.Show("Student account information not found.", "Notification", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch (Exception ex)
             {
                 // Handle errors
-                MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

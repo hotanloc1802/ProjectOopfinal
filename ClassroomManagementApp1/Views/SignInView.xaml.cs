@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.DesignPattern;
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -93,7 +94,7 @@ namespace ClassroomManagementApp1.Views
                                 string role = reader["role"].ToString();
 
                                 // Set the studentId in context
-                                StudentContext.Instance.SetStudentId(studentId);
+                                StudentContextSingleton.Instance.SetStudentId(studentId);
 
                                 if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                                 {

@@ -9,7 +9,7 @@ namespace ClassroomManagementApp1.ClassService
 {
     public class AssignmentService
     {
-        // 1. Đọc DbContext
+        // 1. Read DbContext
         private readonly AppDbContext _context;
 
         // 2. Constructor Service
@@ -20,78 +20,78 @@ namespace ClassroomManagementApp1.ClassService
 
         // 3. Build Service
 
-        // Lấy tất cả Assignment
+        // Get all assignments
         public async Task<List<Assignment>> GetAllAssignment()
         {
             var assignments = await _context.Assignment
-                                 .Include(a => a.Class)  // Include để lấy thông tin liên quan đến Class
+                                 .Include(a => a.Class)  // Include to fetch related Class information
                                  .ToListAsync();
 
-            // Cập nhật status cho từng nhiệm vụ
+            // Update status for each assignment
             foreach (var assignment in assignments)
             {
                 assignment.UpdateStatus();
             }
 
-            // Lưu các thay đổi nếu status được lưu trong DB
+            // Save changes if status is stored in the database
             await _context.SaveChangesAsync();
 
             return assignments;
         }
 
-        // Lấy Assignment theo ClassID
+        // Get assignments by ClassID
         public async Task<List<Assignment>> GetAssignmentByClassID(string classId)
         {
             var assignments = await _context.Assignment
-                                 .Where(a => a.classid == classId)  // Điều kiện lọc theo classId
-                                 .OrderBy(a => a.duedate)  // Sắp xếp theo DueDate tăng dần
+                                 .Where(a => a.classid == classId)  // Filter by classId
+                                 .OrderBy(a => a.duedate)  // Sort by DueDate in ascending order
                                  .ToListAsync();
 
-            // Cập nhật status cho từng nhiệm vụ
+            // Update status for each assignment
             foreach (var assignment in assignments)
             {
                 assignment.UpdateStatus();
             }
 
-            await _context.SaveChangesAsync(); // Lưu các thay đổi
+            await _context.SaveChangesAsync(); // Save changes
 
             return assignments;
         }
 
-        // Lấy Assignment gần đến hạn nhất theo classid
+        // Get the nearest assignment by ClassID
         public async Task<Assignment> GetNearestAssignmentByClassID(string classId)
         {
             var assignment = await _context.Assignment
-                                 .Where(a => a.classid == classId)  // Điều kiện lọc theo classId
-                                 .OrderBy(a => a.duedate)  // Sắp xếp theo DueDate tăng dần
-                                 .FirstOrDefaultAsync(); // Lấy bản ghi đầu tiên (có DueDate gần nhất)
+                                 .Where(a => a.classid == classId)  // Filter by classId
+                                 .OrderBy(a => a.duedate)  // Sort by DueDate in ascending order
+                                 .FirstOrDefaultAsync(); // Get the first record (with the nearest DueDate)
 
-            // Cập nhật status nếu assignment không phải null
+            // Update status if assignment is not null
             if (assignment != null)
             {
                 assignment.UpdateStatus();
-                await _context.SaveChangesAsync(); // Lưu thay đổi
+                await _context.SaveChangesAsync(); // Save changes
             }
 
             return assignment;
         }
 
-        // Lấy danh sách assignment của học sinh theo studentId
+        // Get assignments for a student by studentId
         public async Task<List<Assignment>> GetAssignmentsByStudentId(string studentId)
         {
             var assignments = await _context.Assignment
-                                 .Where(a => a.Class.ClassStudents.Any(cs => cs.studentid == studentId)) // Lọc theo studentId
+                                 .Where(a => a.Class.ClassStudents.Any(cs => cs.studentid == studentId)) // Filter by studentId
                                  .Include(a => a.Class)
-                                 .OrderBy(a => a.duedate) // Sắp xếp theo DueDate tăng dần
+                                 .OrderBy(a => a.duedate) // Sort by DueDate in ascending order
                                  .ToListAsync();
 
-            // Cập nhật status cho từng nhiệm vụ
+            // Update status for each assignment
             foreach (var assignment in assignments)
             {
                 assignment.UpdateStatus();
             }
 
-            await _context.SaveChangesAsync(); // Lưu các thay đổi
+            await _context.SaveChangesAsync(); // Save changes
 
             return assignments;
         }

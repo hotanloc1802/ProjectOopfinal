@@ -14,25 +14,30 @@ namespace ClassroomManagementApp1.Models
     {
         [Key]
         public string assignmentid { get; set; }
+
         [ForeignKey("Class")]
         public string classid { get; set; }
+
         public string description { get; set; } = string.Empty; // Non-nullable
+
         public DateTime duedate { get; set; }
 
         public ICollection<Submission> Submissions { get; set; }
 
         public Class Class { get; set; }
+
         [NotMapped]
         public int status { get; set; }
+
         public void UpdateStatus()
         {
             if (duedate >= DateTime.Now)
             {
-                status = 1; // Còn hạn
+                status = 1; // Within the deadline
             }
             else
             {
-                status = 0; // Hết hạn
+                status = 0; // Past the deadline
             }
         }
     }

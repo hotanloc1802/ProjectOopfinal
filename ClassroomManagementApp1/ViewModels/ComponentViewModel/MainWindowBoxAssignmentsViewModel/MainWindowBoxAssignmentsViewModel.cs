@@ -1,28 +1,21 @@
 ﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+using ClassroomManagementApp1.Factory;
+using ClassroomManagementApp1.DesignPattern;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using ClassroomManagementApp1.Data;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel
 {
     public class MainWindowBoxAssignmentsViewModel : ViewModelBase
     {
-        private MainWindowBoxAssignmentsItem _item; // Private field for backing store
+        private MainWindowBoxAssignmentsItem _item;
 
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
         private readonly ClassesService _classService;
-
         private readonly AssignmentService _assignmentService;
 
-        // Public property for data binding
         private MainWindowBoxAssignmentsItem[] _items = new MainWindowBoxAssignmentsItem[3];
 
         public MainWindowBoxAssignmentsItem this[int index]
@@ -33,10 +26,11 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
                 if (_items[index] != value)
                 {
                     _items[index] = value;
-                    OnPropertyChanged($"Item{index + 1}"); // Notify that the specific item has changed
+                    OnPropertyChanged($"Item{index + 1}");
                 }
             }
         }
+
         public MainWindowBoxAssignmentsItem Item1
         {
             get => this[0];
@@ -63,46 +57,47 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
             AssignmentViewModel = new AssignmentViewModel(_assignmentService);
             InitializeData();
         }
-        private static (ClassesService, AssignmentService) CreateDbContext()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            var classesService = new ClassesService(context);
-            var assignmentService = new AssignmentService(context);
-            return (classesService, assignmentService);
 
-        }
-        public MainWindowBoxAssignmentsViewModel() : this(CreateDbContext().Item1, CreateDbContext().Item2)
+        public MainWindowBoxAssignmentsViewModel()
+            : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateAssignmentService())
         {
         }
+
         private async void InitializeData()
         {
             try
             {
-                // Tải 3 lớp gần nhất của sinh viên và hiển thị
-                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(StudentContext.Instance.StudentId);
-                var ClassList = ClassViewModel.Classes.ToList();
-                await AssignmentViewModel.LoadNearestAssignmentByClassIDAsync(ClassList[0].classid);
-                DateTime dueDate = AssignmentViewModel.NearestAssignment.duedate;
-                string formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
-                Item1 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, formattedDate);
-                await AssignmentViewModel.LoadNearestAssignmentByClassIDAsync(ClassList[1].classid);
-                dueDate = AssignmentViewModel.NearestAssignment.duedate;
-                formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
-                Item2 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, formattedDate);
-                await AssignmentViewModel.LoadNearestAssignmentByClassIDAsync(ClassList[2].classid);
-                dueDate = AssignmentViewModel.NearestAssignment.duedate;
-                formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
-                Item3 = new MainWindowBoxAssignmentsItem(AssignmentViewModel.NearestAssignment.description, formattedDate);
+                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
+                var classList = ClassViewModel.Classes.ToList();
 
+                for (int i = 0; i < Math.Min(3, classList.Count); i++)
+                {
+                    await AssignmentViewModel.LoadNearestAssignmentByClassIDAsync(classList[i].classid);
+                    var nearestAssignment = AssignmentViewModel.NearestAssignment;
+
+                    if (nearestAssignment != null)
+                    {
+                        var formattedDate = FormatDate(nearestAssignment.duedate);
+                        this[i] = new MainWindowBoxAssignmentsItem(nearestAssignment.description, formattedDate);
+                    }
+                    else
+                    {
+                        this[i] = new MainWindowBoxAssignmentsItem("No Assignment Available", string.Empty);
+                    }
+                }
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có
-                //MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                // Handle errors if any
+                //MessageBox.Show($"An error occurred while loading data: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private string FormatDate(DateTime dueDate)
+        {
+            return dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
+        }
+
         private string GetDaySuffix(int day)
         {
             if (day >= 11 && day <= 13) return "th";
@@ -115,5 +110,4 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
             };
         }
     }
-
 }

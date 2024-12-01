@@ -1,12 +1,8 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Models;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
@@ -14,16 +10,21 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
     {
         private readonly StudentService _studentService;
         private ObservableCollection<Student> _students;
+
+        // Collection of students to bind to the UI
         public ObservableCollection<Student> Students
         {
             get => _students;
             set
             {
                 _students = value;
-                OnPropertyChanged(nameof(Students)); // Thông báo UI cập nhật
+                OnPropertyChanged(nameof(Students)); // Notify UI to update
             }
         }
+
         private Student _selectedStudent;
+
+        // Property for the selected student
         public Student SelectedStudent
         {
             get { return _selectedStudent; }
@@ -34,13 +35,14 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
             }
         }
 
+        // Constructor to initialize the StudentService dependency
         public StudentViewModel(StudentService studentService)
         {
-
             _studentService = studentService;
             Students = new ObservableCollection<Student>();
         }
-        // Tải tất cả học sinh
+
+        // Load all students asynchronously
         public async Task LoadAllStudentsAsync()
         {
             var studentList = await _studentService.GetAllStudentsAsync();
@@ -50,45 +52,41 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
                 Students.Add(student);
             }
         }
-        // Thêm học sinh mới
+
+        // Add a new student
         public async Task AddStudentAsync(Student student)
         {
             await _studentService.AddStudentAsync(student);
-            await LoadAllStudentsAsync(); // Cập nhật danh sách sau khi thêm
+            await LoadAllStudentsAsync(); // Refresh the list after adding
         }
-        // Cập nhật thông tin học sinh
+
+        // Update an existing student's information
         public async Task UpdateStudentAsync(Student student)
         {
             await _studentService.UpdateStudentAsync(student);
-            await LoadAllStudentsAsync(); // Cập nhật danh sách sau khi sửa
+            await LoadAllStudentsAsync(); // Refresh the list after updating
         }
 
-        // Xóa học sinh
+        // Delete a student by their ID
         public async Task DeleteStudentAsync(string studentId)
         {
             await _studentService.DeleteStudentAsync(studentId);
-            await LoadAllStudentsAsync(); // Cập nhật danh sách sau khi xóa
+            await LoadAllStudentsAsync(); // Refresh the list after deleting
         }
-        // Tải thông tin học sinh theo ID
+
+        // Load a student's information by their ID
         public async Task LoadStudentByIdAsync(string studentId)
         {
             var student = await _studentService.GetStudentById(studentId);
-            SelectedStudent = student; // Gán vào SelectedStudent để hiển thị chi tiết
+            SelectedStudent = student; // Assign to SelectedStudent for detailed view
         }
-        /*public async Task<bool> UpdateAccountAsync(string studentId)
-        {
 
-            // Pass the current ViewModel values to the service layer for updating the database
-            MessageBox.Show(this.StudentName);
-            return await _studentService.UpdateAccountAsync(studentId, this);
-        }
-        */
-
+        // Event to notify property changes for data binding
         public event PropertyChangedEventHandler PropertyChanged;
+
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
     }
 }

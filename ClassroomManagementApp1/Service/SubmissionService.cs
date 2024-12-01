@@ -23,7 +23,7 @@ namespace ClassroomManagementApp1.ClassService
 
         // 3. Build Service
 
-        // Thêm submission
+        // Add a submission
         public async Task AddSubmissionAsync(Submission submission)
         {
             if (submission == null)
@@ -35,13 +35,13 @@ namespace ClassroomManagementApp1.ClassService
             await _context.SaveChangesAsync();
         }
 
-        // Lấy tất cả submissions
+        // Get all submissions
         public async Task<List<Submission>> GetAllSubmissionsAsync()
         {
             return await _context.Submissions.ToListAsync();
         }
 
-        // Cập nhật submission
+        // Update a submission
         public async Task UpdateSubmissionAsync(Submission submission)
         {
             if (submission == null)
@@ -53,7 +53,7 @@ namespace ClassroomManagementApp1.ClassService
             await _context.SaveChangesAsync();
         }
 
-        // Xóa submission
+        // Delete a submission
         public async Task DeleteSubmissionAsync(string submissionID)
         {
             if (string.IsNullOrEmpty(submissionID))
@@ -69,7 +69,7 @@ namespace ClassroomManagementApp1.ClassService
             }
         }
 
-        // Lấy thông tin submissions theo student ID
+        // Get submissions by student ID
         public async Task<List<Submission>> GetSubmissionsByStudentId(string studentId)
         {
             if (string.IsNullOrEmpty(studentId))
@@ -86,9 +86,11 @@ namespace ClassroomManagementApp1.ClassService
             catch (Exception ex)
             {
                 Console.WriteLine($"Error fetching submissions for student ID {studentId}: {ex.Message}");
-                throw; // Reroute exception for higher-level handling if necessary
+                throw; // Rethrow exception for higher-level handling if necessary
             }
         }
+
+        // Get submission by student ID and assignment ID
         public async Task<Submission> GetSubmissionsByStudentIdAndAssignmentId(string studentId, string assignmentId)
         {
             try
@@ -99,12 +101,10 @@ namespace ClassroomManagementApp1.ClassService
             }
             catch (Exception ex)
             {
-                // Ghi log hoặc hiển thị thông báo lỗi
-                Console.WriteLine($"Đã xảy ra lỗi khi truy vấn: {ex.Message}");
+                // Log or display error message
+                Console.WriteLine($"An error occurred while querying: {ex.Message}");
                 return null;
             }
         }
-
-
     }
 }

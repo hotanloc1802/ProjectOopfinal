@@ -1,23 +1,20 @@
 ﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.DesignPattern;
+using ClassroomManagementApp1.Factory;
 using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListViewAssignmentsViewModel
 {
     public class AssignmentListViewAssignmentsViewModel : ViewModelBase
     {
-        private MainWindowBoxAssignmentsItem _item; // Private field for backing store
+        private MainWindowBoxAssignmentsItem _item;
 
         public AssignmentViewModel AssignmentViewModel { get; private set; }
         private ObservableCollection<item> _firstHalfAssignments = new ObservableCollection<item>();
@@ -43,7 +40,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
             set
             {
                 _firstHalfAssignments = value;
-                OnPropertyChanged(nameof(FirstHalfAssignments)); // Thông báo đúng tên thuộc tính
+                OnPropertyChanged(nameof(FirstHalfAssignments));
             }
         }
 
@@ -53,7 +50,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
             set
             {
                 _secondHalfAssignments = value;
-                OnPropertyChanged(nameof(SecondHalfAssignments)); // Thông báo đúng tên thuộc tính
+                OnPropertyChanged(nameof(SecondHalfAssignments));
             }
         }
 
@@ -64,21 +61,21 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
             set
             {
                 _listassignments = value;
-                OnPropertyChanged(nameof(Listassignments)); // Thông báo đúng tên thuộc tính
+                OnPropertyChanged(nameof(Listassignments));
             }
         }
         private readonly AssignmentService _assignmentService;
 
-        // Public property for data binding
         public MainWindowBoxAssignmentsItem Item
         {
             get => _item;
             set
             {
                 _item = value;
-                OnPropertyChanged(nameof(Item)); // Notify that Item has changed
+                OnPropertyChanged(nameof(Item));
             }
         }
+
         public AssignmentListViewAssignmentsViewModel(AssignmentService assignmentService)
         {
             _assignmentService = assignmentService;
@@ -86,66 +83,28 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
             InitializeData();
         }
 
-        // Method to create and return ClassesService instance
-        private static AssignmentService CreateAssignmenService()
+        public AssignmentListViewAssignmentsViewModel() : this(ServiceFactory.CreateAssignmentService())
         {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            return new AssignmentService(context);
         }
 
-        // Default constructor that uses CreateClassService
-        public AssignmentListViewAssignmentsViewModel() : this(CreateAssignmenService())
-        {
-        }
         private async void InitializeData()
         {
             try
             {
-                await AssignmentViewModel.LoadAssignmentsByStudentId(StudentContext.Instance.StudentId);
+                await AssignmentViewModel.LoadAssignmentsByStudentId(StudentContextSingleton.Instance.StudentId);
 
-                // Kiểm tra xem Assignments có null không
-                if (AssignmentViewModel.Assignments != null)
+                if (AssignmentViewModel.Assignments != null && AssignmentViewModel.Assignments.Any())
                 {
                     Listassignments = new ObservableCollection<Assignment>(AssignmentViewModel.Assignments);
+
                     int halfCount = Listassignments.Count / 2;
 
-                    var store1 = new ObservableCollection<Assignment>(Listassignments.Take(halfCount));
-                    var store2 = new ObservableCollection<Assignment>(Listassignments.Skip(halfCount).Take(halfCount));
-                    FirstHalfAssignments = new ObservableCollection<item>();
-                    SecondHalfAssignments = new ObservableCollection<item>();
+                    // Tách danh sách assignment thành hai phần
+                    var store1 = Listassignments.Take(halfCount);
+                    var store2 = Listassignments.Skip(halfCount);
 
-                    foreach (var asm1 in store1)
-                    {
-                        // Kiểm tra Class và duedate không phải null
-                        if (asm1.Class != null && asm1.duedate != null)
-                        {
-                            string formattedDate1 = asm1.duedate.ToString("dddd, MMMM d") + GetDaySuffix(asm1.duedate.Day) + asm1.duedate.ToString(", yyyy");
-                            FirstHalfAssignments.Add(new item(asm1.Class.classname, asm1.description, formattedDate1));
-                        }
-                        else
-                        {
-                            // Xử lý khi Class hoặc duedate là null
-                            MessageBox.Show("Một hoặc nhiều thuộc tính của bài tập không hợp lệ.", "Lỗi dữ liệu", MessageBoxButton.OK, MessageBoxImage.Warning);
-                        }
-                    }
-
-                    foreach (var asm2 in store2)
-                    {
-                        // Kiểm tra Class và duedate không phải null
-                        if (asm2.Class != null && asm2.duedate != null)
-                        {
-                            string formattedDate2 = asm2.duedate.ToString("dddd, MMMM d") + GetDaySuffix(asm2.duedate.Day) + asm2.duedate.ToString(", yyyy");
-                            SecondHalfAssignments.Add(new item(asm2.Class.classname, asm2.description, formattedDate2));
-                        }
-                        else
-                        {
-                            // Xử lý khi Class hoặc duedate là null
-                            MessageBox.Show("Một hoặc nhiều thuộc tính của bài tập không hợp lệ.", "Lỗi dữ liệu", MessageBoxButton.OK, MessageBoxImage.Warning);
-                        }
-                    }
-
+                    FirstHalfAssignments = FormatAssignments(store1);
+                    SecondHalfAssignments = FormatAssignments(store2);
                 }
                 else
                 {
@@ -154,11 +113,31 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
             }
             catch (Exception ex)
             {
-                // Xử lý lỗi nếu có
                 MessageBox.Show($"Có lỗi xảy ra khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-
         }
+
+        // Hàm định dạng assignment và chuyển sang ObservableCollection<item>
+        private ObservableCollection<item> FormatAssignments(IEnumerable<Assignment> assignments)
+        {
+            var formattedAssignments = new ObservableCollection<item>();
+
+            foreach (var asm in assignments)
+            {
+                if (asm.Class != null && asm.duedate != null)
+                {
+                    string formattedDate = asm.duedate.ToString("dddd, MMMM d") + GetDaySuffix(asm.duedate.Day) + asm.duedate.ToString(", yyyy");
+                    formattedAssignments.Add(new item(asm.Class.classname, asm.description, formattedDate));
+                }
+                else
+                {
+                    MessageBox.Show("Một hoặc nhiều thuộc tính của bài tập không hợp lệ.", "Lỗi dữ liệu", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
+
+            return formattedAssignments;
+        }
+
         private string GetDaySuffix(int day)
         {
             if (day >= 11 && day <= 13) return "th";
@@ -170,7 +149,5 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
                 _ => "th",
             };
         }
-
     }
-
 }

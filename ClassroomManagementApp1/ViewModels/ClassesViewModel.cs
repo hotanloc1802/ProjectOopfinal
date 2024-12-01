@@ -6,9 +6,11 @@ using System.Windows;
 using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Component;
 using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.Factory;
 using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using Microsoft.EntityFrameworkCore;
+using ClassroomManagementApp1.DesignPattern;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -53,10 +55,10 @@ namespace ClassroomManagementApp1.ViewModels
                 OnPropertyChanged(nameof(MyClassId));
             }
         }
-        public class SubmissionAsignment 
+        public class SubmissionAsignment
         {
             public string duedate { get; set; }
-            public string classname { get; set; }  
+            public string classname { get; set; }
             public string description { get; set; }
             public string linksubmission { get; set; }
             public Assignment Assignment { get; set; }
@@ -80,19 +82,8 @@ namespace ClassroomManagementApp1.ViewModels
             MyClassId = classID;
             InitializeData(classID);
         }
-        private static (AssignmentService, SubmissionService, ClassesService) CreateDbContext()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=OOP-new,public;");
-            var context = new AppDbContext(optionsBuilder.Options);
-            var assignmentService = new AssignmentService(context);
-            var submissionService = new SubmissionService(context);
-            var classesService = new ClassesService(context);
-            return (assignmentService, submissionService,classesService);
-        }
-
         public ClassesViewModel(string classID)
-            : this(CreateDbContext().Item1, CreateDbContext().Item2, CreateDbContext().Item3 ,classID)
+            : this(ServiceFactory.CreateAssignmentService(), ServiceFactory.CreateSubmissionService(), ServiceFactory.CreateClassesService(), classID)
         {
         }
         private async void InitializeData(string classID)
@@ -100,12 +91,12 @@ namespace ClassroomManagementApp1.ViewModels
             await ClassViewModel.LoadClassByIdAsync(classID);
             var className = ClassViewModel.SelectedClass.Subject.subjectname;
             var assignmentList = ClassViewModel.Assignments;
-            await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContext.Instance.StudentId);
+            await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContextSingleton.Instance.StudentId);
             var submissionList = SubmissionViewModel.Submissions;
             Subject = ClassViewModel.SelectedClass.Subject.subjectname;
             foreach (var asm in assignmentList)
             {
-                bool isSubmitted = submissionList.Any(sms => sms.assignmentid == asm.assignmentid );
+                bool isSubmitted = submissionList.Any(sms => sms.assignmentid == asm.assignmentid);
                 if (!isSubmitted)
                 {
                     AssignmentNotSubmitted.Add(asm);
@@ -115,11 +106,11 @@ namespace ClassroomManagementApp1.ViewModels
             {
                 //await SubmissionViewModel.LoadSubmissionsByStudentIdAndAssignmentId(StudentContext.Instance.StudentId, asm.assignmentid);
                 //var submission = SubmissionViewModel.SelectedSubmission;
-                DateTime dueDate = asm.duedate; 
+                DateTime dueDate = asm.duedate;
                 string formattedDate = dueDate.ToString("dddd, MMMM d") + GetDaySuffix(dueDate.Day) + dueDate.ToString(", yyyy");
                 //if (submission != null)
                 //{
-                    SubmissonAssignments.Add(new SubmissionAsignment (className, asm.description, formattedDate));
+                SubmissonAssignments.Add(new SubmissionAsignment(className, asm.description, formattedDate));
                 //}
             }
 

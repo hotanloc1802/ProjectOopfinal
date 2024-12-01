@@ -18,22 +18,22 @@ namespace ClassroomManagementApp1.Commands
 
         public bool CanExecute(object parameter)
         {
-            return true; // Luôn cho phép thực thi
+            return true; // Always allow execution
         }
 
         public void Execute(object parameter)
         {
-            // Kiểm tra xem đã có dòng trống hay chưa
+            // Check if there is an empty row
             var hasEmptyRow = _studentViewModel.Students.Any(s => string.IsNullOrEmpty(s.studentid));
 
-            if (!hasEmptyRow) // Nếu chưa có dòng trống, thêm dòng mới
+            if (!hasEmptyRow) // If no empty row exists, add a new one
             {
                 _studentViewModel.Students.Add(new Student
                 {
-                    studentid = string.Empty,    // ID trống
-                    studentname = string.Empty,  // Tên trống
-                    studentemail = string.Empty, // Email trống
-                    studentgrade = string.Empty        // Giá trị mặc định
+                    studentid = string.Empty,    // Empty ID
+                    studentname = string.Empty,  // Empty name
+                    studentemail = string.Empty, // Empty email
+                    studentgrade = string.Empty        // Default value
                 });
             }
         }
