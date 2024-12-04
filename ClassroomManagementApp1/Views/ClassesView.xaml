@@ -198,14 +198,16 @@
                 <Grid Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="5*"/>
+                        <RowDefinition Height="4*"/>
                     </Grid.RowDefinitions>
-                    <Image Source="/Image/background.png" HorizontalAlignment="Left" Margin="70,0,199.8,-0.5"/>
-                    <Border Margin="80,0,0,0">
-                        <TextBlock Text="{Binding Subject}" FontSize="40" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6" VerticalAlignment="Center" Margin="0,0,550,0" HorizontalAlignment="Center"/>
-                    </Border>
-                    <Grid Grid.Row="1" Margin="0,20,0,0">
-                        <component:ClassesListViewClasses Margin="0,0,0,-138" ClassId="{Binding MyClassId}" />
+                    <Grid Grid.Row="0" Margin="0,20,0,0">
+                        <Image Source="/Image/background.png" HorizontalAlignment="Center"/>
+                        <Border HorizontalAlignment="Center">
+                            <TextBlock Text="{Binding Subject}" FontSize="40" FontFamily="Comic Sans MS" FontWeight="Bold" FontStyle="Italic" Foreground="#b897c6" VerticalAlignment="Center" />
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <component:ClassesListViewClasses ClassId="{Binding MyClassId}" />
                     </Grid>
                 </Grid>
             </Grid>

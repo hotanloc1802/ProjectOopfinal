@@ -5156,6 +5156,7 @@
       "EntityFramework >= 6.5.1",
       "MahApps.Metro.IconPacks >= 5.0.1",
       "MahApps.Metro.IconPacks.Material >= 5.1.0",
+      "MaterialDesignColors >= 3.1.0",
       "MaterialDesignThemes >= 5.1.0",
       "Microsoft.EntityFrameworkCore >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Abstractions >= 8.0.10",
@@ -5219,6 +5220,10 @@
           "MahApps.Metro.IconPacks.Material": {
             "target": "Package",
             "version": "[5.1.0, )"
+          },
+          "MaterialDesignColors": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           },
           "MaterialDesignThemes": {
             "target": "Package",

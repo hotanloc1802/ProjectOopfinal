@@ -6,13 +6,14 @@
         xmlns:local="clr-namespace:ClassroomManagementApp1.Views"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/iconpacks"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:component="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d" 
         Title="MainWindowView" Height="760" Width="1280" Background="Transparent" ResizeMode="NoResize"
         AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Border Background="#f6eefb" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
             Padding="20" >
-        <Border CornerRadius="40" Height="716" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1236">      
+        <Border CornerRadius="40" Height="716" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1236">
             <Grid Margin="0,0,0,15" HorizontalAlignment="Center" Width="1176" Height="686" VerticalAlignment="Bottom">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="71*"/>
@@ -254,7 +255,7 @@
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                             <TextBlock x:Name="txtSearch" Text="Search..." Foreground="#b897d1" FontFamily="Montserrat" Margin="38,0,0,0" IsHitTestVisible="False"  />
                         </StackPanel>
-                       
+
                     </Grid>
                     <Grid Grid.Row="1" Margin="0,40,0,0">
                         <Border Background="white" CornerRadius="10" Margin="40,0,40,10" Height="160">
@@ -307,7 +308,7 @@
                             <ColumnDefinition Width="0.3*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0" Margin="10,0,10,0">
-                            <component:MainWindowBoxClasses/>
+                            <component:MainWindowBoxClasses />
                         </Grid>
                         <Grid Grid.Column="1" Margin="10,0,10,0">
                             <component:MainWindowBoxClasses1/>
@@ -346,6 +347,60 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <component:MainWindowBoxStudentInfo/>
+                    </Grid>
+                    <Grid Grid.Row="1" Margin="0,75,0,0" Width="230">
+                        <Grid Grid.Row="2" Height="452" >
+                            <Grid Height="450">
+                                <Grid.Resources>
+                                    <Style
+    x:Key="CustomCalendarDayButton"
+      TargetType="CalendarDayButton"
+      BasedOn="{StaticResource MaterialDesignCalendarDayButton}">
+                                        <Setter
+       Property="materialDesign:CalendarAssist.SelectionColor"
+       Value="#B2F39B" />
+                                        <Setter
+       Property="materialDesign:CalendarAssist.SelectionForegroundColor"
+       Value="Black" />
+                                    </Style>
+                                    <Style
+    x:Key="CustomCalendarButton"
+    TargetType="CalendarButton"
+    BasedOn="{StaticResource MaterialDesignCalendarButton}">
+                                        <Setter
+    Property="materialDesign:CalendarAssist.SelectionColor"
+    Value="#B2F39B" />
+                                        <Setter
+    Property="materialDesign:CalendarAssist.SelectionForegroundColor"
+    Value="Black" />
+                                    </Style>
+                                </Grid.Resources>
+                                <Calendar x:Name="MyCalendar"
+materialDesign:CalendarAssist.HeaderBackground="#FBFBFB" 
+materialDesign:CalendarAssist.HeaderForeground="Black" SelectedDate="{Binding SelectedDate}"
+Background="white"
+CalendarButtonStyle="{StaticResource CustomCalendarButton}"
+CalendarDayButtonStyle="{StaticResource CustomCalendarDayButton}"
+Foreground="Black" Margin="0,0,0,94">
+                                    <Calendar.Resources>
+                                        <Style TargetType="CalendarDayButton">
+                                            <Setter Property="Background" Value="White" />
+                                            <Setter Property="Foreground" Value="Black" />
+                                            <Style.Triggers>
+                                                <!-- DataContext of CalendarDayButton is the date it represents -->
+                                                <DataTrigger Binding="{Binding DataContext, RelativeSource={RelativeSource Self}, 
+                       Converter={StaticResource DateInDueDatesConverter}, 
+                       ConverterParameter={Binding Path=DueDates}}" 
+     Value="True">
+                                                    <Setter Property="Background" Value="Red" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Calendar.Resources>
+
+                                </Calendar>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

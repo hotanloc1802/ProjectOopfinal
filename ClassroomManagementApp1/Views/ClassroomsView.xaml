@@ -13,7 +13,7 @@
     <Border Background="#f6eefb" CornerRadius="40" BorderThickness="2" BorderBrush = "#ebedf3"
         Padding="20" >
         <Border CornerRadius="40" Height="716" VerticalAlignment="Center" HorizontalAlignment="Right" Width="1236">
-            
+
             <Grid Margin="0,0,0,15" HorizontalAlignment="Center" Width="1176" Height="686" VerticalAlignment="Bottom">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="0.8*"/>
@@ -242,14 +242,14 @@
                         <TextBlock Text="Your Classes:" Foreground="Gray" FontFamily="Montserrat" FontSize="32"/>
                     </Grid>
                     <Grid Grid.Row="2" >
-                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Margin="0,15,0,0" Height="548" VerticalAlignment="Bottom"/>
+                        <component:ClassroomListViewClasses HorizontalAlignment="Center" Width="753" Height="548" VerticalAlignment="Bottom"/>
                     </Grid>
                 </Grid>
                 <Grid Grid.Column="2">
-                    <Border>
+                    <Border BorderThickness="0">
                         <Border.Background>
                             <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
-                                <GradientStop Color="white" Offset="0"/>
+                                <GradientStop Color="#f6eefb" Offset="0"/>
                                 <GradientStop Color="#f6eefb" Offset="1"/>
                             </LinearGradientBrush>
                         </Border.Background>
@@ -265,8 +265,8 @@
                     <Grid Grid.Row="1"  Margin="30,30,30,0">
                         <TextBlock Text="Deadlines:" Foreground="Gray" FontFamily="Montserrat" FontSize="22"/>
                     </Grid>
-                    <Grid Grid.Row="2" Margin="20,0,20,0">
-                        <Border x:Name="boDeadlines"  Background="White" CornerRadius="20" Margin="0,23,0,60">
+                    <Grid Grid.Row="2" Margin="10,0,20,0">
+                        <Border x:Name="boDeadlines"  Background="White" CornerRadius="20" Margin="-10,23,15,60">
                             <Border x:Name="boDeadline1" Background="Transparent" BorderBrush="Transparent">
                                 <Grid>
                                     <component:ClassroomListViewAssignments/>

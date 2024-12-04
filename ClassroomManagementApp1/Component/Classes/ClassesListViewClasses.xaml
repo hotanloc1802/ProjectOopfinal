@@ -5,84 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ClassroomManagementApp1.Component"
         mc:Ignorable="d"
-        Height="690" Width="1000">
-    <ScrollViewer >
-        <ListView ItemsSource="{Binding SubmissonAssignments}"  Height="695" Width="995" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.CanContentScroll="False"
-          ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="BorderBrush" Value="Transparent"/>
-                    <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-                    <Setter Property="Padding" Value="0"/>
-                    <Setter Property="Margin" Value="0"/>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="ListViewItem">
-                                <Grid Background="{TemplateBinding Background}">
-                                    <ContentPresenter />
-                                </Grid>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </ListView.ItemContainerStyle>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-
-                    <Grid Background="#ebdef2" Margin="0,15,0,15" >
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="80"/>
-                            <RowDefinition Height="70"/>
-                            <RowDefinition Height="150"/>
-                            <RowDefinition Height="150"/>
-                        </Grid.RowDefinitions>
-                        <Border CornerRadius="50" Background="White" Grid.Row="0" Height="440"  Width="900" VerticalAlignment="Center"  HorizontalAlignment="Center" Grid.RowSpan="4" />
-                        <Grid Grid.Row="0">
-                            <TextBlock Text="{Binding  description}" FontSize="25" FontFamily="Montserrat Bold" Foreground="Gray" Margin="55,30,0,0"/>
-                        </Grid>
-                        <Grid Grid.Row="1">
-                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="170" Margin="100,0,0,25">
-                                <TextBlock Text="Requirements" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="25" Margin="10,0,0,0"/>
-                            </Border>
-                        </Grid>
-                        <Grid Grid.Row="2">
-                            <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Width="185" Margin="100,110,0,0">
-                                <TextBlock Text="Assignments" FontFamily="Montserrat" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
-                            </Border>
-                        </Grid>
-                        <Grid Grid.Row="3">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="68*"/>
-                                <ColumnDefinition Width="241*"/>
-                                <ColumnDefinition Width="191*"/>
-                            </Grid.ColumnDefinitions>
-                            <Border BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="10" Margin="100,15,90,30" Grid.ColumnSpan="3">
-                                <TextBlock Text="Link: " FontSize="25" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Center" Margin="30,0,0,0" />
-                            </Border>
-                            <Grid Grid.Column="1">
-                                <TextBox x:Name="FilePathTextBox" Foreground="Gray" FontFamily="Montserrate" Margin="0,17,10,32" IsReadOnly="True"   FontSize="15">
-                                </TextBox>
+        Height="548.8" Width="987.84">
+    <ListView Background="Transparent" ItemsSource="{Binding SubmissonAssignments}"
+                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                  ScrollViewer.CanContentScroll="False" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListView.ItemContainerStyle>
+            <Style TargetType="ListViewItem">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="BorderBrush" Value="Transparent"/>
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ListViewItem">
+                            <Grid Background="{TemplateBinding Background}">
+                                <ContentPresenter />
                             </Grid>
-                            <Grid Grid.Column="2">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Border Margin="0,30,130,0" Background="#C7E4FF" BorderBrush="Transparent"  CornerRadius="10" HorizontalAlignment="Right" Width="148" >
-                                    <Button  Click="SubmitButton_Click">
-                                        <TextBlock Text="Submit" Foreground="Gray" FontSize="25" FontFamily="Montserrate" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    </Button>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ListView.ItemContainerStyle>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <Grid Margin="15,5,0,0">
+                    <Border CornerRadius="50" Background="White" Height="400"  Width="900" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.RowSpan="4" Margin="0,10,0,10">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="70"/>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="80"/>
+                                <RowDefinition Height="120"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0" VerticalAlignment="Bottom">
+                                <TextBlock Text="{Binding description}" FontSize="25" FontFamily="Montserrat Bold" Foreground="Gray" Margin="50,0,0,0"/>
+                            </Grid>
+                            <Grid Grid.Row="1" VerticalAlignment="Bottom">
+                                <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left" Margin="70,0,0,0">
+                                    <TextBlock Text="Requirements" FontFamily="Montserrat" Foreground="White" VerticalAlignment="Center" FontSize="25" Margin="13,7,13,7"/>
                                 </Border>
-                                <Grid Grid.Row="1">
-                                    <TextBlock Text="{Binding duedate}" FontSize="15" FontFamily="Montserrate" Foreground="Gray" VerticalAlignment="Top" Margin="69,4,0,0" HorizontalAlignment="Left" Width="223"/>
-                                </Grid>
+                            </Grid>
+                            <Grid Grid.Row="3" VerticalAlignment="Bottom">
+                                <Border  Background="#b897c6" CornerRadius="20" HorizontalAlignment="Left"  Margin="70,0,0,0">
+                                    <TextBlock Text="Assignments" FontFamily="Montserrat" Foreground="White" VerticalAlignment="Center" FontSize="25" Margin="13,7,13,7"/>
+                                </Border>
+                            </Grid>
+                            <Grid Grid.Row="4" VerticalAlignment="Center">
+                                <Border BorderBrush="#b897c6" BorderThickness="0.5" CornerRadius="20" Margin="50,0" Grid.ColumnSpan="3">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="0.6*"/>
+                                            <ColumnDefinition Width="0.4*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="0">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Text="Link: " FontSize="25" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Center" Margin="30,0,0,0" />
+                                                <TextBox x:Name="FilePathTextBox" Foreground="Gray" FontFamily="Montserrate" VerticalAlignment="Center" Margin="5,0,0,0" IsReadOnly="True" FontSize="25"/>
+                                            </StackPanel>
+                                        </Grid>
+                                        <Grid Grid.Column="2">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid Grid.Row="0">
+                                                <Border VerticalAlignment="Center" HorizontalAlignment="Center" Background="#C7E4FF" BorderBrush="Transparent"  CornerRadius="10" Margin="0,10,0,5">
+                                                    <Button  Click="SubmitButton_Click">
+                                                        <TextBlock Text="Submit" Foreground="Gray" FontSize="25" FontFamily="Montserrate" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Button>
+                                                </Border>
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding duedate}" FontSize="17" FontFamily="Montserrate" Foreground="Gray" Margin="0,5,0,10"/>
+                                            </Grid>
+                                        </Grid>
+                                    </Grid>
+                                </Border>
                             </Grid>
                         </Grid>
-
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </ScrollViewer>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </UserControl>

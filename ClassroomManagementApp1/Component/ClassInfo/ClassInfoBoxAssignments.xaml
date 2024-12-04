@@ -32,8 +32,8 @@
             <DataTemplate>
                 <Grid>
                     <StackPanel Margin="0,0,0,0">
-                        <TextBlock Text="{Binding description}" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6" Margin="10,20,0,0"/>
-                        <TextBlock Text="{Binding Date}" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6" Margin="10,10,0,0"/>
+                        <TextBlock Text="{Binding description}" FontSize="16" FontFamily="Montserrat Bold" FontWeight="Bold" Foreground="#b897c6" Margin="10,20,0,0"/>
+                        <TextBlock Text="{Binding Date}" FontSize="13" FontFamily="Montserrat" Foreground="#b897c6" Margin="10,5,0,0"/>
                     </StackPanel>
                 </Grid>
             </DataTemplate>

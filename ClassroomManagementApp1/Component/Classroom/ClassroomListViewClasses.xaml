@@ -34,8 +34,8 @@
             </ListView.ItemContainerStyle>
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <Button x:Name="BtnClassroom4" Background="Transparent" Margin="0,0,0,5" Height="200" BorderBrush="Transparent" Click="BtnClassroom1_Click" CommandParameter="{Binding classid}"  >
-                        <Border Height="170" Width="689" CornerRadius="10" Background="#b897c6">
+                    <Button x:Name="BtnClassroom4" Background="Transparent"  Height="200" BorderBrush="Transparent" Click="BtnClassroom1_Click" CommandParameter="{Binding classid}"  >
+                        <Border Margin="20,0,0,0" Height="170" Width="689" CornerRadius="20" Background="#b897c6">
                             <Grid Grid.Column="1" VerticalAlignment="Center">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="auto" MinWidth="100"/>
@@ -50,13 +50,15 @@
                                             </Image.Clip>
                                         </Image>
                                     </Grid>
-                                    <TextBlock Text="Lect. Ross Geller" FontSize="18" Foreground="White" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding teachername}" FontSize="18" Foreground="White" HorizontalAlignment="Center"/>
                                 </StackPanel>
                                 <Grid Grid.Column="1" Margin="15,0,0,0">
                                     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0">
                                         <TextBlock Text="{Binding classname}" FontSize="34" FontFamily="Montserrat Bold" Foreground="White" />
                                         <TextBlock Text="{Binding DateRange, Converter={StaticResource MainWindowBoxClassesDateConverter}}" FontSize="18" FontFamily="Montserrat" Foreground="White" Margin="0,2,0,0"/>
-                                        <TextBlock Text="{Binding AssignmentCount, StringFormat='{}{0} assignments updated'}"  FontSize="18" FontFamily="Montserrat" Foreground="Red" Margin="0,2,0,0"/>
+                                        <Border Margin="0,2,0,0" Background="#ED5757" CornerRadius="10">
+                                            <TextBlock HorizontalAlignment="Center" Text="{Binding AssignmentCount, StringFormat='{}{0} assignments updated'}"  FontSize="18" FontFamily="Montserrat" Foreground="white" Margin="5,0"/>
+                                        </Border>
                                     </StackPanel>
                                 </Grid>
                             </Grid>
