@@ -268,7 +268,7 @@
                         </Grid>
                         <Grid Grid.Row="0" Grid.RowSpan="2">
                             <Ellipse Width="120" Fill="#f6eefb" Stroke="Transparent" HorizontalAlignment="Center" Height="117" VerticalAlignment="Bottom" Margin="120,0,0,0" />
-                            <Image x:Name="imgProfilePicture"  Source="/Image/profile.png" Width="80" Height="80" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="120,0,0,20"/>
+                            <Image x:Name="imgProfilePicture"  Source="/Image/1.png" Width="80" Height="80" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="120,0,0,20"/>
                         </Grid>
                         <Grid Grid.Row="2">
                             <Grid.ColumnDefinitions>

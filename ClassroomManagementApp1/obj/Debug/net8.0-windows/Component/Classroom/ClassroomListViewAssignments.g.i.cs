@@ -53,8 +53,8 @@ namespace ClassroomManagementApp1.Component.Classroom {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ClassroomManagementApp1;component/component/classroom/classroomlistviewassignmen" +
-                    "ts.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ClassroomManagementApp1;V1.0.0.0;component/component/classroom/classroomlistview" +
+                    "assignments.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Component\Classroom\ClassroomListViewAssignments.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

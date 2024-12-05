@@ -6,14 +6,21 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Image\1.png" />
+    <None Remove="Image\2.png" />
     <None Remove="Image\background.png" />
     <None Remove="Image\backgroundSignIn.png" />
     <None Remove="Image\logo.png" />
     <None Remove="Image\profile.png" />
     <None Remove="Image\WelcomeBack.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +44,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Image\1.png" />
+    <Resource Include="Image\2.png" />
     <Resource Include="Image\background.png" />
     <Resource Include="Image\backgroundSignIn.png" />
     <Resource Include="Image\logo.png" />

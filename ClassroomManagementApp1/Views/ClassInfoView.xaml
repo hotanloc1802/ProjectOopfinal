@@ -40,7 +40,7 @@
                         </Grid.ColumnDefinitions>
                         <Grid Grid.Column="0" Margin="22,0,45,0">
                             <Ellipse  Fill="#f6eefb" Stroke="Transparent"/>
-                            <Image Source="/Image/profile.png" x:Name="imgProfilePicture"/>
+                            <Image Source="/Image/2.png" x:Name="imgProfilePicture" Margin="13,18,12,14"/>
                         </Grid>
                         <Grid Grid.Column="1">
                             <TextBlock Text="{Binding ClassInfo.Teacher.teachername}" FontSize="17" FontFamily="Montserrat" Foreground="#b897c6" HorizontalAlignment="Center" Margin="0,60,0,0"/>
