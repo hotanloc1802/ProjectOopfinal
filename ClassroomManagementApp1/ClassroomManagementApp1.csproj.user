@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Component\Assignment\AssigmentListViewAssignments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\ClassInfo\ClassInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\ClassInfo\ClassInfoBoxAssignments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\Classroom\ClassroomListViewAssignments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\Classroom\ClassroomListViewClasses.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\MainWindow\MainWindowBoxStudentInfo.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Component\Classes\ClassesListViewClasses.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminClassView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminStudentView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AdminTeacherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AssignmentsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ChangeInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ChangePassView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ClassesView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ClassInfoView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\ClassroomsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainWindowView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SettingView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SignInView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Component\Assignment\AssigmentListViewAssignments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\ClassInfo\ClassInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\ClassInfo\ClassInfoBoxAssignments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\Classroom\ClassroomListViewAssignments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\Classroom\ClassroomListViewClasses.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\MainWindow\MainWindowBoxAssignments\MainWindowBoxAssignments2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses1.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\MainWindow\MainWindowBoxClasses\MainWindowBoxClasses2.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\MainWindow\MainWindowBoxStudentInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Component\Classes\ClassesListViewClasses.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminClassView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminStudentView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AdminTeacherView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AssignmentsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChangeInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ChangePassView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ClassesView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ClassInfoView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ClassroomsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainWindowView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SettingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SignInView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
