@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Windows.Input;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Domain.Entities;
 using ClassroomManagementApp1.ViewModels;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 

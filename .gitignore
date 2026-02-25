@@ -1,0 +1,32 @@
+# Build outputs
+**/bin/
+**/obj/
+
+# Visual Studio / MSBuild
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vcxproj.user
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# OS / tooling noise
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+
+# NuGet
+**/packages/
+*.nupkg
+*.snupkg
+
+# Local secrets
+appsettings.*.json
+!appsettings.json

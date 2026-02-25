@@ -1,5 +1,5 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -8,7 +8,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
     public class StudentViewModel : INotifyPropertyChanged
     {
-        private readonly StudentService _studentService;
+        private readonly IStudentService _studentService;
         private ObservableCollection<Student> _students;
 
         // Collection of students to bind to the UI
@@ -36,7 +36,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         }
 
         // Constructor to initialize the StudentService dependency
-        public StudentViewModel(StudentService studentService)
+        public StudentViewModel(IStudentService studentService)
         {
             _studentService = studentService;
             Students = new ObservableCollection<Student>();

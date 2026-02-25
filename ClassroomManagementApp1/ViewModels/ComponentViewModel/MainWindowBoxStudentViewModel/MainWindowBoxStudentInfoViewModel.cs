@@ -1,11 +1,9 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using ClassroomManagementApp1.DesignPattern;
-using Microsoft.EntityFrameworkCore;
+using ClassroomManagement.Application.Services;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Media.Imaging;
 using System.Windows;
-using ClassroomManagementApp1.Factory;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStudentViewModel
 {
@@ -13,7 +11,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
     {
         private MainWindowBoxStudentInfoItem _item; // Private field for backing store
         public AccountViewModel AccountViewModel { get; private set; }
-        private readonly AccountService _accountService;
+        private readonly IAccountService _accountService;
 
         // Public property for data binding
         public MainWindowBoxStudentInfoItem Item
@@ -40,15 +38,14 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
         }
 
         // Constructor with AccountService dependency
-        public MainWindowBoxStudentInfoViewModel(AccountService accountService)
+        public MainWindowBoxStudentInfoViewModel(IAccountService accountService)
         {
             _accountService = accountService;
             AccountViewModel = new AccountViewModel(_accountService);
             InitializeData();
         }
 
-        // Default constructor that uses CreateAccountService
-        public MainWindowBoxStudentInfoViewModel() : this(ServiceFactory.CreateAccountService())
+        public MainWindowBoxStudentInfoViewModel() : this(App.Services.GetRequiredService<IAccountService>())
         {
         }
 
@@ -58,7 +55,10 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxStu
             try
             {
                 // Load account data by student ID
-                await AccountViewModel.LoadAccountByStudentIDAsync(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await AccountViewModel.LoadAccountByStudentIDAsync(studentId);
                 await AccountViewModel.GetProfileImageAsync();
                 ProfileImage = AccountViewModel.ProfileImage;
 

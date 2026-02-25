@@ -1,10 +1,11 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Factory;
-using ClassroomManagementApp1.Models;
-using ClassroomManagementApp1.DesignPattern;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using Microsoft.EntityFrameworkCore;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using Microsoft.Extensions.DependencyInjection;
+using ClassroomManagementApp1.Services;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Collections.ObjectModel;
 using System.Windows;
 
@@ -39,9 +40,9 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxCla
         public SubmissionViewModel SubmissionViewModel { get; private set; }
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
-        private readonly ClassesService _classService;
-        private readonly AssignmentService _assignmentService;
-        private readonly SubmissionService _submissionService;
+        private readonly IClassesService _classService;
+        private readonly IAssignmentService _assignmentService;
+        private readonly ISubmissionService _submissionService;
 
         // ObservableCollection for data binding
         public ObservableCollection<MainWindowBoxClassesItem> _listitem = new ObservableCollection<MainWindowBoxClassesItem>();
@@ -55,7 +56,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxCla
             }
         }
 
-        public MainWindowBoxClassesViewModel( AssignmentService assignmentService,ClassesService classService, SubmissionService submissionService)
+        public MainWindowBoxClassesViewModel(IAssignmentService assignmentService, IClassesService classService, ISubmissionService submissionService)
         {
             _classService = classService;
             _assignmentService = assignmentService;
@@ -66,7 +67,10 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxCla
             InitializeData();
         }
 
-        public MainWindowBoxClassesViewModel() : this(ServiceFactory.CreateAssignmentService(), ServiceFactory.CreateClassesService(), ServiceFactory.CreateSubmissionService())
+        public MainWindowBoxClassesViewModel() : this(
+            App.Services.GetRequiredService<IAssignmentService>(),
+            App.Services.GetRequiredService<IClassesService>(),
+            App.Services.GetRequiredService<ISubmissionService>())
         {
         }
         private async void InitializeData()
@@ -74,7 +78,10 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxCla
             try
             {
                 // Load the top 3 nearest classes for the student and display assignments
-                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(studentId);
                 var ClassList = ClassViewModel.Classes.ToList(); // Contains top 3 classes
 
                 foreach (var cls in ClassList)
@@ -83,7 +90,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxCla
                     await ClassViewModel.LoadAssignmentsByClassIdAsync(cls.classid); // Get all assignments for class ID
                     var assignmentsList = ClassViewModel.Assignments.ToList();
                     SetDateRange(cls.datebegin, cls.dateend);
-                    await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContextSingleton.Instance.StudentId);
+                    await SubmissionViewModel.LoadSubmissionsByStudentId(studentId);
                     var submissionList = SubmissionViewModel.Submissions;
 
                     foreach (var asm in assignmentsList)

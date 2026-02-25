@@ -1,18 +1,15 @@
-﻿using System;
+using System;
 using System.Windows.Input;
 using System.Windows;
 using System.Linq;
-using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
-using ClassroomManagementApp1.DesignPattern;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
 using ClassroomManagementApp1.Commands;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
-using ClassroomManagementApp1.Factory;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -21,8 +18,8 @@ namespace ClassroomManagementApp1.ViewModels
         // 1. Create instances of required ViewModels
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
-        private readonly ClassesService _classService;
-        private readonly AssignmentService _assignmentService;
+        private readonly IClassesService _classService;
+        private readonly IAssignmentService _assignmentService;
 
         // 2. Create instances for RelayCommand
         public ICommand SearchCommand { get; }
@@ -56,12 +53,8 @@ namespace ClassroomManagementApp1.ViewModels
         public ObservableCollection<Class> Classes { get; set; } = new ObservableCollection<Class>();
 
         // 5. Default constructor, uses CreateDbContext to initialize DbContext and ClassViewModel
-        public MainWindowViewModel(string studentId) : this(ServiceFactory.CreateClassesService(),ServiceFactory.CreateAssignmentService(), studentId)
-        {
-        }
-
         // 6. Constructor to initialize MainWindowViewModel
-        public MainWindowViewModel(ClassesService classService, AssignmentService assignmentService, string studentId)
+        public MainWindowViewModel(IClassesService classService, IAssignmentService assignmentService, string studentId)
         {
             _classService = classService;
             _assignmentService = assignmentService;

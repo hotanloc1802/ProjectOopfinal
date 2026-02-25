@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,8 @@ using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
 using ClassroomManagementApp1.Views;
-using ClassroomManagementApp1.Data;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 
 namespace ClassroomManagementApp1.Views
@@ -30,7 +31,15 @@ namespace ClassroomManagementApp1.Views
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView DashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
+            var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+            if (string.IsNullOrWhiteSpace(studentId))
+            {
+                new SignInView().Show();
+                Close();
+                return;
+            }
+
+            MainWindowView DashboardWindow = new MainWindowView(studentId);
             DashboardWindow.Show();
             this.Close();
         }

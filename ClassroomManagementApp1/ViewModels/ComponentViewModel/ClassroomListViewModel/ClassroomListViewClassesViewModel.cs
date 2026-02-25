@@ -1,11 +1,9 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.DesignPattern;
-using ClassroomManagementApp1.Factory;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using Microsoft.EntityFrameworkCore;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -18,8 +16,8 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         private MainWindowBoxClassesItem _item; // Private field for backing store
         public ClassViewModel ClassViewModel { get; private set; }
         public SubmissionViewModel SubmissionViewModel { get; private set; }
-        private readonly ClassesService _classService;
-        private readonly SubmissionService _submissionService;
+        private readonly IClassesService _classService;
+        private readonly ISubmissionService _submissionService;
         private List<Tuple<DateTime, DateTime>> _dateRanges = new List<Tuple<DateTime, DateTime>>();
         public ObservableCollection<ClassWithDateRange> _listclasswithdaterange { get; set; }
         public ObservableCollection<ClassWithDateRange> ListClassesWithDateRange
@@ -77,7 +75,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         }
 
         // Constructor with ClassService dependency
-        public ClassroomListViewClassesViewModel(ClassesService classService, SubmissionService submissionService)
+        public ClassroomListViewClassesViewModel(IClassesService classService, ISubmissionService submissionService)
         {
             _classService = classService;
             ClassViewModel = new ClassViewModel(_classService);
@@ -87,7 +85,9 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         }
 
         // Default constructor that uses CreateClassService
-        public ClassroomListViewClassesViewModel() : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateSubmissionService())
+        public ClassroomListViewClassesViewModel() : this(
+            App.Services.GetRequiredService<IClassesService>(),
+            App.Services.GetRequiredService<ISubmissionService>())
         {
         }
 
@@ -96,7 +96,10 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         {
             try
             {
-                await ClassViewModel.LoadClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await ClassViewModel.LoadClassesByStudentIdAsync(studentId);
                 // Gán cả danh sách các lớp vào ObservableCollection
                 Listclasses = new ObservableCollection<Class>(ClassViewModel.Classes);
                 ListClassesWithDateRange = new ObservableCollection<ClassWithDateRange> { };
@@ -104,7 +107,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
                 {
                     await ClassViewModel.LoadAssignmentsByClassIdAsync(cls.classid);
                     var assignmentsList = ClassViewModel.Assignments.ToList();
-                    await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContextSingleton.Instance.StudentId);
+                    await SubmissionViewModel.LoadSubmissionsByStudentId(studentId);
                     var submissionList = SubmissionViewModel.Submissions;
                     int countNotSubmitted = 0;
                     foreach (var asm in assignmentsList)

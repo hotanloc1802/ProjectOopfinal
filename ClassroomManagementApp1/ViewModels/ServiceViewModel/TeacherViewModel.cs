@@ -1,5 +1,5 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
@@ -7,7 +7,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
     public class TeacherViewModel : INotifyPropertyChanged
     {
-        private readonly TeacherService _teacherService;
+        private readonly ITeacherService _teacherService;
 
         // Collection of teachers to notify UI of changes
         public ObservableCollection<Teacher> Teachers { get; set; }
@@ -25,7 +25,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         }
 
         // Constructor to initialize the TeacherService dependency
-        public TeacherViewModel(TeacherService teacherService)
+        public TeacherViewModel(ITeacherService teacherService)
         {
             _teacherService = teacherService;
             Teachers = new ObservableCollection<Teacher>();

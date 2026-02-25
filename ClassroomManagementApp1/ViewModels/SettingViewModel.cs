@@ -1,11 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
 using ClassroomManagementApp1.Commands;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.ViewModels;
@@ -14,15 +13,14 @@ using System.Collections.ObjectModel;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
 using ClassroomManagementApp1.Component;
 using System.Windows;
-using ClassroomManagementApp1.Factory;
-using ClassroomManagementApp1.DesignPattern;
+
 namespace ClassroomManagementApp1.ViewModels
 {
     public class SettingViewModel : ViewModelBase
     {
         public AccountViewModel AccountViewModel { get; private set; }
 
-        private readonly AccountService _accounService;
+        private readonly IAccountService _accounService;
         public class studentinfo : Student
         {
             public string dateofbirth { get; set; }
@@ -44,10 +42,7 @@ namespace ClassroomManagementApp1.ViewModels
                 OnPropertyChanged(nameof(StudentInfo));
             }
         }
-        public SettingViewModel(string studentid) : this(ServiceFactory.CreateAccountService() , studentid)
-        {
-        }
-         public SettingViewModel(AccountService accountService ,string studentid)
+        public SettingViewModel(IAccountService accountService, string studentid)
         {
             _accounService = accountService;
             AccountViewModel = new AccountViewModel(_accounService);
@@ -57,7 +52,7 @@ namespace ClassroomManagementApp1.ViewModels
         
         private async void InitializeData(string studentid)
         {
-            await AccountViewModel.LoadAccountByStudentIDAsync(StudentContextSingleton.Instance.StudentId);
+            await AccountViewModel.LoadAccountByStudentIDAsync(studentid);
             StudentInfo = new studentinfo(AccountViewModel.SelectedAccountStudent.studentname,AccountViewModel.SelectedAccountStudent.studentbirth,AccountViewModel.SelectedAccount.username);
         }
     }

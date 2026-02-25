@@ -1,15 +1,13 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Factory;
-using ClassroomManagementApp1.Models;
-using ClassroomManagementApp1.DesignPattern;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using Microsoft.EntityFrameworkCore;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -18,9 +16,9 @@ namespace ClassroomManagementApp1.ViewModels
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
         public SubmissionViewModel SubmissionViewModel { get; private set; }
-        private readonly ClassesService _classService;
-        private readonly AssignmentService _assignmentService;
-        private readonly SubmissionService _submissionService;
+        private readonly IClassesService _classService;
+        private readonly IAssignmentService _assignmentService;
+        private readonly ISubmissionService _submissionService;
 
         private Class _classInfo;
         public Class ClassInfo
@@ -46,7 +44,7 @@ namespace ClassroomManagementApp1.ViewModels
         public ObservableCollection<AssignmentFormated> AssignmentsFormattedList { get; set; } = new ObservableCollection<AssignmentFormated>();
         public ObservableCollection<Assignment> AssignmentNotSubmitted { get; set; } = new ObservableCollection<Assignment>();
 
-        public ClassInfoViewModel(ClassesService classService, AssignmentService assignmentService, SubmissionService submissionService, string classID)
+        public ClassInfoViewModel(IClassesService classService, IAssignmentService assignmentService, ISubmissionService submissionService, string classID)
         {
             _classService = classService;
             _assignmentService = assignmentService;
@@ -58,7 +56,11 @@ namespace ClassroomManagementApp1.ViewModels
         }
       
         public ClassInfoViewModel(string classID)
-            : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateAssignmentService(), ServiceFactory.CreateSubmissionService() ,classID)
+            : this(
+                App.Services.GetRequiredService<IClassesService>(),
+                App.Services.GetRequiredService<IAssignmentService>(),
+                App.Services.GetRequiredService<ISubmissionService>(),
+                classID)
         {
         }
 
@@ -67,7 +69,11 @@ namespace ClassroomManagementApp1.ViewModels
             await ClassViewModel.LoadClassByIdAsync(classID);
             try
             {
-                await SubmissionViewModel.LoadSubmissionsByStudentId(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (!string.IsNullOrWhiteSpace(studentId))
+                {
+                    await SubmissionViewModel.LoadSubmissionsByStudentId(studentId);
+                }
             }
             catch (Exception ex)
             {

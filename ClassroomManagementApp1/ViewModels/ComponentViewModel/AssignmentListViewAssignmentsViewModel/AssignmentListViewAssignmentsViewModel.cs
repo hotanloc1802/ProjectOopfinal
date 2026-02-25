@@ -1,11 +1,9 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.DesignPattern;
-using ClassroomManagementApp1.Factory;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using Microsoft.EntityFrameworkCore;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
@@ -64,7 +62,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
                 OnPropertyChanged(nameof(Listassignments));
             }
         }
-        private readonly AssignmentService _assignmentService;
+        private readonly IAssignmentService _assignmentService;
 
         public MainWindowBoxAssignmentsItem Item
         {
@@ -76,14 +74,14 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
             }
         }
 
-        public AssignmentListViewAssignmentsViewModel(AssignmentService assignmentService)
+        public AssignmentListViewAssignmentsViewModel(IAssignmentService assignmentService)
         {
             _assignmentService = assignmentService;
             AssignmentViewModel = new AssignmentViewModel(_assignmentService);
             InitializeData();
         }
 
-        public AssignmentListViewAssignmentsViewModel() : this(ServiceFactory.CreateAssignmentService())
+        public AssignmentListViewAssignmentsViewModel() : this(App.Services.GetRequiredService<IAssignmentService>())
         {
         }
 
@@ -91,7 +89,10 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.AssignmentListVi
         {
             try
             {
-                await AssignmentViewModel.LoadAssignmentsByStudentId(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await AssignmentViewModel.LoadAssignmentsByStudentId(studentId);
 
                 if (AssignmentViewModel.Assignments != null && AssignmentViewModel.Assignments.Any())
                 {

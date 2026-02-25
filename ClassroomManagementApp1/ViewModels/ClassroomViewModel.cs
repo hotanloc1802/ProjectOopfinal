@@ -1,18 +1,16 @@
-﻿using System;
+using System;
 using System.Windows.Input;
 using System.Windows;
 using System.Linq;
-using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using ClassroomManagementApp1.Services;
 using ClassroomManagementApp1.Commands;
-using ClassroomManagementApp1.DesignPattern;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.ViewModels;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
-using ClassroomManagementApp1.Factory;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -21,8 +19,8 @@ namespace ClassroomManagementApp1.ViewModels
         // 1. Create instances of required ViewModels
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
-        private readonly ClassesService _classService;
-        private readonly AssignmentService _assignmentService;
+        private readonly IClassesService _classService;
+        private readonly IAssignmentService _assignmentService;
 
         // 2. Create instances for RelayCommand
         public ICommand SearchCommand { get; }
@@ -56,18 +54,22 @@ namespace ClassroomManagementApp1.ViewModels
         public ObservableCollection<Class> Classes { get; set; } = new ObservableCollection<Class>();
 
         // 5. Default constructor, uses CreateDbContext to initialize DbContext and ClassViewModel
-        public ClassroomViewModel() : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateAssignmentService())
+        public ClassroomViewModel() : this(
+            App.Services.GetRequiredService<IClassesService>(),
+            App.Services.GetRequiredService<IAssignmentService>())
         {
+            InitializeData();
         }
 
         // 6. Constructor to initialize MainWindowViewModel
-        public ClassroomViewModel(ClassesService classService, AssignmentService assignmentService)
+        public ClassroomViewModel(IClassesService classService, IAssignmentService assignmentService)
         {
             _classService = classService;
             _assignmentService = assignmentService;
             ClassViewModel = new ClassViewModel(_classService);
             AssignmentViewModel = new AssignmentViewModel(_assignmentService);
             SearchCommand = new SearchClassCommand(ClassViewModel);
+            InitializeData();
         }
 
         private async void InitializeData()
@@ -75,7 +77,10 @@ namespace ClassroomManagementApp1.ViewModels
             try
             {
                 // Load the top 3 nearest classes for the student and display
-                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(studentId);
 
                 // Load assignment data for a specific classId (can change classId as needed)
                 if (ClassViewModel.Classes.Any())

@@ -1,12 +1,11 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using ClassroomManagementApp1.Factory;
-using ClassroomManagementApp1.DesignPattern;
 using System.Collections.ObjectModel;
 using System.Windows;
-using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListViewModel
 {
@@ -38,15 +37,14 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
         }
 
         // Constructor using Dependency Injection for AssignmentService
-        public ClassroomListViewAssignmentsViewModel(AssignmentService assignmentService)
+        public ClassroomListViewAssignmentsViewModel(IAssignmentService assignmentService)
         {
             AssignmentViewModel = new AssignmentViewModel(assignmentService);
             InitializeData();
         }
 
-        // Default constructor using Factory Pattern
         public ClassroomListViewAssignmentsViewModel()
-            : this(ServiceFactory.CreateAssignmentService())
+            : this(App.Services.GetRequiredService<IAssignmentService>())
         {
         }
 
@@ -55,10 +53,13 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.ClassroomListVie
             try
             {
                 // Load assignments for the logged-in student
-                await AssignmentViewModel.LoadAssignmentsByStudentId(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await AssignmentViewModel.LoadAssignmentsByStudentId(studentId);
 
                 // Update Listassignments
-                Listassignments = new ObservableCollection<Assignment>(AssignmentViewModel.Assignments ?? new ObservableCollection<Assignment>());
+                Listassignments = new ObservableCollection<Assignment>(AssignmentViewModel.Assignments);
             }
             catch (Exception ex)
             {
