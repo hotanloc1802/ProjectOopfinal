@@ -1,5 +1,5 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Media.Imaging;
@@ -8,7 +8,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
     public class AccountViewModel : INotifyPropertyChanged
     {
-        private readonly AccountService _accountService;
+        private readonly IAccountService _accountService;
         private Account _selectedAccount;
 
         private BitmapImage _profileImage;
@@ -49,7 +49,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         }
 
         // Constructor accepting an AccountService dependency
-        public AccountViewModel(AccountService accountService)
+        public AccountViewModel(IAccountService accountService)
         {
             _accountService = accountService;
         }

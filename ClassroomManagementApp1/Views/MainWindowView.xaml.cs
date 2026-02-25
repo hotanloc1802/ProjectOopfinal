@@ -1,5 +1,5 @@
-﻿using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ClassroomManagementApp1.Data;
+
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -23,14 +23,17 @@ namespace ClassroomManagementApp1.Views
     /// </summary>
     public partial class MainWindowView : Window
     {
+        private readonly string _studentId;
+
         public MainWindowView(string studentid)
         {
+            _studentId = studentid;
             InitializeComponent();
-            DataContext = new MainWindowViewModel(studentid);
+            DataContext = ActivatorUtilities.CreateInstance<MainWindowViewModel>(App.Services, studentid);
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView dashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
+            MainWindowView dashboardWindow = new MainWindowView(_studentId);
             dashboardWindow.Show();
             this.Close();
         }
@@ -42,7 +45,7 @@ namespace ClassroomManagementApp1.Views
         }
         private void BtnClass_Click(object sender, RoutedEventArgs e)
         {
-            ClassesView ClassWindow = new ClassesView(StudentContext.Instance.StudentId);
+            ClassesView ClassWindow = new ClassesView(_studentId);
             ClassWindow.Show();
             this.Close();
         }

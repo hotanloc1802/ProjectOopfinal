@@ -1,12 +1,10 @@
-﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Commands;
-using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
 using ClassroomManagementApp1.Views;
-using Microsoft.EntityFrameworkCore;
+using ClassroomManagement.Application.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System.Windows.Input;
 using System.Windows;
-using ClassroomManagementApp1.Factory;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -15,19 +13,23 @@ namespace ClassroomManagementApp1.ViewModels
         public StudentViewModel StudentViewModel { get; private set; }
         public AccountViewModel AccountViewModel { get; private set; }
 
-        private readonly AccountService _accountService;
-        private readonly StudentService _studentService;
+        private readonly IAccountService _accountService;
+        private readonly IStudentService _studentService;
         private readonly Window _window;  // Window reference
 
         public ICommand ChangeAccountCommand { get; private set; }
         public ICommand ChangePassCommand { get; private set; }
 
         public ChangeViewModel(string studentId, Window window)
-            : this(ServiceFactory.CreateAccountService(), ServiceFactory.CreateStudentService(), studentId, window)
+            : this(
+                App.Services.GetRequiredService<IAccountService>(),
+                App.Services.GetRequiredService<IStudentService>(),
+                studentId,
+                window)
         {
         }
 
-        public ChangeViewModel(AccountService accountService, StudentService studentService, string studentId, Window window)
+        public ChangeViewModel(IAccountService accountService, IStudentService studentService, string studentId, Window window)
         {
             _accountService = accountService;
             _studentService = studentService;

@@ -1,5 +1,3 @@
-﻿using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels;
 using System;
 using System.Collections.Generic;

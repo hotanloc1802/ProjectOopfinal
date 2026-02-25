@@ -1,4 +1,3 @@
-﻿using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxClassesViewModel;
 using ClassroomManagementApp1.Views;
 using System;

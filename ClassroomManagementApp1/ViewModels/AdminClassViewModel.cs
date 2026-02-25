@@ -1,13 +1,11 @@
-﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.Commands;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using Microsoft.EntityFrameworkCore;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using System.Windows;
-using ClassroomManagementApp1.Factory;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -16,7 +14,7 @@ namespace ClassroomManagementApp1.ViewModels
         public ICommand AddClassCommand { get; }
         public ICommand DeleteClassCommand { get; }
         public ICommand SaveCommand { get; }
-        private readonly ClassesService _classService;
+        private readonly IClassesService _classService;
         public ClassViewModel ClassViewModel { get; private set; }
         private ObservableCollection<Class> _classes;
 
@@ -45,12 +43,12 @@ namespace ClassroomManagementApp1.ViewModels
 
         // Create a database context
         // Default constructor
-        public AdminClassViewModel() : this(ServiceFactory.CreateClassesService())
+        public AdminClassViewModel() : this(App.Services.GetRequiredService<IClassesService>())
         {
         }
 
         // Constructor with dependency injection
-        public AdminClassViewModel(ClassesService classesService)
+        public AdminClassViewModel(IClassesService classesService)
         {
             _classService = classesService;
             ClassViewModel = new ClassViewModel(_classService);

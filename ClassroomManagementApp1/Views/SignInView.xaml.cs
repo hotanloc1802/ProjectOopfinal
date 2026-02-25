@@ -1,10 +1,7 @@
-﻿using ClassroomManagementApp1;
-using Npgsql;
+using ClassroomManagement.Application.Services;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,8 +10,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.DesignPattern;
+
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -22,8 +18,19 @@ namespace ClassroomManagementApp1.Views
     /// </summary>
     public partial class SignInView : Window
     {
-        public SignInView()
+        private readonly IAuthenticationService _authenticationService;
+        private readonly ICurrentStudentContext _currentStudentContext;
+
+        public SignInView() : this(
+            App.Services.GetRequiredService<IAuthenticationService>(),
+            App.Services.GetRequiredService<ICurrentStudentContext>())
         {
+        }
+
+        public SignInView(IAuthenticationService authenticationService, ICurrentStudentContext currentStudentContext)
+        {
+            _authenticationService = authenticationService;
+            _currentStudentContext = currentStudentContext;
             InitializeComponent();
         }
 
@@ -69,59 +76,39 @@ namespace ClassroomManagementApp1.Views
                 }
             }
         }
-        private void LogIn_Click(object sender, RoutedEventArgs e)
+        private async void LogIn_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = "Host=localhost;Port=5432;Database=uit;Username=postgres;Password=123123zzA.;SearchPath=public";
-
-            // SQL query to check the user and get the studentId and role
-            string query = "SELECT studentid, role FROM \"public\".account WHERE username = @Username AND password = @Password";
-
-            using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
+            try
             {
-                try
+                var username = boxUserName.Text;
+                var password = boxPassword.Password;
+
+                var result = await _authenticationService.AuthenticateAsync(username, password);
+                if (result == null)
                 {
-                    connection.Open();
-                    using (NpgsqlCommand command = new NpgsqlCommand(query, connection))
-                    {
-                        command.Parameters.AddWithValue("@Username", boxUserName.Text);
-                        command.Parameters.AddWithValue("@Password", boxPassword.Password);
-
-                        using (var reader = command.ExecuteReader())
-                        {
-                            if (reader.Read()) // User found
-                            {
-                                string studentId = reader["studentid"].ToString();
-                                string role = reader["role"].ToString();
-
-                                // Set the studentId in context
-                                StudentContextSingleton.Instance.SetStudentId(studentId);
-
-                                if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
-                                {
-                                    // Open Admin interface
-                                    AdminStudentView adminWindow = new AdminStudentView();
-                                    adminWindow.Show();
-                                }
-                                else
-                                {
-                                    // Open Normal interface
-                                    MainWindowView mainWindow = new MainWindowView(studentId);
-                                    mainWindow.Show();
-                                }
-
-                                this.Hide(); // Hide the login form
-                            }
-                            else
-                            {
-                                MessageBox.Show("Tài khoản hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButton.OK, MessageBoxImage.Error);
-                            }
-                        }
-                    }
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng.", "Đăng nhập thất bại", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
                 }
-                catch (Exception ex)
+
+                var (studentId, role) = result.Value;
+                _currentStudentContext.StudentId = studentId;
+
+                if (role.Equals("Admin", StringComparison.OrdinalIgnoreCase))
                 {
-                    MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    var adminWindow = new AdminStudentView();
+                    adminWindow.Show();
                 }
+                else
+                {
+                    var mainWindow = ActivatorUtilities.CreateInstance<MainWindowView>(App.Services, studentId);
+                    mainWindow.Show();
+                }
+
+                Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

@@ -1,19 +1,13 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using ClassroomManagementApp1.DesignPattern;
-using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Collections.ObjectModel;
-using ClassroomManagementApp1.Component;
 using ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel;
-using ClassroomManagementApp1.Factory;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ClassroomManagementApp1.ViewModels
 {
@@ -23,9 +17,8 @@ namespace ClassroomManagementApp1.ViewModels
 
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
-        private readonly ClassesService _classService;
-
-        private readonly AssignmentService _assignmentService;
+        private readonly IClassesService _classService;
+        private readonly IAssignmentService _assignmentService;
         public ObservableCollection<Assignment> _listassignment;
         public ObservableCollection<Assignment> ListAssignment
         {
@@ -47,7 +40,7 @@ namespace ClassroomManagementApp1.ViewModels
             }
         }
         public ObservableCollection<AssignmentFormated> AssignmentsFormattedList { get; set; } = new ObservableCollection<AssignmentFormated>();
-        public ClassroomListViewAssignmentViewModel(ClassesService classService, AssignmentService assignmentService)
+        public ClassroomListViewAssignmentViewModel(IClassesService classService, IAssignmentService assignmentService)
         {
             _classService = classService;
             _assignmentService = assignmentService;
@@ -56,7 +49,9 @@ namespace ClassroomManagementApp1.ViewModels
             ListAssignment = new ObservableCollection<Assignment>();
             InitializeData();
         }
-        public ClassroomListViewAssignmentViewModel() : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateAssignmentService())
+        public ClassroomListViewAssignmentViewModel() : this(
+            App.Services.GetRequiredService<IClassesService>(),
+            App.Services.GetRequiredService<IAssignmentService>())
         {
         }
         private async void InitializeData()
@@ -64,7 +59,10 @@ namespace ClassroomManagementApp1.ViewModels
             try
             {
                 // Load the 3 nearest classes of the student and display them
-                await ClassViewModel.LoadClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await ClassViewModel.LoadClassesByStudentIdAsync(studentId);
                 ListAssignment.Clear();
                 var assignmentsList = ClassViewModel.Assignments;
                 foreach (var asm in assignmentsList)

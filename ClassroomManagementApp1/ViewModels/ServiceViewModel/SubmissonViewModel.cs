@@ -1,5 +1,5 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
@@ -7,7 +7,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
     public class SubmissionViewModel : INotifyPropertyChanged
     {
-        private readonly SubmissionService _submissionService;
+        private readonly ISubmissionService _submissionService;
 
         // Collection of submissions to notify UI of changes
         public ObservableCollection<Submission> Submissions { get; set; } = new ObservableCollection<Submission>();
@@ -26,7 +26,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         }
 
         // Constructor to initialize the SubmissionService dependency
-        public SubmissionViewModel(SubmissionService submissionService)
+        public SubmissionViewModel(ISubmissionService submissionService)
         {
             _submissionService = submissionService;
         }

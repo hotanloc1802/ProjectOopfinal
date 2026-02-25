@@ -1,5 +1,6 @@
-﻿using ClassroomManagementApp1.Data;
 using ClassroomManagementApp1.ViewModels;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,15 @@ namespace ClassroomManagementApp1.Views
         public ChangePassView()
         {
             InitializeComponent();
-            DataContext = new ChangeViewModel(StudentContext.Instance.StudentId, this);
+            var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+            if (string.IsNullOrWhiteSpace(studentId))
+            {
+                new SignInView().Show();
+                Close();
+                return;
+            }
+
+            DataContext = new ChangeViewModel(studentId, this);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {

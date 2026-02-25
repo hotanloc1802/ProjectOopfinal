@@ -1,7 +1,7 @@
-﻿using ClassroomManagementApp1.Data;
-using ClassroomManagementApp1.Models;
 using ClassroomManagementApp1.Views;
 using MahApps.Metro.IconPacks;
+using Microsoft.Extensions.DependencyInjection;
+using ClassroomManagementApp1.Services;
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -27,11 +27,27 @@ namespace ClassroomManagementApp1.Views
         public SettingView()
         {
             InitializeComponent();
-            DataContext = new SettingViewModel(StudentContext.Instance.StudentId);
+            var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+            if (string.IsNullOrWhiteSpace(studentId))
+            {
+                new SignInView().Show();
+                Close();
+                return;
+            }
+
+            DataContext = ActivatorUtilities.CreateInstance<SettingViewModel>(App.Services, studentId);
         }
         private void BtnDashboard_Click(object sender, RoutedEventArgs e)
         {
-            MainWindowView DashboardWindow = new MainWindowView(StudentContext.Instance.StudentId);
+            var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+            if (string.IsNullOrWhiteSpace(studentId))
+            {
+                new SignInView().Show();
+                Close();
+                return;
+            }
+
+            MainWindowView DashboardWindow = new MainWindowView(studentId);
             DashboardWindow.Show();
             this.Close();
         }
@@ -43,7 +59,15 @@ namespace ClassroomManagementApp1.Views
         }
         private void BtnClassroom1_Click(object sender, RoutedEventArgs e)
         {
-            ClassesView ClassWindow = new ClassesView(StudentContext.Instance.StudentId);
+            var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+            if (string.IsNullOrWhiteSpace(studentId))
+            {
+                new SignInView().Show();
+                Close();
+                return;
+            }
+
+            ClassesView ClassWindow = new ClassesView(studentId);
             ClassWindow.Show();
             this.Close();
         }

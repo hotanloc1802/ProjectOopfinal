@@ -1,5 +1,5 @@
-﻿using ClassroomManagementApp1.ClassService;
-using ClassroomManagementApp1.Models;
+using ClassroomManagement.Application.Services;
+using ClassroomManagement.Domain.Entities;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
@@ -7,7 +7,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
 {
     public class AssignmentViewModel
     {
-        private readonly AssignmentService _assignmentService;
+        private readonly IAssignmentService _assignmentService;
 
         // ObservableCollection to notify UI of changes
         public ObservableCollection<Assignment> Assignments { get; set; } = new ObservableCollection<Assignment>();
@@ -25,7 +25,7 @@ namespace ClassroomManagementApp1.ViewModels.ServiceViewModels
         }
 
         // Constructor to initialize AssignmentService
-        public AssignmentViewModel(AssignmentService assignmentService)
+        public AssignmentViewModel(IAssignmentService assignmentService)
         {
             _assignmentService = assignmentService; // Initialize the assignment service
         }

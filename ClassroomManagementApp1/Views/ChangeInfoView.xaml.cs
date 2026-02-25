@@ -1,4 +1,3 @@
-﻿using ClassroomManagementApp1.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ClassroomManagementApp1.ViewModels;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
+using ClassroomManagementApp1.Services;
+using Microsoft.Extensions.DependencyInjection;
 namespace ClassroomManagementApp1.Views
 {
     /// <summary>
@@ -24,7 +25,15 @@ namespace ClassroomManagementApp1.Views
         public ChangeInfoView()
         {
             InitializeComponent();
-            DataContext = new ChangeViewModel(StudentContext.Instance.StudentId,this);
+            var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+            if (string.IsNullOrWhiteSpace(studentId))
+            {
+                new SignInView().Show();
+                Close();
+                return;
+            }
+
+            DataContext = new ChangeViewModel(studentId, this);
         }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {

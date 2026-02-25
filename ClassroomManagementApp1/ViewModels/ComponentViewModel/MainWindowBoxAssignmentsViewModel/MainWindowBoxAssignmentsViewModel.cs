@@ -1,9 +1,9 @@
-﻿using ClassroomManagementApp1.ClassService;
 using ClassroomManagementApp1.ViewModels.ServiceViewModels;
-using ClassroomManagementApp1.Factory;
-using ClassroomManagementApp1.DesignPattern;
+using System;
 using System.Linq;
-using ClassroomManagementApp1.Data;
+using ClassroomManagement.Application.Services;
+using Microsoft.Extensions.DependencyInjection;
+using ClassroomManagementApp1.Services;
 
 namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAssignmentsViewModel
 {
@@ -13,8 +13,8 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
 
         public ClassViewModel ClassViewModel { get; private set; }
         public AssignmentViewModel AssignmentViewModel { get; private set; }
-        private readonly ClassesService _classService;
-        private readonly AssignmentService _assignmentService;
+        private readonly IClassesService _classService;
+        private readonly IAssignmentService _assignmentService;
 
         private MainWindowBoxAssignmentsItem[] _items = new MainWindowBoxAssignmentsItem[3];
 
@@ -49,7 +49,7 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
             set => this[2] = value;
         }
 
-        public MainWindowBoxAssignmentsViewModel(ClassesService classService, AssignmentService assignmentService)
+        public MainWindowBoxAssignmentsViewModel(IClassesService classService, IAssignmentService assignmentService)
         {
             _classService = classService;
             _assignmentService = assignmentService;
@@ -59,7 +59,9 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
         }
 
         public MainWindowBoxAssignmentsViewModel()
-            : this(ServiceFactory.CreateClassesService(), ServiceFactory.CreateAssignmentService())
+            : this(
+                App.Services.GetRequiredService<IClassesService>(),
+                App.Services.GetRequiredService<IAssignmentService>())
         {
         }
 
@@ -67,7 +69,10 @@ namespace ClassroomManagementApp1.ViewModels.ComponentViewModel.MainWindowBoxAss
         {
             try
             {
-                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(StudentContextSingleton.Instance.StudentId);
+                var studentId = App.Services.GetRequiredService<ICurrentStudentContext>().StudentId;
+                if (string.IsNullOrWhiteSpace(studentId)) return;
+
+                await ClassViewModel.LoadTop3NearestClassesByStudentIdAsync(studentId);
                 var classList = ClassViewModel.Classes.ToList();
 
                 for (int i = 0; i < Math.Min(3, classList.Count); i++)
